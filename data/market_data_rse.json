@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "updated": "pending",
+    "updated_it": "In attesa del primo aggiornamento GitHub Action",
+    "regime": "NEUTRO",
+    "regime_score": 0,
+    "regime_signals": ["Dati non ancora disponibili — configura GitHub Action"]
+  },
+  "indicators": {},
+  "probabilities": {
+    "petrolio_alto": 35, "guerra_commerciale": 40, "crisi_taiwan": 15,
+    "hormuz": 12, "recessione_germania": 45, "crisi_btp": 15,
+    "bce_alza": 20, "deflazione_eu": 12, "hard_landing_usa": 25,
+    "soft_landing": 55, "stagflazione_usa": 20, "boom_ai": 65,
+    "flash_crash": 12, "bear_market": 18, "bull_estremo": 22,
+    "inversione_curva": 30, "bitcoin_mainstream": 45, "regolamentazione_crypto": 55,
+    "carbon_tax": 50, "crisi_idrica": 25, "rinascita_industriale_eu": 35,
+    "boom_demografico_africa": 70, "rivoluzione_farmaceutica": 75,
+    "fusione_nucleare": 15, "pace_ucraina": 30, "superciclo_commodity": 35,
+    "dollaro_debole": 40, "credito_privato_boom": 55, "small_cap_outperform": 40,
+    "dividendi_moda": 50, "invecchiamento_europa": 90, "gen_z_investe": 75,
+    "pensioni_pressione": 80, "immigrazione_europa": 60, "robotica_automazione": 70,
+    "quantum_computing": 25, "spazio_commerciale": 45, "fintech_decentralizzato": 50,
+    "governo_tecnico_italia": 20, "federalismo_eu": 30, "trump_completo": 55,
+    "multipolarismo": 65, "lusso_italiano": 55, "turismo_record": 65,
+    "crisi_banche_usa": 20, "pe_democratizzato": 45, "re_commerciale_crisi": 55,
+    "infrastrutture_boom": 70, "cbdc_europeo": 60, "dedollarizzazione": 45,
+    "inflazione_strutturale": 35, "repressione_finanziaria": 30
+  }
+}
