@@ -1,0 +1,30 @@
+name: RSE — Read PDFs with Claude AI
+
+on:
+  workflow_dispatch:        # Solo manuale — tu decidi quando farlo girare
+  schedule:
+    - cron: '0 9 2 1,4,7,10 *'  # Trimestrale — 2 gennaio, aprile, luglio, ottobre
+
+jobs:
+  read-pdfs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install anthropic pdfplumber requests
+      - name: Read PDFs with Claude API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/read_pdf_claude.py
+      - name: Commit consensus
+        run: |
+          git config --local user.email "rse-bot@github.com"
+          git config --local user.name "RSE DataBot"
+          git add data/consensus.json data/consensus_*.json
+          git diff --staged --quiet || git commit -m "🤖 Consensus update $(date +'%Y-%m')"
+          git push
