@@ -1,0 +1,29 @@
+name: RSE — Fetch Market Data
+
+on:
+  schedule:
+    - cron: '0 7 * * 1-5'    # 09:00 ora italiana giorni feriali
+    - cron: '0 14 * * 1-5'   # 16:00 ora italiana giorni feriali
+  workflow_dispatch:
+
+jobs:
+  fetch-market:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install yfinance pandas numpy requests
+      - name: Fetch market indicators
+        run: python scripts/fetch_market.py
+      - name: Commit
+        run: |
+          git config --local user.email "rse-bot@github.com"
+          git config --local user.name "RSE DataBot"
+          git add data/market_data_rse.json
+          git diff --staged --quiet || git commit -m "📊 RSE market update $(date +'%Y-%m-%d %H:%M')"
+          git push
