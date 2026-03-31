@@ -1,14 +1,14 @@
 {
   "meta": {
-    "updated": "2026-03-31T08:06:32.982048Z",
-    "updated_it": "31/03/2026 08:06",
+    "updated": "2026-03-31T15:07:57.439905Z",
+    "updated_it": "31/03/2026 15:07",
     "regime": "NEUTRO",
     "regime_score": -1,
     "regime_signals": [
-      "VIX 29.1 \u2014 volatilit\u00e0 elevata (attenzione)",
-      "Curva normale +0.74% (espansione)",
-      "S&P500 -7.8% mensile (pressione ribassista)",
-      "Petrolio +43.4% \u2014 pressione inflattiva"
+      "VIX 28.1 \u2014 volatilit\u00e0 elevata (attenzione)",
+      "Curva normale +0.72% (espansione)",
+      "S&P500 -6.5% mensile (pressione ribassista)",
+      "Petrolio +46.5% \u2014 pressione inflattiva"
     ]
   },
   "indicators": {
@@ -17,99 +17,99 @@
       "n": "CBOE Volatility Index",
       "cat": "risk",
       "ok": true,
-      "price": 29.06,
-      "chg_week": 7.83,
-      "chg_month": 35.54,
-      "sma20": 26.0965,
-      "ts": "2026-03-31T08:06:29.729216Z"
+      "price": 28.12,
+      "chg_week": 4.34,
+      "chg_month": 31.16,
+      "sma20": 26.0495,
+      "ts": "2026-03-31T15:07:54.411321Z"
     },
     "US10Y": {
       "ticker": "^TNX",
       "n": "US Treasury 10Y Yield",
       "cat": "rates",
       "ok": true,
-      "price": 4.342,
-      "chg_week": 0.18,
-      "chg_month": 9.59,
-      "sma20": 4.2529,
-      "ts": "2026-03-31T08:06:29.861237Z"
+      "price": 4.327,
+      "chg_week": -1.48,
+      "chg_month": 6.89,
+      "sma20": 4.2664,
+      "ts": "2026-03-31T15:07:54.585879Z"
     },
     "US2Y": {
       "ticker": "^IRX",
       "n": "US Treasury 2Y Yield",
       "cat": "rates",
       "ok": true,
-      "price": 3.598,
-      "chg_week": -0.39,
-      "chg_month": 0.56,
-      "sma20": 3.6035,
-      "ts": "2026-03-31T08:06:30.062249Z"
+      "price": 3.603,
+      "chg_week": -0.47,
+      "chg_month": 0.36,
+      "sma20": 3.6039,
+      "ts": "2026-03-31T15:07:54.755620Z"
     },
     "CRUDE": {
       "ticker": "CL=F",
       "n": "WTI Crude Oil Futures",
       "cat": "commodity",
       "ok": true,
-      "price": 102.16,
-      "chg_week": 10.62,
-      "chg_month": 43.42,
-      "sma20": 92.8465,
-      "ts": "2026-03-31T08:06:30.199175Z"
+      "price": 104.32,
+      "chg_week": 12.96,
+      "chg_month": 46.46,
+      "sma20": 92.9545,
+      "ts": "2026-03-31T15:07:54.878454Z"
     },
     "GOLD": {
       "ticker": "GC=F",
       "n": "Gold Futures",
       "cat": "commodity",
       "ok": true,
-      "price": 4589.8999,
-      "chg_week": 4.33,
-      "chg_month": -13.31,
-      "sma20": 4819.055,
-      "ts": "2026-03-31T08:06:30.397136Z"
+      "price": 4627.1001,
+      "chg_week": 5.18,
+      "chg_month": -12.6,
+      "sma20": 4820.915,
+      "ts": "2026-03-31T15:07:55.025924Z"
     },
     "DOLLAR": {
       "ticker": "DX-Y.NYB",
       "n": "US Dollar Index",
       "cat": "fx",
       "ok": true,
-      "price": 100.456,
-      "chg_week": 1.03,
-      "chg_month": 2.11,
-      "sma20": 99.5838,
-      "ts": "2026-03-31T08:06:30.533592Z"
+      "price": 100.225,
+      "chg_week": 0.8,
+      "chg_month": 1.88,
+      "sma20": 99.5722,
+      "ts": "2026-03-31T15:07:55.130914Z"
     },
     "EURUSD": {
       "ticker": "EURUSD=X",
       "n": "EUR/USD",
       "cat": "fx",
       "ok": true,
-      "price": 1.1476,
-      "chg_week": -1.13,
-      "chg_month": -2.41,
-      "sma20": 1.1552,
-      "ts": "2026-03-31T08:06:30.673497Z"
+      "price": 1.1526,
+      "chg_week": -0.7,
+      "chg_month": -1.98,
+      "sma20": 1.1554,
+      "ts": "2026-03-31T15:07:55.218766Z"
     },
     "SP500": {
       "ticker": "^GSPC",
       "n": "S&P 500",
       "cat": "equity",
       "ok": true,
-      "price": 6343.7202,
-      "chg_week": -3.61,
-      "chg_month": -7.78,
-      "sma20": 6649.354,
-      "ts": "2026-03-31T08:06:30.806527Z"
+      "price": 6433.23,
+      "chg_week": -1.88,
+      "chg_month": -6.52,
+      "sma20": 6630.184,
+      "ts": "2026-03-31T15:07:55.391197Z"
     },
     "STOXX": {
       "ticker": "^STOXX50E",
       "n": "Euro Stoxx 50",
       "cat": "equity",
       "ok": true,
-      "price": 5571.98,
-      "chg_week": -0.17,
-      "chg_month": -6.93,
-      "sma20": 5675.346,
-      "ts": "2026-03-31T08:06:30.942077Z"
+      "price": 5570.3799,
+      "chg_week": -0.2,
+      "chg_month": -6.96,
+      "sma20": 5675.266,
+      "ts": "2026-03-31T15:07:55.487650Z"
     },
     "IHYG": {
       "ticker": "IHYG.DE",
@@ -144,11 +144,11 @@
       "n": "Bitcoin EUR",
       "cat": "crypto",
       "ok": true,
-      "price": 58627.0234,
-      "chg_week": -1.7,
-      "chg_month": -2.65,
-      "sma20": 60588.7557,
-      "ts": "2026-03-31T08:06:32.981841Z"
+      "price": 57922.918,
+      "chg_week": -2.88,
+      "chg_month": -3.82,
+      "sma20": 60553.5504,
+      "ts": "2026-03-31T15:07:57.439672Z"
     }
   },
   "probabilities": {
@@ -157,16 +157,16 @@
     "crisi_taiwan": 15,
     "hormuz": 40,
     "recessione_germania": 38,
-    "crisi_btp": 29,
-    "bce_alza": 55,
+    "crisi_btp": 27,
+    "bce_alza": 57,
     "deflazione_eu": 5,
     "hard_landing_usa": 35,
-    "soft_landing": 37,
-    "stagflazione_usa": 46,
-    "boom_ai": 61,
+    "soft_landing": 39,
+    "stagflazione_usa": 48,
+    "boom_ai": 62,
     "flash_crash": 25,
     "bear_market": 15,
-    "bull_estremo": 11,
+    "bull_estremo": 12,
     "inversione_curva": 30,
     "bitcoin_mainstream": 45,
     "regolamentazione_crypto": 55,
@@ -177,7 +177,7 @@
     "rivoluzione_farmaceutica": 75,
     "fusione_nucleare": 15,
     "pace_ucraina": 30,
-    "superciclo_commodity": 63,
+    "superciclo_commodity": 65,
     "dollaro_debole": 33,
     "credito_privato_boom": 55,
     "small_cap_outperform": 40,
@@ -202,7 +202,7 @@
     "infrastrutture_boom": 70,
     "cbdc_europeo": 60,
     "dedollarizzazione": 55,
-    "inflazione_strutturale": 57,
+    "inflazione_strutturale": 58,
     "repressione_finanziaria": 21
   },
   "consensus_date": null,
