@@ -25,7 +25,7 @@ jobs:
         run: pip install yfinance pandas numpy requests
 
       - name: Fetch market data
-       run: python scripts/fetch_market_data.py
+        run: python scripts/fetch_market_data.py
 
       - name: Commit and push data
         run: |
