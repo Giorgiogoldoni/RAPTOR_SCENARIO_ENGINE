@@ -1,1 +1,89 @@
-{"meta":{"updated":"pending","regime":"NEUTRO","avg_score":2,"long":0,"flat":0},"data":{}}
+{
+  "meta": {
+    "updated": "2026-04-07T15:04:17.511200Z",
+    "updated_it": "07/04/2026 15:04",
+    "source": "Yahoo Finance"
+  },
+  "data": {
+    "SP500": {
+      "ticker": "^GSPC",
+      "n": "S&P 500",
+      "ok": true,
+      "price": 6543.6602,
+      "chg_week": 3.15,
+      "ts": "2026-04-07T15:04:15.787142Z"
+    },
+    "STOXX": {
+      "ticker": "^STOXX50E",
+      "n": "Euro Stoxx 50",
+      "ok": true,
+      "price": 5647.5298,
+      "chg_week": 2.57,
+      "ts": "2026-04-07T15:04:15.904997Z"
+    },
+    "FTSEMIB": {
+      "ticker": "FTSEMIB.MI",
+      "n": "FTSE MIB",
+      "ok": true,
+      "price": 45561.4102,
+      "chg_week": 5.03,
+      "ts": "2026-04-07T15:04:15.998290Z"
+    },
+    "DAX": {
+      "ticker": "^GDAXI",
+      "n": "DAX",
+      "ok": true,
+      "price": 22986.8398,
+      "chg_week": 3.08,
+      "ts": "2026-04-07T15:04:16.070314Z"
+    },
+    "VIX": {
+      "ticker": "^VIX",
+      "n": "VIX",
+      "ok": true,
+      "price": 26.42,
+      "chg_week": -13.69,
+      "ts": "2026-04-07T15:04:16.238240Z"
+    },
+    "US10Y": {
+      "ticker": "^TNX",
+      "n": "US 10Y Yield",
+      "ok": true,
+      "price": 4.359,
+      "chg_week": 0.39,
+      "ts": "2026-04-07T15:04:16.474697Z"
+    },
+    "EURUSD": {
+      "ticker": "EURUSD=X",
+      "n": "EUR/USD",
+      "ok": true,
+      "price": 1.1574,
+      "chg_week": 1.0,
+      "ts": "2026-04-07T15:04:16.702217Z"
+    },
+    "GOLD": {
+      "ticker": "GC=F",
+      "n": "Gold",
+      "ok": true,
+      "price": 4667.3999,
+      "chg_week": 3.12,
+      "ts": "2026-04-07T15:04:17.119445Z"
+    },
+    "CRUDE": {
+      "ticker": "CL=F",
+      "n": "WTI Crude",
+      "ok": true,
+      "price": 116.0,
+      "chg_week": 12.75,
+      "ts": "2026-04-07T15:04:17.311860Z"
+    },
+    "BITCOIN": {
+      "ticker": "BTC-EUR",
+      "n": "Bitcoin EUR",
+      "ok": true,
+      "price": 58627.6445,
+      "chg_week": 1.16,
+      "ts": "2026-04-07T15:04:17.511150Z"
+    }
+  }
+}
