@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RSE Metriche & Metodologia</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+:root{
+  --bg:#f4f6f9;--card:#fff;--border:#dde3ec;--text:#1a2332;--muted:#6b7c93;
+  --accent:#7c3aed;--blue:#1a6fcf;--green:#16a34a;--red:#dc2626;--gold:#d4aa48;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:13px;line-height:1.6;}
+.top-bar{background:#0d1526;color:#fff;padding:10px 24px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100;}
+.top-bar a{color:#5a9fd4;text-decoration:none;font-size:12px;}
+.top-bar h1{font-size:14px;font-weight:700;letter-spacing:1px;flex:1;}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px;}
+.hero{background:linear-gradient(135deg,#0d1526,#2d1b69);border-radius:12px;padding:32px;margin-bottom:28px;color:#fff;}
+.hero h2{font-size:20px;font-weight:800;letter-spacing:2px;margin-bottom:6px;}
+.hero p{color:#a78bfa;font-size:13px;}
+.hero .badge{display:inline-block;background:rgba(139,92,246,.3);border:1px solid #7c3aed;color:#c4b5fd;font-size:10px;padding:2px 10px;border-radius:20px;letter-spacing:1px;margin-top:8px;}
+.section{margin-bottom:32px;}
+.section-title{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:6px;border-bottom:2px solid var(--border);}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin-bottom:12px;}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px;}
+th{background:#f8fafc;font-weight:600;text-align:left;padding:7px 10px;border-bottom:2px solid var(--border);color:var(--muted);}
+td{padding:7px 10px;border-bottom:1px solid var(--border);}
+tr:last-child td{border-bottom:none;}
+.tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:20px;background:var(--bg);border:1px solid var(--border);color:var(--muted);margin:2px;}
+.tag.purple{background:#faf5ff;border-color:#d8b4fe;color:#7c3aed;}
+.tag.blue{background:#eff6ff;border-color:#93c5fd;color:#1a6fcf;}
+.tag.green{background:#f0fdf4;border-color:#86efac;color:#16a34a;}
+.tag.gold{background:#fffbeb;border-color:#fde68a;color:#d97706;}
+.flow-steps{display:flex;align-items:center;gap:0;flex-wrap:wrap;margin:14px 0;}
+.flow-step{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:11px;text-align:center;}
+.flow-step strong{display:block;font-size:10px;color:var(--muted);margin-bottom:2px;}
+.flow-arrow{color:var(--muted);padding:0 6px;font-size:16px;}
+.indicator-box{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:8px;}
+.ind-header{display:flex;align-items:center;gap:10px;margin-bottom:6px;}
+.ind-ticker{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--accent);background:#faf5ff;padding:2px 8px;border-radius:4px;}
+.ind-name{font-size:12px;font-weight:600;}
+.ind-area{font-size:10px;color:var(--muted);}
+.ind-desc{font-size:12px;color:var(--muted);line-height:1.6;}
+.formula-box{background:#faf5ff;border:1px solid #d8b4fe;border-radius:8px;padding:14px 16px;margin:10px 0;}
+.formula-box h4{font-size:11px;font-weight:700;color:#7c3aed;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.formula-row{display:flex;align-items:center;gap:10px;padding:5px 0;border-bottom:1px solid #ede9fe;font-size:12px;}
+.formula-row:last-child{border-bottom:none;}
+.formula-cond{font-family:'JetBrains Mono',monospace;color:#7c3aed;min-width:180px;}
+.formula-pts{font-weight:700;min-width:50px;}
+.formula-pts.pos{color:var(--green);}
+.formula-pts.neg{color:var(--red);}
+.formula-desc{color:var(--muted);}
+.weight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0;}
+.weight-box{background:var(--card);border:2px solid var(--border);border-radius:8px;padding:14px;text-align:center;}
+.weight-pct{font-size:28px;font-weight:800;color:var(--accent);}
+.weight-label{font-size:11px;font-weight:700;margin:4px 0;}
+.weight-sub{font-size:10px;color:var(--muted);}
+.regime-table{margin:12px 0;}
+.regime-row{display:flex;align-items:center;gap:12px;padding:8px 12px;border-radius:6px;margin-bottom:4px;font-size:12px;}
+.regime-bull{background:#f0fdf4;border:1px solid #86efac;}
+.regime-esp{background:#eff6ff;border:1px solid #93c5fd;}
+.regime-neu{background:#fffbeb;border:1px solid #fde68a;}
+.regime-rall{background:#fff7ed;border:1px solid #fdba74;}
+.regime-bear{background:#fff1f2;border:1px solid #fca5a5;}
+.regime-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.regime-score{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);min-width:80px;}
+.signal-card{border-radius:8px;padding:12px 16px;margin-bottom:8px;border-left:4px solid;}
+.sc-stress{background:#fff1f2;border-color:#dc2626;}
+.sc-paura{background:#fff1f2;border-color:#ef4444;}
+.sc-inflaz{background:#fff7ed;border-color:#f97316;}
+.sc-credito{background:#fff7ed;border-color:#ea580c;}
+.sc-crescita{background:#f0fdf4;border-color:#16a34a;}
+.sc-asia{background:#faf5ff;border-color:#7c3aed;}
+.signal-title{font-size:12px;font-weight:700;margin-bottom:4px;}
+.signal-desc{font-size:11px;color:var(--muted);}
+code{font-family:'JetBrains Mono',monospace;background:#f1f5f9;padding:2px 6px;border-radius:4px;font-size:11px;color:#1a6fcf;}
+
+/* SEZIONE MACRO MOVER COMPLEMENTARE */
+.mm-bridge{background:linear-gradient(135deg,#0d1526,#1e1b4b);border-radius:12px;padding:24px;margin-bottom:20px;color:#fff;}
+.mm-bridge h3{font-size:16px;font-weight:700;color:#a78bfa;margin-bottom:12px;}
+.mm-bridge p{font-size:12px;color:#c4b5fd;line-height:1.8;margin-bottom:12px;}
+.mm-compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;}
+.mm-col{background:rgba(255,255,255,.05);border:1px solid rgba(139,92,246,.3);border-radius:8px;padding:14px;}
+.mm-col h4{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px;}
+.mm-col ul{list-style:none;font-size:11px;color:#c4b5fd;}
+.mm-col ul li{padding:3px 0;padding-left:14px;position:relative;}
+.mm-col ul li::before{content:'→';position:absolute;left:0;color:#7c3aed;}
+.info-box{background:#eff6ff;border:1px solid #93c5fd;border-radius:8px;padding:12px 16px;font-size:12px;color:#1e40af;margin:10px 0;}
+
+.json-box{background:#1e1b4b;border-radius:8px;padding:16px;font-family:'JetBrains Mono',monospace;font-size:11px;color:#a78bfa;margin:10px 0;overflow-x:auto;}
+.json-key{color:#7c3aed;}
+.json-val{color:#c4b5fd;}
+.json-comment{color:#4b5563;}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <a href="https://giorgiogoldoni.github.io/RAPTOR_SCENARIO_ENGINE/RSE.html">← RSE</a>
+  <h1>📐 Metriche &amp; Metodologia</h1>
+  <span style="font-size:11px;color:#3a5a7a">v2.1 · Multi-Region · Aprile 2026</span>
+</div>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <h2>RAPTOR SCENARIO ENGINE</h2>
+    <p>Il RSE calcola automaticamente il regime di mercato globale combinando 20 indicatori macro su tre aree geografiche. Le probabilità dei 52 scenari vengono aggiornate due volte al giorno in base ai dati di mercato in tempo reale.</p>
+    <span class="badge">2× / giorno · 09:00 e 16:00 IT · GitHub Actions</span>
+  </div>
+
+  <!-- SISTEMA COMPLEMENTARE MACRO MOVER -->
+  <div class="section">
+    <div class="section-title">🔮 Sistema Complementare — RAPTOR Macro Mover</div>
+
+    <div class="mm-bridge">
+      <h3>RSE + Macro Mover — Due sistemi, un'unica visione macro</h3>
+      <p>Il RAPTOR Macro Mover è un sistema complementare al RSE, con approccio e focus diversi. Usarli insieme dà una visione macro più completa e robusta.</p>
+      <div class="mm-compare">
+        <div class="mm-col">
+          <h4 style="color:#60a5fa">RSE — Scenario Engine</h4>
+          <ul>
+            <li>52 scenari su 3 aree geografiche</li>
+            <li>Regime globale aggregato (USA 40%, EU 35%, Asia 25%)</li>
+            <li>Focus su segnali geopolitici e regionali</li>
+            <li>Aggiornamento 2× giorno (09:00 e 16:00)</li>
+            <li>Override manuale degli scenari</li>
+            <li>Consensus istituzionale (BCE, FMI, BlackRock)</li>
+            <li>Ottimale per: visione tattica cross-regionale</li>
+          </ul>
+        </div>
+        <div class="mm-col">
+          <h4 style="color:#a78bfa">Macro Mover</h4>
+          <ul>
+            <li>14 scenari ciclo economico storico</li>
+            <li>850+ settimane di storia (dal 2010)</li>
+            <li>Focus su ciclo macro USA (CPI, yield, spread)</li>
+            <li>Aggiornamento 1× giorno (13:00 IT)</li>
+            <li>Previsione Markov Chain a 1/2/4/8 settimane</li>
+            <li>Portafoglio ETF ottimizzato (15 ETF EU)</li>
+            <li>Ottimale per: allocazione portafoglio operativa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      💡 <strong>Come usarli insieme:</strong> Usa il RSE per la visione geopolitica e regionale (es. stress BTP, crisi Asia), il Macro Mover per l'allocazione operativa del portafoglio e il timing dei ribilanciamenti.
+    </div>
+
+    <table>
+      <thead><tr><th>Dimensione</th><th>RSE</th><th>Macro Mover</th></tr></thead>
+      <tbody>
+        <tr><td>Scenari</td><td>52 (geopolitici + macro + finanziari)</td><td>14 (ciclo economico)</td></tr>
+        <tr><td>Copertura geografica</td><td>USA + EU + Asia</td><td>USA (con proxy EU)</td></tr>
+        <tr><td>Orizzonte previsivo</td><td>Tattico (giorni/settimane)</td><td>4-8 settimane (Markov)</td></tr>
+        <tr><td>Fonte dati</td><td>Yahoo Finance 20 ticker</td><td>Yahoo Finance + BLS</td></tr>
+        <tr><td>Output operativo</td><td>Regime globale + 52 probabilità</td><td>Portafoglio 15 ETF + segnale</td></tr>
+        <tr><td>AI</td><td>No</td><td>Groq llama-3.3-70b</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FLUSSO AGGIORNAMENTO -->
+  <div class="section">
+    <div class="section-title">Flusso di Aggiornamento RSE</div>
+    <div class="card">
+      <div class="flow-steps">
+        <div class="flow-step"><strong>01 · 09:00 e 16:00</strong>GitHub Actions</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>02 · FETCH</strong>Yahoo Finance 20 ticker</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>03 · CALC</strong>Regime USA/EU/Asia</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>04 · MERGE</strong>Consensus + Override</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>05 · WRITE</strong>market_data_rse.json</div>
+      </div>
+      <p style="font-size:12px;color:var(--muted)">Lo script legge eventuali override da <code>data/overrides.json</code> e il consensus istituzionale da <code>data/consensus.json</code>. Le probabilità finali sono una media ponderata tra calcolo automatico e consensus.</p>
+    </div>
+  </div>
+
+  <!-- INDICATORI USA -->
+  <div class="section">
+    <div class="section-title">🇺🇸 Indicatori — Area USA (Peso base 40%)</div>
+
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^VIX</span><div><div class="ind-name">CBOE Volatility Index</div><div class="ind-area">USA · Volatilità implicita S&P 500</div></div></div>
+      <div class="ind-desc">Misura la volatilità implicita dell'S&P 500 sui prossimi 30 giorni. Sotto 15 = mercato sereno. Sopra 30 = paura. È il termometro del rischio più usato al mondo e domina il calcolo del regime USA.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^TNX</span><div><div class="ind-name">US Treasury 10Y Yield</div><div class="ind-area">USA · Tasso a lungo termine</div></div></div>
+      <div class="ind-desc">Tasso sui titoli di stato USA a 10 anni. Usato con il 2Y per la curva dei rendimenti. Curva invertita segnala storicamente recessione entro 12-18 mesi.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^IRX</span><div><div class="ind-name">US Treasury 2Y Yield</div><div class="ind-area">USA · Tasso a breve termine</div></div></div>
+      <div class="ind-desc">Tasso a breve termine, sensibile alle aspettative sui Fed Funds. Il differenziale 10Y−2Y è il principale indicatore di inversione della curva.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^GSPC</span><div><div class="ind-name">S&P 500</div><div class="ind-area">USA · Equity benchmark</div></div></div>
+      <div class="ind-desc">Indice delle 500 maggiori società USA. Variazione mensile entra nel calcolo del regime: sopra +3% aggiunge punti positivi, sotto -5% penalizza.</div>
+    </div>
+
+    <div class="formula-box">
+      <h4>Formula Regime USA</h4>
+      <div class="formula-row"><span class="formula-cond">VIX &lt; 15</span><span class="formula-pts pos">+2 pt</span><span class="formula-desc">Bassa volatilità, mercato rialzista</span></div>
+      <div class="formula-row"><span class="formula-cond">VIX 15–20</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Volatilità normale</span></div>
+      <div class="formula-row"><span class="formula-cond">VIX 20–30</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Volatilità elevata, attenzione</span></div>
+      <div class="formula-row"><span class="formula-cond">VIX &gt; 30</span><span class="formula-pts neg">−2 pt</span><span class="formula-desc">Paura elevata, ribassista</span></div>
+      <div class="formula-row"><span class="formula-cond">Curva 10Y−2Y &gt; 0.5%</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Curva normale, espansione</span></div>
+      <div class="formula-row"><span class="formula-cond">Curva 10Y−2Y &lt; 0</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Curva invertita, rischio recessione</span></div>
+      <div class="formula-row"><span class="formula-cond">S&P500 &gt; +3% mensile</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Momentum rialzista</span></div>
+      <div class="formula-row"><span class="formula-cond">S&P500 &lt; −5% mensile</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Pressione ribassista</span></div>
+    </div>
+  </div>
+
+  <!-- INDICATORI EU -->
+  <div class="section">
+    <div class="section-title">🇪🇺 Indicatori — Area Europa (Peso base 35%)</div>
+
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^STOXX50E</span><div><div class="ind-name">Euro Stoxx 50</div><div class="ind-area">EU · Benchmark Eurozona</div></div></div>
+      <div class="ind-desc">Le 50 maggiori blue chip dell'Eurozona. Benchmark principale per l'equity europeo, entra nella media con DAX, CAC e FTSE.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^GDAXI</span><div><div class="ind-name">DAX Germania</div><div class="ind-area">EU · Motore industriale EU</div></div></div>
+      <div class="ind-desc">Indice delle 40 maggiori società tedesche. Una debolezza del DAX segnala spesso problemi strutturali nell'export EU.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">BTP10.MI / EXX6.DE</span><div><div class="ind-name">Proxy Spread BTP-Bund</div><div class="ind-area">EU · Rischio sovrano Italia</div></div></div>
+      <div class="ind-desc">Differenza di performance mensile tra BTP italiano e Bund tedesco. Se la differenza supera −2% si attiva il segnale STRESS PERIFERICO che abbassa il regime EU di 2 punti e aumenta il peso EU al 45%.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">IHYG.MI</span><div><div class="ind-name">iShares EUR High Yield Bond</div><div class="ind-area">EU · Credito HY Europa</div></div></div>
+      <div class="ind-desc">Obbligazioni europee ad alto rendimento. Molto sensibile al rischio credito — un calo brusco anticipa spesso stress nel sistema bancario EU.</div>
+    </div>
+
+    <div class="formula-box">
+      <h4>Formula Regime Europa</h4>
+      <div class="formula-row"><span class="formula-cond">Azionario EU &gt; +3%</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Media STOXX + DAX + CAC + FTSE</span></div>
+      <div class="formula-row"><span class="formula-cond">Azionario EU &lt; −4%</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Pressione ribassista Europa</span></div>
+      <div class="formula-row"><span class="formula-cond">BTP−Bund diff &lt; −2%</span><span class="formula-pts neg">−2 pt</span><span class="formula-desc">⚠️ STRESS PERIFERICO</span></div>
+      <div class="formula-row"><span class="formula-cond">BTP−Bund diff −1%/−2%</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Allargamento spread, attenzione</span></div>
+      <div class="formula-row"><span class="formula-cond">IHYG &lt; −3% mensile</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Stress credito High Yield EU</span></div>
+      <div class="formula-row"><span class="formula-cond">EUR/USD &lt; 1.02</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Euro debole, pressione importazioni</span></div>
+    </div>
+  </div>
+
+  <!-- INDICATORI ASIA -->
+  <div class="section">
+    <div class="section-title">🌏 Indicatori — Area Asia (Peso base 25%)</div>
+
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^N225</span><div><div class="ind-name">Nikkei 225</div><div class="ind-area">Asia · Giappone</div></div></div>
+      <div class="ind-desc">Le 225 maggiori società giapponesi. Apre prima degli altri mercati — spesso leading indicator per la seduta europea.</div>
+    </div>
+    <div class="indicator-box">
+      <div class="ind-header"><span class="ind-ticker">^HSI</span><div><div class="ind-name">Hang Seng Index</div><div class="ind-area">Asia · Proxy Cina</div></div></div>
+      <div class="ind-desc">Le maggiori società di Hong Kong, proxy della Cina continentale. Un crollo HSI &gt;−10% mensile scala il peso Asia al 30%.</div>
+    </div>
+
+    <div class="formula-box">
+      <h4>Formula Regime Asia</h4>
+      <div class="formula-row"><span class="formula-cond">Nikkei &gt; +3% mensile</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Momentum Asia positivo</span></div>
+      <div class="formula-row"><span class="formula-cond">Nikkei &lt; −5% mensile</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Debolezza Giappone</span></div>
+      <div class="formula-row"><span class="formula-cond">Hang Seng &gt; +3% mensile</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Ripresa Cina/HK</span></div>
+      <div class="formula-row"><span class="formula-cond">Hang Seng &lt; −5% mensile</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Debolezza Cina/HK</span></div>
+      <div class="formula-row"><span class="formula-cond">Rame &gt; +5% mensile</span><span class="formula-pts pos">+1 pt</span><span class="formula-desc">Domanda globale in crescita</span></div>
+      <div class="formula-row"><span class="formula-cond">Rame &lt; −5% mensile</span><span class="formula-pts neg">−1 pt</span><span class="formula-desc">Segnale rallentamento globale</span></div>
+    </div>
+  </div>
+
+  <!-- INDICATORI GLOBALI -->
+  <div class="section">
+    <div class="section-title">🌍 Indicatori Globali</div>
+    <table>
+      <thead><tr><th>Ticker</th><th>Nome</th><th>Ruolo nel Regime</th></tr></thead>
+      <tbody>
+        <tr><td><code>CL=F</code></td><td>WTI Crude Oil Futures</td><td>Sopra +10%/mese → pressione inflattiva</td></tr>
+        <tr><td><code>GC=F</code></td><td>Gold Futures</td><td>Safe haven — proxy avversione rischio globale</td></tr>
+        <tr><td><code>HG=F</code></td><td>Copper Futures (Rame)</td><td>"Dr. Copper" — proxy crescita economica globale</td></tr>
+        <tr><td><code>DX-Y.NYB</code></td><td>US Dollar Index (DXY)</td><td>Dollaro forte penalizza EM e commodity</td></tr>
+        <tr><td><code>EURUSD=X</code></td><td>EUR/USD</td><td>Sotto 1.02 → pressioni inflattive import EU</td></tr>
+        <tr><td><code>BTC-EUR</code></td><td>Bitcoin EUR</td><td>Proxy appetito al rischio — solo scenari crypto</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PESI DINAMICI -->
+  <div class="section">
+    <div class="section-title">Pesi Dinamici delle Aree</div>
+    <div class="weight-grid">
+      <div class="weight-box"><div class="weight-pct">40%</div><div class="weight-label">🇺🇸 USA</div><div class="weight-sub">VIX, S&P, curva tassi</div></div>
+      <div class="weight-box"><div class="weight-pct">35%</div><div class="weight-label">🇪🇺 Europa</div><div class="weight-sub">Azionario EU + spread + credito</div></div>
+      <div class="weight-box"><div class="weight-pct">25%</div><div class="weight-label">🌏 Asia</div><div class="weight-sub">Nikkei + HSI + Rame</div></div>
+    </div>
+    <table>
+      <thead><tr><th>Condizione</th><th>USA</th><th>EU</th><th>Asia</th><th>Motivazione</th></tr></thead>
+      <tbody>
+        <tr><td>Default (normale)</td><td>40%</td><td>35%</td><td>25%</td><td>Pesi standard</td></tr>
+        <tr><td>VIX &gt; 30</td><td>50%</td><td>30%</td><td>20%</td><td>Contagio parte da Wall Street</td></tr>
+        <tr><td>VIX &gt; 35</td><td>55%</td><td>28%</td><td>17%</td><td>Crisi sistemica — USA domina</td></tr>
+        <tr><td>Spread BTP−Bund &lt; −2%</td><td>35%</td><td>45%</td><td>20%</td><td>Stress periferico EU dominante</td></tr>
+        <tr><td>HSI &lt; −10% mensile</td><td>38%</td><td>32%</td><td>30%</td><td>Crisi Asia rilevante per contagio</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LIVELLI DI REGIME -->
+  <div class="section">
+    <div class="section-title">Livelli di Regime</div>
+    <div class="regime-table">
+      <div class="regime-row regime-bull"><div class="regime-dot" style="background:#16a34a"></div><strong>🟢 BULL</strong><span class="regime-score">≥ 2.0</span><span>Tutti i mercati in momentum positivo, bassa volatilità → Sovrappeso equity, riduci cash</span></div>
+      <div class="regime-row regime-esp"><div class="regime-dot" style="background:#1a6fcf"></div><strong>🔵 ESPANSIONE</strong><span class="regime-score">0.8 → 2.0</span><span>Crescita moderata, qualche segnale misto → Equity con selettività settoriale</span></div>
+      <div class="regime-row regime-neu"><div class="regime-dot" style="background:#d97706"></div><strong>🟡 NEUTRO</strong><span class="regime-score">−0.8 → 0.8</span><span>Segnali contrastanti, incertezza elevata → Bilanciato, evita leva, aumenta XEON</span></div>
+      <div class="regime-row regime-rall"><div class="regime-dot" style="background:#ea580c"></div><strong>🟠 RALLENTAMENTO</strong><span class="regime-score">−1.5 → −0.8</span><span>Deterioramento macro, credito sotto stress → Riduzione equity, aumenta bond gov</span></div>
+      <div class="regime-row regime-bear"><div class="regime-dot" style="background:#dc2626"></div><strong>🔴 BEAR</strong><span class="regime-score">&lt; −1.5</span><span>Stress su tutti i fronti, alta volatilità → Difensivo, cash, oro, short equity</span></div>
+    </div>
+  </div>
+
+  <!-- SEGNALI SPECIALI -->
+  <div class="section">
+    <div class="section-title">Segnali Speciali</div>
+    <div class="signal-card sc-stress"><div class="signal-title">⚠️ STRESS PERIFERICO — BTP−Bund &lt; −2%</div><div class="signal-desc">Il BTP italiano perde oltre 2pp più del Bund in un mese. Score EU −2pt, peso EU sale al 45%.</div></div>
+    <div class="signal-card sc-paura"><div class="signal-title">🔴 PAURA ELEVATA — VIX &gt; 30</div><div class="signal-desc">Soglia storica di paura. Il peso USA nel regime sale automaticamente al 50-55%.</div></div>
+    <div class="signal-card sc-inflaz"><div class="signal-title">🛢️ PRESSIONE INFLATTIVA — WTI &gt; +10%/mese</div><div class="signal-desc">Il petrolio sale oltre 10% mensile. Aumenta probabilità stagflazione USA e stress BTP.</div></div>
+    <div class="signal-card sc-credito"><div class="signal-title">🔴 STRESS CREDITO EU — IHYG &lt; −3%/mese</div><div class="signal-desc">HY europeo scende oltre 3% mensile. Segnale precoce di tensioni nel sistema finanziario EU.</div></div>
+    <div class="signal-card sc-crescita"><div class="signal-title">🟢 CRESCITA GLOBALE — Rame &gt; +5%/mese</div><div class="signal-desc">"Dr. Copper" — rialzo sostenuto segnala domanda reale in crescita, specialmente da Cina ed EM.</div></div>
+    <div class="signal-card sc-asia"><div class="signal-title">🌏 CRISI ASIA — HSI &lt; −10%/mese</div><div class="signal-desc">Hang Seng crolla oltre 10% mensile. Scala il peso Asia al 30%.</div></div>
+  </div>
+
+  <!-- STRUTTURA JSON -->
+  <div class="section">
+    <div class="section-title">Struttura JSON Output</div>
+    <div class="json-box">
+<span class="json-comment">// market_data_rse.json — STRUTTURA v2.0</span>
+{
+  <span class="json-key">"meta"</span>: {
+    <span class="json-key">"regime"</span>: <span class="json-val">"BULL | ESPANSIONE | NEUTRO | RALLENTAMENTO | BEAR"</span>,
+    <span class="json-key">"regime_score"</span>: <span class="json-val">-0.45</span>,  <span class="json-comment">// float pesato</span>
+    <span class="json-key">"regime_score_usa"</span>: <span class="json-val">-1</span>,
+    <span class="json-key">"regime_score_eu"</span>: <span class="json-val">-2</span>,
+    <span class="json-key">"regime_score_asia"</span>: <span class="json-val">0</span>,
+    <span class="json-key">"regime_weights"</span>: <span class="json-val">{"usa": 0.40, "eu": 0.35, "asia": 0.25}</span>,
+    <span class="json-key">"regime_signals"</span>: <span class="json-val">["STRESS_PERIFERICO", "PAURA_ELEVATA"]</span>,
+    <span class="json-key">"btp_bund_diff"</span>: <span class="json-val">-2.3</span>,  <span class="json-comment">// proxy spread %</span>
+    <span class="json-key">"updated_it"</span>: <span class="json-val">"10/04/2026 09:00"</span>
+  },
+  <span class="json-key">"indicators"</span>: { <span class="json-comment">/* 20 indicatori con valori */</span> },
+  <span class="json-key">"probabilities"</span>: { <span class="json-comment">/* 52 scenari 0-100 */</span> }
+}
+    </div>
+    <table>
+      <thead><tr><th>Campo</th><th>Tipo</th><th>Descrizione</th></tr></thead>
+      <tbody>
+        <tr><td><code>meta.regime</code></td><td>string</td><td>Regime globale: BULL / ESPANSIONE / NEUTRO / RALLENTAMENTO / BEAR</td></tr>
+        <tr><td><code>meta.regime_score</code></td><td>float</td><td>Score globale pesato (es. −0.45)</td></tr>
+        <tr><td><code>meta.regime_weights</code></td><td>object</td><td>Pesi dinamici applicati {usa, eu, asia}</td></tr>
+        <tr><td><code>meta.regime_signals</code></td><td>array</td><td>Segnali speciali attivi</td></tr>
+        <tr><td><code>meta.btp_bund_diff</code></td><td>float</td><td>Differenza % mensile BTP−Bund (proxy spread)</td></tr>
+        <tr><td><code>indicators</code></td><td>object</td><td>20 indicatori con valori correnti</td></tr>
+        <tr><td><code>probabilities</code></td><td>object</td><td>52 scenari con probabilità 0-100</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- OVERRIDE -->
+  <div class="section">
+    <div class="section-title">Override Manuale</div>
+    <div class="card">
+      <p style="font-size:12px;color:var(--muted);margin-bottom:12px">Per sovrascrivere manualmente la probabilità di uno o più scenari, modifica il file <code>data/overrides.json</code> nel repo:</p>
+      <div class="json-box">
+<span class="json-comment">// data/overrides.json</span>
+{
+  <span class="json-key">"guerra_commerciale"</span>: <span class="json-val">65</span>,
+  <span class="json-key">"soft_landing"</span>: <span class="json-val">30</span>,
+  <span class="json-key">"crisi_btp"</span>: <span class="json-val">45</span>
+}
+      </div>
+      <p style="font-size:12px;color:var(--muted)">Gli override hanno priorità massima e sovrascrivono sia il calcolo automatico che il consensus. Per tornare al calcolo automatico, svuota il file con <code>{}</code>.</p>
+    </div>
+  </div>
+
+  <!-- LINK -->
+  <div class="section">
+    <div class="section-title">URL JSON Live</div>
+    <div class="card">
+      <div style="font-size:12px;margin-bottom:6px"><strong>RSE:</strong> <code>https://giorgiogoldoni.github.io/RAPTOR_SCENARIO_ENGINE/data/market_data_rse.json</code></div>
+      <div style="font-size:12px;margin-bottom:6px"><strong>Ranking:</strong> <code>https://giorgiogoldoni.github.io/raptor-ranking/data/ranking.json</code></div>
+      <div style="font-size:12px;margin-bottom:6px"><strong>Macro Mover:</strong> <code>https://giorgiogoldoni.github.io/raptor-macro-mover/data/latest.json</code></div>
+      <div style="font-size:12px"><strong>Portfolio:</strong> <code>https://giorgiogoldoni.github.io/raptor-macro-mover/data/portfolio.json</code></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:20px 0;font-size:11px;color:var(--muted)">
+    RAPTOR Scenario Engine · giorgiogoldoni.github.io · v2.1 · Aprile 2026
+  </div>
+
+</div>
+</body>
+</html>
