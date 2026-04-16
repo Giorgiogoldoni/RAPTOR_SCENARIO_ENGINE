@@ -470,8 +470,9 @@ def calc_forecast(history, current_regime, duration_info, scenari_attivi):
         pct   = duration_info.get("percentuale_durata", 50)
         prob_continua = max(20, min(80, 100 - pct))
         prob_altro    = round((100 - prob_continua) / (len(REGIMES) - 1))
-        dist_base = {r: prob_altro for r in REGIMES}
-        dist_base[current_regime] = prob_continua
+        # Valori in 0-1 per _to_pct_dict
+        dist_base = {r: prob_altro/100 for r in REGIMES}
+        dist_base[current_regime] = prob_continua/100
         return {
             "4w":  _to_pct_dict(dist_base),
             "3m":  _to_pct_dict(dist_base),
@@ -572,13 +573,18 @@ def apply_scenario_adjustments(distribution, scenari_attivi, weeks_ahead):
 
 
 def _to_pct_dict(distribution):
-    """Converte distribuzione 0-1 in percentuali intere."""
-    pct = {r: round(v * 100) for r, v in distribution.items()}
+    """Converte distribuzione 0-1 in percentuali intere (0-100, somma=100)."""
+    # Normalizza prima a 1.0 per sicurezza
+    total = sum(distribution.values())
+    if total <= 0:
+        return {r: round(100/len(REGIMES)) for r in REGIMES}
+    normed = {r: v/total for r, v in distribution.items()}
+    pct = {r: max(0, round(v * 100)) for r, v in normed.items()}
     # Corregge arrotondamento a 100
     diff = 100 - sum(pct.values())
     if diff != 0:
         top = max(pct, key=pct.get)
-        pct[top] += diff
+        pct[top] = max(0, pct[top] + diff)
     return pct
 
 
