@@ -738,6 +738,9 @@ def main():
     # Gli override manuali hanno precedenza sugli automatici
     scenari_attivi = {**scenari_auto}
     for nome, cfg in overrides_scenari.items():
+        # Salta chiavi speciali che iniziano con _ (commenti/metadati)
+        if nome.startswith('_') or not isinstance(cfg, dict):
+            continue
         if cfg.get("attivo"):
             scenari_attivi[nome] = {
                 "attivo": True,
