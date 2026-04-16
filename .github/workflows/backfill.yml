@@ -1,0 +1,26 @@
+name: RSE — Backfill History (run once)
+
+on:
+  workflow_dispatch:   # Solo manuale — NON schedulato
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install yfinance pandas numpy
+      - name: Run backfill
+        run: python scripts/backfill_history.py
+      - name: Commit
+        run: |
+          git config --local user.email "rse-bot@github.com"
+          git config --local user.name "RSE DataBot"
+          git add data/market_data_rse.json
+          git diff --staged --quiet || git commit -m "📊 RSE backfill history — $(date +'%Y-%m-%d')"
+          git push
