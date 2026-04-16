@@ -5,49 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="RSE">
-<meta name="theme-color" content="#080818">
+<meta name="theme-color" content="#ffffff">
 <title>RAPTOR SCENARIO ENGINE</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#080818;--bg2:#0d0d22;--bg3:#12122a;--bg4:#181830;
-  --gold:#c8a020;--gold2:#e8c040;--gold3:#fff060;
-  --cyan:#00c8e0;--cyan2:#00e8ff;
-  --purple:#6030c0;--purple2:#8050e0;--purple3:#a070ff;
-  --green:#20a040;--green2:#30c060;--green3:#40e080;
-  --red:#c02020;--red2:#e04040;--red3:#ff6060;
-  --amber:#c08020;--amber2:#e0a030;
-  --gray:#606080;--gray2:#404060;--gray3:#282840;
-  --white:#e0e0f0;--white2:#c0c0e0;
+  --bg:#ffffff;--bg2:#f8f9fb;--bg3:#f0f2f6;--bg4:#e8eaf0;
+  --gold:#c8a020;--gold2:#b8900a;--gold3:#a07800;
+  --cyan:#0088aa;--cyan2:#006688;
+  --purple:#6030c0;--purple2:#8050e0;--purple3:#6040b0;
+  --green:#16a34a;--green2:#15803d;--green3:#166534;
+  --red:#dc2626;--red2:#b91c1c;--red3:#991b1b;
+  --amber:#d97706;--amber2:#b45309;
+  --gray:#6b7c93;--gray2:#9ca3af;--gray3:#e4e8f0;
+  --white:#1a2332;--white2:#374151;
   --r:10px;--r2:6px;
-  --glow-gold:0 0 20px rgba(200,160,32,.3);
-  --glow-cyan:0 0 20px rgba(0,200,224,.2);
+  --glow-gold:0 2px 12px rgba(200,160,32,.15);
+  --glow-cyan:0 2px 12px rgba(0,136,170,.1);
+  --shadow:0 1px 3px rgba(0,0,0,.06);
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Mono',monospace;background:var(--bg);color:var(--white2);min-height:100vh;font-size:12px;overflow-x:hidden;}
 
-/* STARS BACKGROUND */
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(96,48,192,.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(0,200,224,.05) 0%,transparent 50%);pointer-events:none;z-index:0;}
-
 /* HEADER */
-.hdr{background:linear-gradient(135deg,rgba(8,8,24,.98),rgba(13,13,34,.98));height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(200,160,32,.15);backdrop-filter:blur(10px);}
+.hdr{background:#ffffff;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:200;border-bottom:2px solid var(--gray3);box-shadow:var(--shadow);}
 .hdr-brand{display:flex;align-items:center;gap:14px;}
 .hdr-icon{font-size:28px;}
-.hdr-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:#fff;letter-spacing:.06em;}
+.hdr-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);letter-spacing:.06em;}
 .hdr-title span{color:var(--gold2);}
-.hdr-sub{font-size:9px;color:var(--purple3);letter-spacing:.14em;text-transform:uppercase;margin-top:1px;}
+.hdr-sub{font-size:9px;color:var(--gray);letter-spacing:.14em;text-transform:uppercase;margin-top:1px;}
 .hdr-right{display:flex;align-items:center;gap:14px;}
 .regime-badge{padding:4px 14px;border-radius:20px;font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
-.regime-bull{background:rgba(32,160,64,.15);color:var(--green3);border:1px solid rgba(32,160,64,.3);}
-.regime-espansione{background:rgba(0,200,224,.1);color:var(--cyan2);border:1px solid rgba(0,200,224,.2);}
+.regime-bull{background:rgba(22,163,74,.1);color:#166534;border:1px solid rgba(22,163,74,.3);}
+.regime-espansione{background:rgba(0,136,170,.1);color:#006688;border:1px solid rgba(0,136,170,.2);}
 .regime-neutro{background:rgba(200,160,32,.1);color:var(--gold2);border:1px solid rgba(200,160,32,.2);}
-.regime-rallentamento{background:rgba(192,128,32,.15);color:var(--amber2);border:1px solid rgba(192,128,32,.3);}
-.regime-bear{background:rgba(192,32,32,.15);color:var(--red3);border:1px solid rgba(192,32,32,.3);}
+.regime-rallentamento{background:rgba(217,119,6,.1);color:var(--amber2);border:1px solid rgba(217,119,6,.3);}
+.regime-bear{background:rgba(220,38,38,.1);color:var(--red2);border:1px solid rgba(220,38,38,.3);}
 
 /* NAV */
-.nav{background:rgba(13,13,34,.95);border-bottom:1px solid var(--gray3);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:64px;z-index:199;backdrop-filter:blur(10px);}
+.nav{background:#ffffff;border-bottom:1px solid var(--gray3);display:flex;overflow-x:auto;scrollbar-width:none;position:sticky;top:64px;z-index:199;box-shadow:var(--shadow);}
 .nav::-webkit-scrollbar{display:none;}
 .ntab{padding:12px 20px;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--gray);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;}
 .ntab:hover{color:var(--white);}
@@ -59,13 +57,13 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 /* SECTION HEADER */
 .sh{margin-bottom:20px;}
-.sh-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:#fff;}
+.sh-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;color:var(--white);}
 .sh-sub{font-size:10px;color:var(--gray);margin-top:3px;letter-spacing:.05em;}
 
 /* CARDS */
-.card{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r);padding:18px;margin-bottom:14px;}
+.card{background:var(--bg);border:1px solid var(--gray3);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:var(--shadow);}
 .card-title{font-size:12px;font-weight:500;color:var(--gold2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--gray3);letter-spacing:.05em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
-.card-glow{box-shadow:var(--glow-gold);}
+.card-glow{box-shadow:var(--glow-gold);border-left:3px solid var(--gold);}
 
 /* GRID */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
@@ -76,18 +74,18 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 @media(max-width:600px){.g2,.g3{grid-template-columns:1fr;}.main{padding:12px 8px 80px;}}
 
 /* STATS */
-.stat{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r);padding:14px;}
+.stat{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r);padding:14px;}
 .stat-label{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--gray);margin-bottom:5px;}
-.stat-value{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:#fff;line-height:1;}
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--white);line-height:1;}
 .stat-sub{font-size:9px;color:var(--gray);margin-top:4px;}
 
 /* SCENARIO CARDS */
 .sc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px;margin-bottom:14px;}
-.sc-card{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);padding:14px;cursor:pointer;transition:all .2s;position:relative;}
-.sc-card:hover{border-color:var(--gold);transform:translateY(-1px);}
-.sc-card.selected{border-color:var(--gold2);border-width:2px;background:rgba(200,160,32,.08);box-shadow:var(--glow-gold);}
+.sc-card{background:var(--bg);border:1px solid var(--gray3);border-radius:var(--r2);padding:14px;cursor:pointer;transition:all .2s;position:relative;box-shadow:var(--shadow);}
+.sc-card:hover{border-color:var(--gold);transform:translateY(-1px);box-shadow:0 4px 12px rgba(200,160,32,.12);}
+.sc-card.selected{border-color:var(--gold2);border-width:2px;background:#fffbf0;box-shadow:var(--glow-gold);}
 .sc-card.selected::after{content:'✓';position:absolute;top:8px;right:10px;color:var(--gold2);font-size:12px;font-weight:600;}
-.sc-name{font-size:11px;font-weight:500;color:#fff;margin-bottom:6px;line-height:1.4;padding-right:16px;}
+.sc-name{font-size:11px;font-weight:500;color:var(--white);margin-bottom:6px;line-height:1.4;padding-right:16px;}
 .sc-meta{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;}
 .sc-tag{font-size:8px;padding:2px 6px;border-radius:10px;}
 .sc-prob-wrap{display:flex;align-items:center;gap:8px;}
@@ -97,19 +95,14 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 
 /* INDICATORI MACRO */
 .ind-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
-.ind-card{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);padding:12px;}
+.ind-card{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r2);padding:12px;}
 .ind-name{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:6px;}
-.ind-value{font-size:20px;font-weight:600;color:#fff;font-family:'Cormorant Garamond',serif;}
+.ind-value{font-size:20px;font-weight:600;color:var(--white);font-family:'Cormorant Garamond',serif;}
 .ind-chg{font-size:10px;margin-top:2px;}
 
-/* GAUGE semicircle */
-.gauge-wrap{text-align:center;padding:8px;}
-.gauge-label{font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-bottom:8px;}
-.gauge-value{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;margin-top:4px;}
-
 /* COSTRUTTORE */
-.builder-scenario{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);margin-bottom:8px;}
-.builder-name{flex:1;font-size:11px;color:#fff;}
+.builder-scenario{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r2);margin-bottom:8px;}
+.builder-name{flex:1;font-size:11px;color:var(--white);}
 .builder-prob{display:flex;align-items:center;gap:8px;}
 .builder-prob input[type=range]{width:100px;height:3px;-webkit-appearance:none;background:var(--gray3);border-radius:2px;outline:none;cursor:pointer;}
 .builder-prob input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;height:12px;border-radius:50%;background:var(--gold2);cursor:pointer;}
@@ -120,77 +113,89 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .impact-class{width:160px;font-size:11px;color:var(--white2);}
 .impact-bar-wrap{flex:1;height:12px;background:var(--gray3);border-radius:6px;overflow:visible;position:relative;}
 .impact-bar{height:100%;border-radius:6px;position:absolute;transition:all .6s;}
-.impact-bar-pos{background:linear-gradient(90deg,var(--green),var(--green3));left:50%;}
-.impact-bar-neg{background:linear-gradient(90deg,var(--red3),var(--red));right:50%;}
+.impact-bar-pos{background:linear-gradient(90deg,#16a34a,#22c55e);left:50%;}
+.impact-bar-neg{background:linear-gradient(90deg,#ef4444,#dc2626);right:50%;}
 .impact-zero{position:absolute;left:50%;top:-2px;width:2px;height:16px;background:var(--gray2);}
 .impact-val{font-size:11px;font-weight:600;min-width:48px;text-align:right;}
 
-/* PORTFOLIO */
-.porto-input{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r);padding:16px;margin-bottom:14px;}
-
 /* REPORT CLIENTE */
-.report-preview{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r);padding:20px;font-size:11px;line-height:1.8;}
-.report-scenario-block{background:rgba(200,160,32,.05);border:1px solid rgba(200,160,32,.15);border-radius:var(--r2);padding:12px;margin-bottom:10px;}
+.report-preview{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r);padding:20px;font-size:11px;line-height:1.8;}
+.report-scenario-block{background:#fffbf0;border:1px solid rgba(200,160,32,.25);border-radius:var(--r2);padding:12px;margin-bottom:10px;}
 .report-scenario-name{font-size:13px;font-weight:600;color:var(--gold2);margin-bottom:4px;}
 .report-scenario-desc{font-size:11px;color:var(--white2);line-height:1.7;}
 
 /* FORMS */
 .fl{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);margin-bottom:4px;}
-.fi,.fs{width:100%;padding:8px 11px;border:1px solid var(--gray3);border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:12px;color:var(--white2);background:var(--bg3);transition:border-color .2s;}
+.fi,.fs{width:100%;padding:8px 11px;border:1px solid var(--gray3);border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:12px;color:var(--white2);background:var(--bg2);transition:border-color .2s;}
 .fi:focus,.fs:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,160,32,.1);}
-.fs{-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%23606080'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;cursor:pointer;}
+.fs{-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath d='M0 0l5 7 5-7z' fill='%236b7c93'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:28px;cursor:pointer;}
 .fg{margin-bottom:12px;}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:var(--r2);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.07em;text-transform:uppercase;cursor:pointer;transition:all .2s;border:none;}
-.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-weight:600;}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;font-weight:600;}
 .btn-gold:hover{opacity:.88;}
-.btn-cyan{background:linear-gradient(135deg,rgba(0,200,224,.2),rgba(0,232,255,.15));color:var(--cyan2);border:1px solid rgba(0,200,224,.3);}
+.btn-cyan{background:rgba(0,136,170,.08);color:var(--cyan2);border:1px solid rgba(0,136,170,.2);}
 .btn-outline{background:transparent;border:1px solid var(--gray3);color:var(--gray);}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold2);}
 .btn-sm{padding:5px 12px;font-size:9px;}
 
 /* BADGE */
 .badge{display:inline-block;padding:2px 7px;border-radius:20px;font-size:8px;letter-spacing:.04em;}
-.b-geo{background:rgba(192,32,32,.15);color:var(--red3);border:1px solid rgba(192,32,32,.2);}
-.b-macro{background:rgba(200,160,32,.15);color:var(--gold2);border:1px solid rgba(200,160,32,.2);}
-.b-tech{background:rgba(0,200,224,.1);color:var(--cyan2);border:1px solid rgba(0,200,224,.2);}
-.b-demo{background:rgba(96,48,192,.15);color:var(--purple3);border:1px solid rgba(96,48,192,.2);}
-.b-fin{background:rgba(32,160,64,.15);color:var(--green3);border:1px solid rgba(32,160,64,.2);}
-.b-mon{background:rgba(192,128,32,.15);color:var(--amber2);border:1px solid rgba(192,128,32,.2);}
-.b-pos{background:rgba(0,200,224,.08);color:var(--cyan);border:1px solid rgba(0,200,224,.15);}
-.b-alta{background:rgba(192,32,32,.15);color:var(--red3);}
-.b-media{background:rgba(200,160,32,.15);color:var(--gold2);}
-.b-bassa{background:rgba(96,96,128,.15);color:var(--gray);}
-
-/* CORRELAZIONI */
-.corr-badge{font-size:8px;padding:1px 6px;border-radius:10px;background:rgba(200,160,32,.1);color:var(--gold2);margin-left:6px;}
+.b-geo{background:rgba(220,38,38,.08);color:#991b1b;border:1px solid rgba(220,38,38,.2);}
+.b-macro{background:rgba(200,160,32,.1);color:var(--gold2);border:1px solid rgba(200,160,32,.2);}
+.b-tech{background:rgba(0,136,170,.08);color:var(--cyan2);border:1px solid rgba(0,136,170,.15);}
+.b-demo{background:rgba(96,48,192,.08);color:var(--purple3);border:1px solid rgba(96,48,192,.15);}
+.b-fin{background:rgba(22,163,74,.08);color:#166534;border:1px solid rgba(22,163,74,.2);}
+.b-mon{background:rgba(217,119,6,.1);color:var(--amber2);border:1px solid rgba(217,119,6,.2);}
+.b-pos{background:rgba(0,136,170,.06);color:var(--cyan);border:1px solid rgba(0,136,170,.12);}
+.b-alta{background:rgba(220,38,38,.08);color:#991b1b;}
+.b-media{background:rgba(200,160,32,.1);color:var(--gold2);}
+.b-bassa{background:rgba(107,124,147,.08);color:var(--gray);}
 
 /* AGGIORNAMENTO */
-.update-bar{background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:10px;}
+.update-bar{background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r2);padding:8px 14px;display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:10px;}
 .update-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:6px;}
-.dot-live{background:var(--green3);animation:pulse 2s infinite;}
-.dot-stale{background:var(--amber2);}
-.dot-offline{background:var(--red3);}
+.dot-live{background:var(--green);animation:pulse 2s infinite;}
+.dot-stale{background:var(--amber);}
+.dot-offline{background:var(--red);}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
 
 /* TOAST */
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--bg3);color:var(--gold2);padding:10px 22px;border-radius:24px;font-size:11px;z-index:2000;opacity:0;transition:opacity .3s;pointer-events:none;border:1px solid var(--gold);box-shadow:var(--glow-gold);}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a2332;color:var(--gold2);padding:10px 22px;border-radius:24px;font-size:11px;z-index:2000;opacity:0;transition:opacity .3s;pointer-events:none;border:1px solid var(--gold);box-shadow:var(--glow-gold);}
 .toast.show{opacity:1;}
 
 /* TABLE */
 .rt{width:100%;border-collapse:collapse;font-size:11px;}
 .rt th{text-align:left;padding:8px 10px;font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--gray);border-bottom:1px solid var(--gray3);font-weight:400;}
-.rt td{padding:8px 10px;border-bottom:1px solid rgba(255,255,255,.03);color:var(--white2);}
+.rt td{padding:8px 10px;border-bottom:1px solid var(--gray3);color:var(--white2);}
 .rt tr:last-child td{border-bottom:none;}
-.rt tr:hover td{background:rgba(255,255,255,.02);}
+.rt tr:hover td{background:var(--bg2);}
 .rt .num{text-align:right;}
 
 hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
+
+/* FORECAST MARKOV */
+.forecast-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray3);border:1px solid var(--gray3);border-radius:var(--r2);overflow:hidden;margin-top:14px;}
+@media(max-width:900px){.forecast-grid{grid-template-columns:repeat(2,1fr);}}
+.fc-card{background:#fff;padding:14px 16px;}
+.fc-card.fc-best{background:#fffbf0;border-bottom:2px solid var(--gold);}
+.fc-horizon{font-size:9px;font-weight:600;letter-spacing:.18em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;}
+.fc-dominant{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;margin-bottom:8px;line-height:1;}
+.fc-dominant.BULL{color:#166534;}.fc-dominant.ESPANSIONE{color:#15803d;}
+.fc-dominant.NEUTRO{color:#a16207;}.fc-dominant.RALLENTAMENTO{color:#b45309;}.fc-dominant.BEAR{color:#b91c1c;}
+.fc-bar-row{display:flex;align-items:center;gap:5px;margin-bottom:3px;}
+.fc-bar-label{width:72px;font-size:8.5px;color:var(--gray);white-space:nowrap;}
+.fc-bar-track{flex:1;height:4px;background:var(--gray3);border-radius:2px;overflow:hidden;}
+.fc-bar-fill{height:100%;border-radius:2px;}
+.fc-bar-pct{width:28px;text-align:right;font-size:9px;font-weight:700;}
+.dur-info{font-size:10px;color:var(--gray);margin-bottom:8px;line-height:1.8;}
+.dur-bar-wrap{height:6px;background:var(--gray3);border-radius:3px;overflow:hidden;margin-bottom:4px;}
+.dur-bar-fill{height:100%;border-radius:3px;transition:width .6s;}
+.dur-label{font-size:9px;color:var(--gray2);}
 </style>
 </head>
 <body>
-
 <header class="hdr">
   <div class="hdr-brand">
     <div class="hdr-icon">🔭</div>
@@ -203,7 +208,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
     <div id="regimeBadge" class="regime-badge regime-neutro">CARICAMENTO...</div>
     <div id="hdrDate" style="font-size:10px;color:var(--gray)"></div>
     <a href="RWM_Dashboard_v3.html" class="btn btn-outline btn-sm">← RWM</a>
-    <a href="RWM_Ultra.html" class="btn btn-outline btn-sm">⚡ Ultra</a>
   </div>
 </header>
 
@@ -232,7 +236,7 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
     <div class="card-title">🌍 Regime di Mercato Corrente</div>
     <div class="g2">
       <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:#fff;line-height:1" id="regimeLabel">—</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:600;color:var(--white);line-height:1" id="regimeLabel">—</div>
         <div style="font-size:11px;color:var(--gray);margin-top:6px" id="regimeScore">—</div>
         <div style="margin-top:12px" id="regimeSignals"></div>
       </div>
@@ -241,6 +245,15 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
         <div id="topScenari"></div>
       </div>
     </div>
+  </div>
+
+  <!-- FORECAST MARKOV -->
+  <div class="card" id="forecastCard" style="display:none;margin-bottom:14px">
+    <div class="card-title">📈 Forecast Strutturale — Markov Chain · Duration-Adjusted</div>
+    <div class="dur-info" id="durInfo">—</div>
+    <div class="dur-bar-wrap"><div class="dur-bar-fill" id="durBar" style="width:0%"></div></div>
+    <div class="dur-label" id="durLabel">Completamento ciclo: —</div>
+    <div class="forecast-grid" id="forecastGrid" style="margin-top:14px"></div>
   </div>
 
   <!-- INDICATORI -->
@@ -266,7 +279,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 <!-- ② SCENARI -->
 <section class="sec" id="sec-scenari">
   <div class="sh"><div class="sh-title">52 Scenari Macro</div><div class="sh-sub">Clicca per selezionare · Usa il Costruttore per impostare le probabilità</div></div>
-
   <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;align-items:center">
     <button class="btn btn-outline btn-sm" onclick="filterScenari('all')">Tutti</button>
     <button class="btn btn-outline btn-sm" onclick="filterScenari('geo')">🌍 Geopolitici</button>
@@ -278,9 +290,7 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
     <button class="btn btn-outline btn-sm" onclick="filterScenari('pos')">✨ Positivi</button>
     <div style="margin-left:auto;font-size:10px;color:var(--gray)" id="selectedCount">0 selezionati</div>
   </div>
-
   <div class="sc-grid" id="scenariGrid"></div>
-
   <div style="text-align:center;margin-top:14px">
     <button class="btn btn-gold" onclick="show('costruttore')">→ Vai al Costruttore</button>
   </div>
@@ -289,10 +299,7 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 <!-- ③ COSTRUTTORE -->
 <section class="sec" id="sec-costruttore">
   <div class="sh"><div class="sh-title">Costruttore Scenari</div><div class="sh-sub">Imposta probabilità · Verifica correlazioni · Calcola impatto aggregato</div></div>
-
-  <div id="builderEmpty" class="card" style="text-align:center;padding:32px;color:var(--gray)">
-    ← Seleziona prima gli scenari nel tab ② Scenari
-  </div>
+  <div id="builderEmpty" class="card" style="text-align:center;padding:32px;color:var(--gray)">← Seleziona prima gli scenari nel tab ② Scenari</div>
   <div id="builderContent" style="display:none">
     <div class="g2">
       <div>
@@ -328,7 +335,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 <!-- ④ PORTAFOGLIO -->
 <section class="sec" id="sec-portafoglio">
   <div class="sh"><div class="sh-title">Analisi Portafoglio Cliente</div><div class="sh-sub">Impatta gli scenari selezionati sul portafoglio reale</div></div>
-
   <div class="card">
     <div class="card-title">📁 Portafoglio Cliente</div>
     <div class="g2">
@@ -361,7 +367,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
       </div>
     </div>
   </div>
-
   <div id="portoResults" style="display:none">
     <div class="g4" id="portoKPI" style="margin-bottom:14px"></div>
     <div class="card">
@@ -383,7 +388,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 <!-- ⑤ CONSENSUS -->
 <section class="sec" id="sec-consensus">
   <div class="sh"><div class="sh-title">Consensus Istituzionale</div><div class="sh-sub">Lettura automatica PDF · FMI · BCE · OCSE · Fed · BlackRock · JPMorgan</div></div>
-
   <div class="card">
     <div class="card-title">📚 Fonti Configurate</div>
     <div style="overflow-x:auto">
@@ -393,23 +397,20 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
       </table>
     </div>
   </div>
-
   <div class="card">
     <div class="card-title">🤖 Upload PDF Manuale → Claude AI</div>
     <div style="font-size:11px;color:var(--white2);margin-bottom:12px;line-height:1.8">
       Carica un PDF di un report istituzionale. Claude lo legge e aggiorna automaticamente le probabilità degli scenari.
       <br><span style="color:var(--gold2)">Formati supportati: PDF testo selezionabile (non scansioni)</span>
     </div>
-    <div style="background:var(--bg3);border:2px dashed var(--gray3);border-radius:var(--r);padding:24px;text-align:center;cursor:pointer;margin-bottom:12px"
-         onclick="document.getElementById('pdfUpload').click()">
+    <div style="background:var(--bg2);border:2px dashed var(--gray3);border-radius:var(--r);padding:24px;text-align:center;cursor:pointer;margin-bottom:12px" onclick="document.getElementById('pdfUpload').click()">
       <div style="font-size:24px;margin-bottom:6px">📄</div>
-      <div style="font-size:12px;color:#fff">Trascina PDF qui o clicca per selezionare</div>
+      <div style="font-size:12px;color:var(--white)">Trascina PDF qui o clicca per selezionare</div>
       <div style="font-size:10px;color:var(--gray);margin-top:4px">BlackRock Outlook · JPMorgan GTM · Vanguard · Report custom</div>
       <input type="file" id="pdfUpload" accept=".pdf" style="display:none" onchange="handlePDFUpload(event)">
     </div>
-    <div id="pdfStatus" style="display:none;background:var(--bg3);border:1px solid var(--gray3);border-radius:var(--r2);padding:14px;font-size:11px;line-height:1.8"></div>
+    <div id="pdfStatus" style="display:none;background:var(--bg2);border:1px solid var(--gray3);border-radius:var(--r2);padding:14px;font-size:11px;line-height:1.8"></div>
   </div>
-
   <div class="card">
     <div class="card-title">📊 Probabilità da Consensus</div>
     <div style="font-size:10px;color:var(--gray);margin-bottom:12px" id="consensusDate">Ultimo aggiornamento: —</div>
@@ -420,7 +421,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 <!-- ⑥ REPORT -->
 <section class="sec" id="sec-report">
   <div class="sh"><div class="sh-title">Report Cliente</div><div class="sh-sub">Versione tecnica CFA · Versione semplificata cliente</div></div>
-
   <div class="card">
     <div class="card-title">⚙ Impostazioni Report</div>
     <div class="g2">
@@ -450,7 +450,6 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
       <button class="btn btn-cyan" onclick="renderReportPreview()">👁 Anteprima</button>
     </div>
   </div>
-
   <div class="card" id="reportPreview" style="display:none">
     <div class="card-title">👁 Anteprima Report</div>
     <div id="reportPreviewContent" class="report-preview"></div>
@@ -465,395 +464,81 @@ hr.div{border:none;border-top:1px solid var(--gray3);margin:14px 0;}
 // DATI — 52 SCENARI COMPLETI
 // ══════════════════════════════════════════════════
 const SCENARI = [
-  // GEOPOLITICI
-  {id:'petrolio_alto',      cat:'geo', nome:'Petrolio persistentemente alto',      desc:'WTI > $90/barile per 6+ mesi. Inflazione riprende, BCE alza, bond lunghi soffrono.',  orizzonte:'6-12m', intensita:'alta',
-    impatto:{eq:-8,em:-5,gov:-12,corp:-6,il:+8,com:+25,cash:+2,gold:+10},
-    corr:['bce_alza','stagflazione_usa','inflazione_strutturale'],
-    taa:'Aumenta IL (IBCI) e Commodity (IGLN/ICOM). Riduci Gov Bond lunga duration (IBGL/IDTL). Accorcia su IEGE.',
-    cliente:'Il prezzo del petrolio alto fa salire l\'inflazione. I tuoi bond lunghi soffrono, ma l\'oro e i titoli indicizzati all\'inflazione proteggono.',
-  },
-  {id:'guerra_commerciale', cat:'geo', nome:'Guerra commerciale USA-Cina',          desc:'Dazi generalizzati >25%. Supply chain globale colpita. EM azionario sotto pressione.',  orizzonte:'12-24m', intensita:'alta',
-    impatto:{eq:-10,em:-18,gov:+5,corp:-8,il:+3,com:-5,cash:+5,gold:+8},
-    corr:['hard_landing_usa','recessione_germania'],
-    taa:'Riduci IEMA, aumenta EXCS (ex-China). Sovrappesa Gov Bond come rifugio. Riduce esposizione globale.',
-    cliente:'I dazi tra USA e Cina danneggiano il commercio mondiale. Le azioni dei paesi emergenti soffrono di più.',
-  },
-  {id:'crisi_taiwan',       cat:'geo', nome:'Crisi Taiwan',                         desc:'Escalation militare o blocco commerciale. Shock geopolitico estremo globale.',           orizzonte:'0-6m',  intensita:'alta',
-    impatto:{eq:-25,em:-30,gov:+10,corp:-15,il:+5,com:-10,cash:+15,gold:+20},
-    corr:['flash_crash'],
-    taa:'Massima difensività. Cash (XEON/SMART) al massimo. Oro. Esci da equity EM completamente.',
-    cliente:'Una crisi a Taiwan sarebbe un evento estremo. Il portafoglio difensivo con oro e liquidità resisterebbe meglio.',
-  },
-  {id:'hormuz',             cat:'geo', nome:'Chiusura Stretto di Hormuz',            desc:'20% del petrolio mondiale bloccato. Shock energetico immediato e severo.',               orizzonte:'0-3m',  intensita:'alta',
-    impatto:{eq:-15,em:-12,gov:+5,corp:-10,il:+12,com:+40,cash:+8,gold:+15},
-    corr:['petrolio_alto','inflazione_strutturale'],
-    taa:'Massimizza commodity (IGLN, ICOM). Riduci equity ciclico. Duration breve su bond.',
-    cliente:'La chiusura dello Stretto di Hormuz farebbe esplodere il prezzo del petrolio. L\'oro e le materie prime si apprezzerebbero.',
-  },
-
-  // MACRO EUROPA
-  {id:'recessione_germania',cat:'geo', nome:'Recessione Germania',                  desc:'PIL Germania -0.5%+ per 2 trimestri. Trascina Eurozona. PMI manifatturiero <45.',      orizzonte:'6-18m', intensita:'media',
-    impatto:{eq:-12,em:-8,gov:+8,corp:-10,il:+4,com:-8,cash:+5,gold:+5},
-    corr:['crisi_btp','bce_alza'],
-    taa:'Sottopesa azionario Europa (BNKS, IESE). Aumenta Gov Bond breve. Riduci HY (IHYG).',
-    cliente:'Se la Germania entra in recessione, l\'intera Europa rallenta. Le azioni europee e i bond societari soffrono.',
-  },
-  {id:'crisi_btp',          cat:'macro', nome:'Crisi BTP Italia',                   desc:'Spread BTP-Bund oltre 300bps. Tensione fiscale italiana. Contagio periferia.',          orizzonte:'3-12m', intensita:'alta',
-    impatto:{eq:-8,em:-5,gov:-15,corp:-12,il:-5,com:+3,cash:+10,gold:+8},
-    corr:['recessione_germania'],
-    taa:'Riduci IBGM/IBGL. Esci da BTP diretti. Aumenta IEGE (breve, meno esposto). Cash tattico XEON.',
-    cliente:'Un allargamento dello spread BTP significa che i mercati si fidano meno dell\'Italia. I tuoi bond italiani perderebbero valore.',
-  },
-  {id:'bce_alza',           cat:'macro', nome:'BCE alza i tassi di nuovo',            desc:'Fine ciclo taglio. BCE rialza per inflazione persistente. Bond lunghi colpiti.',       orizzonte:'3-9m',  intensita:'media',
-    impatto:{eq:-6,em:-4,gov:-14,corp:-8,il:+6,com:+3,cash:+5,gold:+4},
-    corr:['petrolio_alto','inflazione_strutturale'],
-    taa:'Accorcia duration. Da IBGL/IDTL a IEGE. Aumenta SMART/XEON. Riduci IHYG.',
-    cliente:'Se la BCE alza i tassi, i tuoi bond lunghi perdono valore. I conti correnti e i BOT rendono di più.',
-  },
-  {id:'deflazione_eu',      cat:'macro', nome:'Deflazione Eurozona',                 desc:'BCE torna a QE. Tassi negativi. Bond lunghi salgono. Equity misto.',                   orizzonte:'12-24m', intensita:'media',
-    impatto:{eq:+5,em:+3,gov:+15,corp:+10,il:-8,com:-10,cash:-2,gold:+5},
-    corr:['recessione_germania'],
-    taa:'Aumenta duration (IBGL, IDTL). Riduci IL e commodity. Equity selettivo (growth/quality).',
-    cliente:'La deflazione fa scendere i prezzi ma è negativa per l\'economia. I tuoi bond lunghi si apprezzano.',
-  },
-
-  // MACRO USA
-  {id:'hard_landing_usa',   cat:'macro', nome:'Hard landing USA',                    desc:'Recessione USA entro 12 mesi. Utili aziendali crollano. Fed taglia aggressivo.',       orizzonte:'6-18m', intensita:'alta',
-    impatto:{eq:-20,em:-15,gov:+15,corp:-15,il:+3,com:-12,cash:+10,gold:+10},
-    corr:['bear_market','guerra_commerciale'],
-    taa:'Massimizza Gov Bond (IBGM, IBGL). Riduci equity globale. Aumenta oro. Cash difensivo.',
-    cliente:'Una recessione americana colpisce tutti i mercati. I bond governativi e l\'oro sono i rifugi tradizionali.',
-  },
-  {id:'soft_landing',       cat:'macro', nome:'Soft landing USA confermato',          desc:'Atterraggio perfetto. Inflazione al target. Fed taglia graduale. Mercati stabili.',    orizzonte:'6-12m', intensita:'bassa',
-    impatto:{eq:+10,em:+8,gov:+5,corp:+8,il:0,com:+3,cash:-2,gold:0},
-    corr:['boom_ai'],
-    taa:'Mantieni SAA. Leggermente sovrappesato equity. Normalità operativa. Revisione mensile standard.',
-    cliente:'Il migliore scenario possibile. L\'economia cresce, i mercati sono stabili e il tuo portafoglio beneficia.',
-  },
-  {id:'stagflazione_usa',   cat:'macro', nome:'Stagflazione USA',                    desc:'Inflazione alta + crescita zero. Peggiore degli ambienti per i mercati finanziari.',   orizzonte:'12-18m', intensita:'alta',
-    impatto:{eq:-15,em:-12,gov:-10,corp:-12,il:+15,com:+20,cash:0,gold:+18},
-    corr:['petrolio_alto','inflazione_strutturale'],
-    taa:'Massimizza IL e commodity. Riduci tutto il resto. È il portafoglio più difficile da gestire.',
-    cliente:'Stagflazione significa prezzi alti e economia ferma. Solo oro, materie prime e titoli indicizzati all\'inflazione proteggono.',
-  },
-  {id:'boom_ai',            cat:'tech',  nome:'Boom AI continua',                    desc:'Produttività esplode. Capex tech in accelerazione. S&P500 guidato da tech.',           orizzonte:'12-36m', intensita:'alta',
-    impatto:{eq:+20,em:+8,gov:-3,corp:+5,il:-2,com:0,cash:-5,gold:-5},
-    corr:['soft_landing','robotica_automazione'],
-    taa:'Aumenta QDVE (S&P IT Sector). Sovrappesa IWMO (momentum). Considera EQQQ se profilo aggressivo.',
-    cliente:'Il boom dell\'intelligenza artificiale spinge le aziende tecnologiche. Il tuo portafoglio azionario beneficia, specialmente la componente USA.',
-  },
-
-  // FINANZIARI
-  {id:'flash_crash',        cat:'fin',   nome:'Flash crash',                          desc:'Caduta -20%+ in 2 settimane poi rimbalzo rapido. Volatilità estrema temporanea.',      orizzonte:'0-3m',  intensita:'alta',
-    impatto:{eq:-20,em:-22,gov:+8,corp:-15,il:+2,com:-10,cash:+10,gold:+12},
-    corr:['crisi_taiwan'],
-    taa:'Non vendere durante il crash. Mantieni PAC Dinamico con moltiplicatore 3x. È un\'opportunità di acquisto.',
-    cliente:'Un flash crash è uno spavento temporaneo. I portafogli diversificati recuperano rapidamente. Non vendere nel panico.',
-  },
-  {id:'bear_market',        cat:'fin',   nome:'Bear market prolungato',               desc:'-40% in 18 mesi. Recessione globale. Liquidità premia. Recovery lenta.',              orizzonte:'12-24m', intensita:'alta',
-    impatto:{eq:-40,em:-45,gov:+20,corp:-25,il:+5,com:-20,cash:+15,gold:+15},
-    corr:['hard_landing_usa','recessione_germania'],
-    taa:'Drawdown L3 → posizione difensiva massima. Cash al massimo. Aspetta segnale TAA 3/4 per rientrare.',
-    cliente:'Un bear market lungo è doloroso ma temporaneo. La storia insegna che chi mantiene recupera sempre.',
-  },
-  {id:'bull_estremo',       cat:'fin',   nome:'Bull market estremo',                  desc:'S&P500 +50% in 2 anni. FOMO generalizzato. Rischio bolla su alcune asset class.',     orizzonte:'12-24m', intensita:'media',
-    impatto:{eq:+50,em:+35,gov:-8,corp:+15,il:-5,com:+10,cash:-10,gold:-8},
-    corr:['boom_ai','soft_landing'],
-    taa:'Attenzione alla valutazione. Mantieni SAA. Non inseguire la performance. Prepara strategia di uscita parziale.',
-    cliente:'Un mercato toro molto forte porta guadagni importanti, ma attenzione alle valutazioni eccessive.',
-  },
-  {id:'inversione_curva',   cat:'fin',   nome:'Inversione curva tassi',               desc:'2y-10y spread negativo persistente. Segnale storico più affidabile di recessione.',   orizzonte:'6-18m', intensita:'media',
-    impatto:{eq:-5,em:-8,gov:+5,corp:-8,il:+3,com:-5,cash:+8,gold:+5},
-    corr:['hard_landing_usa','bear_market'],
-    taa:'Segnale di allerta. Inizia a costruire posizione difensiva graduale. Aumenta IEGE (breve).',
-    cliente:'Quando i tassi a breve superano quelli a lungo termine, storicamente anticipa una recessione entro 12-18 mesi.',
-  },
-
-  // CRYPTO
-  {id:'bitcoin_mainstream', cat:'fin',   nome:'Bitcoin mainstream',                   desc:'Istituzionali entrano massicci. ETF spot approvati. Bitcoin come riserva di valore.',  orizzonte:'12-36m', intensita:'media',
-    impatto:{eq:+5,em:+3,gov:-2,corp:0,il:-2,com:+5,cash:-5,gold:-3},
-    corr:['boom_ai'],
-    taa:'Solo per profili Ultra (BTCE, HODL). Portafogli classici: nessuna azione.',
-    cliente:'Il Bitcoin che diventa mainstream interessa principalmente chi ha già esposizione crypto nel portafoglio Ultra.',
-  },
-  {id:'regolamentazione_crypto', cat:'fin', nome:'Regolamentazione crypto UE',        desc:'MiCA impatto mercati. Alcune crypto escluse. Stablecoin regolamentate.',             orizzonte:'12-24m', intensita:'bassa',
-    impatto:{eq:+2,em:0,gov:0,corp:+2,il:0,com:0,cash:0,gold:0},
-    corr:['fintech_decentralizzato'],
-    taa:'Nessuna azione per portafogli classici. Attenzione per profili Ultra con HODL/BTCE.',
-    cliente:'La regolamentazione delle criptovalute le rende più sicure ma potrebbe ridurne la volatilità al rialzo.',
-  },
-
-  // CLIMATICI
-  {id:'carbon_tax',         cat:'geo',   nome:'Carbon tax europea',                   desc:'Tassa carbonio generalizzata. Energia rinnovabile esplode. Fossili penalizzati.',      orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:+3,em:-2,gov:0,corp:+2,il:+2,com:-8,cash:0,gold:0},
-    corr:['rinascita_industriale_eu','infrastrutture_boom'],
-    taa:'Aumenta esposizione a settori rinnovabili tramite HLTH/AERO. Riduci commodity fossili.',
-    cliente:'La tassa sul carbonio premia le aziende verdi e penalizza quelle fossili. Un cambiamento graduale ma strutturale.',
-  },
-  {id:'crisi_idrica',       cat:'geo',   nome:'Crisi idrica globale',                  desc:'Siccità strutturale. Commodity agricole alle stelle. Food security a rischio.',        orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:-3,em:-8,gov:+2,corp:-4,il:+5,com:+20,cash:+2,gold:+5},
-    corr:['carbon_tax','inflazione_strutturale'],
-    taa:'Aumenta commodity broad (ICOM). Considera esposizione a settore agricoltura.',
-    cliente:'La crisi idrica fa salire i prezzi alimentari e delle materie prime agricole.',
-  },
-
-  // POSITIVI STRUTTURALI
-  {id:'rinascita_industriale_eu', cat:'pos', nome:'Rinascita industriale Europa',     desc:'Reshoring + sussidi verdi + PNRR. Manifattura europea torna competitiva.',          orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:+12,em:-2,gov:0,corp:+8,il:+3,com:+5,cash:-3,gold:0},
-    corr:['infrastrutture_boom','carbon_tax'],
-    taa:'Aumenta azionario Europa (BNKS, settoriali). Sovrappesa small cap (IESE). Corporate bond Europa.',
-    cliente:'La reindustrializzazione europea porta lavoro e crescita. Le aziende europee beneficiano strutturalmente.',
-  },
-  {id:'boom_demografico_africa', cat:'demo', nome:'Boom demografico Africa',           desc:'Africa motore crescita globale. 1.4 miliardi di consumatori. EM nuovo driver.',      orizzonte:'60-120m', intensita:'media',
-    impatto:{eq:+5,em:+15,gov:0,corp:+3,il:0,com:+10,cash:-2,gold:0},
-    corr:['superciclo_commodity'],
-    taa:'Aumenta IEMA con focus su EM Africa. Commodity metalli industriali beneficiano.',
-    cliente:'La crescita dell\'Africa nei prossimi decenni creerà enormi opportunità di investimento nei mercati emergenti.',
-  },
-  {id:'rivoluzione_farmaceutica', cat:'tech', nome:'Rivoluzione farmaceutica',         desc:'GLP-1, longevità, biotech esplode. Healthcare diventa settore dominante.',           orizzonte:'24-60m', intensita:'alta',
-    impatto:{eq:+8,em:+3,gov:0,corp:+5,il:0,com:0,cash:-2,gold:0},
-    corr:['invecchiamento_europa','boom_ai'],
-    taa:'Aumenta HLTH (Healthcare). Considera BTEC (Biotech) per profili aggressivi.',
-    cliente:'I nuovi farmaci contro obesità e invecchiamento potrebbero essere la più grande rivoluzione sanitaria degli ultimi decenni.',
-  },
-  {id:'fusione_nucleare',   cat:'tech',  nome:'Fusione nucleare commerciale',          desc:'Energia quasi gratuita entro 10 anni. Rivoluzione energetica totale.',               orizzonte:'60-120m', intensita:'alta',
-    impatto:{eq:+10,em:+8,gov:0,corp:+5,il:-5,com:-20,cash:-3,gold:-5},
-    corr:['carbon_tax','robotica_automazione'],
-    taa:'Molto lungo termine. Nessuna azione TAA immediata. Monitoraggio.',
-    cliente:'La fusione nucleare risolverebbe il problema energetico globale. Un cambio di paradigma epocale ma ancora lontano.',
-  },
-  {id:'pace_ucraina',       cat:'geo',   nome:'Pace in Ucraina',                       desc:'Accordo di cessate il fuoco. Gas russo torna. Ricostruzione. Spread crollano.',       orizzonte:'0-12m', intensita:'alta',
-    impatto:{eq:+12,em:+5,gov:+3,corp:+10,il:-5,com:-15,cash:-5,gold:-10},
-    corr:['deflazione_eu','recessione_germania'],
-    taa:'Aumenta azionario Europa (BNKS). Riduci commodity energia. Aumenta corporate bond Europa.',
-    cliente:'La pace in Ucraina farebbe scendere i prezzi dell\'energia e rilanciare l\'economia europea.',
-  },
-
-  // CICLICI POSITIVI
-  {id:'superciclo_commodity', cat:'pos', nome:'Superciclo commodity',                  desc:'Domanda EM + underinvestment offerta. Metalli, energia, agricoltura salgono.',       orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:+3,em:+12,gov:-2,corp:+3,il:+8,com:+30,cash:-3,gold:+15},
-    corr:['boom_demografico_africa','dedollarizzazione'],
-    taa:'Aumenta ICOM (commodity broad) e IGLN (oro). Sovrappesa EM produttori.',
-    cliente:'Un superciclo delle materie prime beneficia i paesi produttori e i fondi commodity nel tuo portafoglio.',
-  },
-  {id:'dollaro_debole',     cat:'mon',   nome:'Dollaro debole strutturale',            desc:'EUR/USD > 1.20. EM beneficiano. Oro sale. Debito USA in dollari si alleggerisce.',    orizzonte:'12-36m', intensita:'media',
-    impatto:{eq:+3,em:+15,gov:+2,corp:+3,il:+3,com:+12,cash:0,gold:+12},
-    corr:['dedollarizzazione','multipolarismo'],
-    taa:'Aumenta IEMA. Riduci hedging valutario. IGLN beneficia strutturalmente.',
-    cliente:'Un dollaro più debole è positivo per i mercati emergenti e per l\'oro nel tuo portafoglio.',
-  },
-  {id:'credito_privato_boom', cat:'fin', nome:'Credito privato boom',                  desc:'Private credit come alternativa. Rendimenti 8-12%. Mercato in espansione rapida.',   orizzonte:'12-36m', intensita:'media',
-    impatto:{eq:+2,em:+2,gov:-3,corp:+5,il:0,com:0,cash:-2,gold:0},
-    corr:['pe_democratizzato'],
-    taa:'Nessuna azione diretta su ETF. Opportunità in prodotti alternativi non coperti da RWM.',
-    cliente:'Il credito privato offre rendimenti alti ma è poco liquido. Non è incluso nei portafogli ETF standard.',
-  },
-  {id:'small_cap_outperform', cat:'fin', nome:'Small cap outperformance',              desc:'Value rotation dopo anni growth. Small cap value storicamente batte in questo ciclo.', orizzonte:'12-24m', intensita:'media',
-    impatto:{eq:+15,em:+8,gov:-2,corp:+3,il:0,com:+3,cash:-3,gold:0},
-    corr:['dollaro_debole','soft_landing'],
-    taa:'Aumenta IUSN (World Small Cap) e ZPRV (USA Small Cap Value).',
-    cliente:'Le piccole aziende tendono a sovraperformare in certi cicli di mercato. Il tuo portafoglio ha già un\'esposizione.',
-  },
-  {id:'dividendi_moda',     cat:'fin',   nome:'Dividendi tornano di moda',              desc:'Income investing strutturale. High dividend outperformance. Yield preference.',      orizzonte:'12-24m', intensita:'bassa',
-    impatto:{eq:+5,em:+3,gov:0,corp:+5,il:0,com:0,cash:-2,gold:0},
-    corr:['invecchiamento_europa'],
-    taa:'Aumenta VHYL e ISEU (Income). Ottimo per portafogli Income DIST.',
-    cliente:'Quando i dividendi tornano di moda, i tuoi ETF ad alto rendimento cedolare beneficiano di maggiori afflussi.',
-  },
-
-  // DEMOGRAFICI
-  {id:'invecchiamento_europa', cat:'demo', nome:'Invecchiamento Europa',               desc:'Healthcare, pharma, risparmio gestito crescono strutturalmente per decenni.',        orizzonte:'60-120m', intensita:'alta',
-    impatto:{eq:+5,em:-2,gov:+3,corp:+3,il:+2,com:0,cash:0,gold:0},
-    corr:['rivoluzione_farmaceutica','pensioni_pressione'],
-    taa:'Aumenta HLTH (Healthcare). Strutturalmente positivo per income e dividendi.',
-    cliente:'L\'invecchiamento della popolazione europea è una certezza. Farmaci, assistenza sanitaria e previdenza cresceranno.',
-  },
-  {id:'gen_z_investe',      cat:'demo',  nome:'Gen Z investe diversamente',            desc:'Crypto, ESG, alternative mainstream. Flussi verso asset non tradizionali.',           orizzonte:'24-60m', intensita:'bassa',
-    impatto:{eq:+3,em:+2,gov:-2,corp:0,il:0,com:0,cash:-3,gold:0},
-    corr:['bitcoin_mainstream','fintech_decentralizzato'],
-    taa:'Nessuna azione immediata. Tendenza strutturale a lungo termine.',
-    cliente:'Le nuove generazioni investono in modo diverso. Questa tendenza cambierà gradualmente i mercati.',
-  },
-  {id:'pensioni_pressione', cat:'demo',  nome:'Pensioni sotto pressione',              desc:'Mercato previdenza integrativa esplode. Risparmio privato necessario strutturalmente.', orizzonte:'24-60m', intensita:'alta',
-    impatto:{eq:+5,em:+2,gov:+5,corp:+3,il:+3,com:0,cash:-5,gold:0},
-    corr:['invecchiamento_europa'],
-    taa:'Strutturalmente positivo per tutto il settore gestione patrimoniale.',
-    cliente:'Le pensioni pubbliche saranno insufficienti. La previdenza integrativa e i portafogli privati diventano essenziali.',
-  },
-  {id:'immigrazione_europa', cat:'demo', nome:'Immigrazione massiccia Europa',         desc:'Consumi, real estate, banche beneficiano. Mercato lavoro si riequilibra.',           orizzonte:'24-60m', intensita:'bassa',
-    impatto:{eq:+5,em:0,gov:0,corp:+3,il:+2,com:+3,cash:-2,gold:0},
-    corr:['invecchiamento_europa','rinascita_industriale_eu'],
-    taa:'Positivo per azionario Europa (BNKS) e Real Estate (IPRP).',
-    cliente:'L\'immigrazione sostiene i consumi e il mercato immobiliare europeo nel medio termine.',
-  },
-
-  // TECNOLOGICI
-  {id:'robotica_automazione', cat:'tech', nome:'Robotica e automazione',              desc:'Produttività manifatturiera aumenta. Costi produzione calano. Margini migliorano.',  orizzonte:'24-60m', intensita:'alta',
-    impatto:{eq:+10,em:+5,gov:0,corp:+5,il:-2,com:-5,cash:-3,gold:0},
-    corr:['boom_ai','rinascita_industriale_eu'],
-    taa:'Aumenta IWMO (Momentum) e tech tramite QDVE/EQQQ.',
-    cliente:'I robot e l\'automazione aumentano la produttività delle aziende, migliorando i profitti e quindi le azioni.',
-  },
-  {id:'quantum_computing',  cat:'tech',  nome:'Quantum computing commerciale',        desc:'Rivoluzione cybersecurity e scoperta farmaci. Alcune industrie disrupted.',           orizzonte:'36-72m', intensita:'media',
-    impatto:{eq:+5,em:+2,gov:0,corp:+3,il:0,com:0,cash:-2,gold:0},
-    corr:['boom_ai','rivoluzione_farmaceutica'],
-    taa:'Lungo termine. Esposizione indiretta tramite QDVE e HLTH.',
-    cliente:'Il quantum computing è ancora lontano dall\'applicazione commerciale ma potrebbe rivoluzionare farmaci e sicurezza informatica.',
-  },
-  {id:'spazio_commerciale', cat:'tech',  nome:'Spazio commerciale',                   desc:'SpaceX, satelliti, turismo spaziale. Nuova frontiera investimenti settoriali.',       orizzonte:'36-72m', intensita:'bassa',
-    impatto:{eq:+5,em:+2,gov:0,corp:+3,il:0,com:+3,cash:-2,gold:0},
-    corr:['boom_ai','robotica_automazione'],
-    taa:'Esposizione indiretta tramite AERO (Aerospace & Defence).',
-    cliente:'Lo spazio commerciale è una frontiera entusiasmante. L\'ETF Aerospace nel tuo portafoglio ne beneficia parzialmente.',
-  },
-  {id:'fintech_decentralizzato', cat:'tech', nome:'Fintech decentralizzato',           desc:'Banche tradizionali sotto pressione. DeFi, pagamenti digitali, neobank crescono.',  orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:+2,em:+3,gov:-2,corp:+2,il:0,com:0,cash:-3,gold:0},
-    corr:['bitcoin_mainstream','gen_z_investe'],
-    taa:'Attenzione a BNKS (Banche EU) nel lungo termine. Tendenza strutturale ribassista per banche tradizionali.',
-    cliente:'Le nuove tecnologie finanziarie mettono sotto pressione le banche tradizionali nel lungo termine.',
-  },
-
-  // POLITICI
-  {id:'governo_tecnico_italia', cat:'geo', nome:'Governo tecnico in Italia',           desc:'Riforme strutturali, spread BTP giù, fiducia mercati aumenta.',                       orizzonte:'6-24m', intensita:'media',
-    impatto:{eq:+8,em:0,gov:+5,corp:+5,il:+3,com:0,cash:-3,gold:-3},
-    corr:['crisi_btp'],
-    taa:'Positivo per IBGM/IBGL (BTP). Aumenta azionario Italia tramite BNKS.',
-    cliente:'Un governo riformatore in Italia farebbe scendere lo spread e aumentare la fiducia degli investitori internazionali.',
-  },
-  {id:'federalismo_eu',     cat:'geo',   nome:'Federalismo fiscale EU',                desc:'Eurobond permanenti. Integrazione fiscale. Safe asset europeo credibile.',             orizzonte:'36-72m', intensita:'alta',
-    impatto:{eq:+8,em:+2,gov:+10,corp:+6,il:+3,com:0,cash:-5,gold:-5},
-    corr:['rinascita_industriale_eu'],
-    taa:'Molto positivo per Gov Bond EU (IBGM, IBGL, VGEA). Azionario Europa beneficia.',
-    cliente:'Un\'Europa più integrata fiscalmente renderebbe i bond europei più sicuri e attrattivi per gli investitori mondiali.',
-  },
-  {id:'trump_completo',     cat:'geo',   nome:'Trump 2.0 completo',                    desc:'Dazi, riduzione tasse, dollaro forte/debole, debito USA esplode.',                    orizzonte:'6-24m', intensita:'alta',
-    impatto:{eq:+8,em:-12,gov:-5,corp:+5,il:+3,com:+5,cash:0,gold:+8},
-    corr:['guerra_commerciale','stagflazione_usa'],
-    taa:'Riduci IEMA (EM penalizzati da dazi). Aumenta azionario USA domestico. Oro come hedge.',
-    cliente:'Le politiche Trump favoriscono le aziende americane ma danneggiano i mercati emergenti e il commercio globale.',
-  },
-  {id:'multipolarismo',     cat:'geo',   nome:'Multipolarismo consolidato',             desc:'Fine egemonia dollaro, BRICS rafforzati, yuan e oro come riserve alternative.',      orizzonte:'36-72m', intensita:'media',
-    impatto:{eq:+2,em:+10,gov:0,corp:0,il:+5,com:+10,cash:-5,gold:+15},
-    corr:['dedollarizzazione','dollaro_debole'],
-    taa:'Aumenta IEMA con focus su Asia. Oro strutturalmente positivo. Diversifica valutario.',
-    cliente:'Un mondo multipolare favorisce i mercati emergenti e l\'oro come alternative al dollaro.',
-  },
-
-  // SETTORIALI
-  {id:'lusso_italiano',     cat:'pos',   nome:'Rinascita lusso italiano',               desc:'Domanda Asia in ripresa. Brand italiani beneficiano. Turismo di lusso esplode.',    orizzonte:'12-24m', intensita:'media',
-    impatto:{eq:+8,em:+3,gov:0,corp:+3,il:0,com:0,cash:-2,gold:0},
-    corr:['turismo_record','boom_demografico_africa'],
-    taa:'Esposizione indiretta tramite azionario Europa. Nessun ETF dedicato nel RWM universe.',
-    cliente:'Il lusso italiano è richiestissimo dall\'Asia in ripresa. Le grandi aziende del lusso quotate beneficerebbero.',
-  },
-  {id:'turismo_record',     cat:'pos',   nome:'Turismo record Europa',                  desc:'Boom post-pandemia strutturale. Prezzi alberghi/trasporti persistentemente alti.',    orizzonte:'12-36m', intensita:'bassa',
-    impatto:{eq:+5,em:+2,gov:0,corp:+3,il:+2,com:+3,cash:-2,gold:0},
-    corr:['lusso_italiano','inflazione_strutturale'],
-    taa:'Esposizione indiretta tramite azionario Europa (BNKS, settoriali).',
-    cliente:'Il turismo record porta più entrate alle aziende europee di ospitalità, trasporti e beni di consumo.',
-  },
-  {id:'crisi_banche_usa',   cat:'fin',   nome:'Crisi banche regionali USA',             desc:'Contagio Silicon Valley Bank style. Credito si restringe. Fed interviene.',           orizzonte:'0-6m',  intensita:'alta',
-    impatto:{eq:-12,em:-8,gov:+10,corp:-15,il:+3,com:-5,cash:+8,gold:+10},
-    corr:['hard_landing_usa','flash_crash'],
-    taa:'Riduci corporate bond (IHYG). Aumenta Gov Bond. Cash tattico. Oro.',
-    cliente:'Una crisi bancaria USA è uno shock finanziario. I tuoi bond governativi e oro salgono come rifugi.',
-  },
-  {id:'pe_democratizzato',  cat:'fin',   nome:'Private equity democratizzato',          desc:'Retail accede agli alternativi. Fondi chiusi, ELTIF, infrastrutture per tutti.',     orizzonte:'24-48m', intensita:'bassa',
-    impatto:{eq:+3,em:+2,gov:-2,corp:+3,il:0,com:0,cash:-3,gold:0},
-    corr:['credito_privato_boom'],
-    taa:'Nessuna azione diretta. Opportunità complementari ai portafogli ETF.',
-    cliente:'Gli investimenti alternativi diventano accessibili. Complementari ma non sostitutivi del portafoglio ETF.',
-  },
-  {id:'re_commerciale_crisi', cat:'fin', nome:'Real estate commerciale crolla',         desc:'Remote work strutturale. Uffici vuoti. REIT commerciali colpiti duramente.',          orizzonte:'24-48m', intensita:'media',
-    impatto:{eq:-3,em:-2,gov:+2,corp:-5,il:0,com:0,cash:+3,gold:0},
-    corr:['fintech_decentralizzato'],
-    taa:'Attenzione a IWDP e IPRP (Real Estate). Verifica esposizione indiretta via IQQH.',
-    cliente:'Gli uffici vuoti colpiscono il mercato immobiliare commerciale. Gli ETF immobiliari nel tuo portafoglio ne risentono.',
-  },
-  {id:'infrastrutture_boom', cat:'pos',  nome:'Infrastrutture boom',                   desc:'PNRR, difesa, transizione energetica. Spesa pubblica esplode. Costruzioni crescono.',  orizzonte:'24-60m', intensita:'alta',
-    impatto:{eq:+8,em:+5,gov:-2,corp:+5,il:+3,com:+8,cash:-3,gold:0},
-    corr:['rinascita_industriale_eu','carbon_tax'],
-    taa:'Aumenta AERO (Aerospace/Difesa). Esposizione commodity metalli industriali tramite ICOM.',
-    cliente:'Gli investimenti in infrastrutture militari, energetiche e digitali creano crescita per molti settori.',
-  },
-
-  // MONETARI
-  {id:'cbdc_europeo',       cat:'mon',   nome:'CBDC europeo',                           desc:'Euro digitale. Impatto su banche, bond, privacy. Tassi negativi possibili.',          orizzonte:'24-60m', intensita:'media',
-    impatto:{eq:+2,em:0,gov:+3,corp:+2,il:0,com:0,cash:-5,gold:+3},
-    corr:['fintech_decentralizzato','deflazione_eu'],
-    taa:'Nessuna azione immediata. Monitorare impatto su BNKS nel lungo termine.',
-    cliente:'La valuta digitale europea cambierà il sistema bancario. Impatto ancora incerto ma rilevante nel lungo termine.',
-  },
-  {id:'dedollarizzazione',  cat:'mon',   nome:'Dedollarizzazione accelera',             desc:'BRICS, yuan, oro come riserve. Dollaro perde quota riserve mondiali gradualmente.',  orizzonte:'36-72m', intensita:'media',
-    impatto:{eq:+2,em:+12,gov:0,corp:0,il:+5,com:+12,cash:-5,gold:+18},
-    corr:['multipolarismo','dollaro_debole'],
-    taa:'Aumenta IEMA e oro (IGLN). Diversifica valutario strutturalmente.',
-    cliente:'Se il dollaro perde il suo ruolo dominante, i mercati emergenti e l\'oro ne beneficiano nel lungo termine.',
-  },
-  {id:'inflazione_strutturale', cat:'mon', nome:'Inflazione strutturalmente alta',      desc:'Nuovo regime 3-4% permanente. Tassi reali bassi. Bond nominali penalizzati.',       orizzonte:'24-60m', intensita:'alta',
-    impatto:{eq:+3,em:+5,gov:-12,corp:-5,il:+18,com:+15,cash:-3,gold:+12},
-    corr:['petrolio_alto','stagflazione_usa'],
-    taa:'Massimizza IL (IBCI). Aumenta commodity e oro. Riduci duration nominale. Equity reale positivo.',
-    cliente:'Se l\'inflazione rimane strutturalmente alta, i bond nominali perdono potere d\'acquisto. L\'oro e i titoli indicizzati proteggono.',
-  },
-  {id:'repressione_finanziaria', cat:'mon', nome:'Repressione finanziaria',             desc:'Tassi reali negativi di nuovo. Governi si finanziano a spese dei risparmiatori.',    orizzonte:'12-36m', intensita:'media',
-    impatto:{eq:+8,em:+6,gov:-5,corp:+3,il:+10,com:+8,cash:-8,gold:+10},
-    corr:['deflazione_eu','cbdc_europeo'],
-    taa:'Aumenta azionario reale e IL. Riduci cash nominale. Oro come protezione.',
-    cliente:'La repressione finanziaria penalizza chi tiene troppi soldi fermi. Il portafoglio investito batte il cash.',
-  },
+  {id:'petrolio_alto',cat:'geo',nome:'Petrolio persistentemente alto',desc:'WTI > $90/barile per 6+ mesi. Inflazione riprende, BCE alza, bond lunghi soffrono.',orizzonte:'6-12m',intensita:'alta',impatto:{eq:-8,em:-5,gov:-12,corp:-6,il:+8,com:+25,cash:+2,gold:+10},corr:['bce_alza','stagflazione_usa','inflazione_strutturale'],taa:"Aumenta IL (IBCI) e Commodity (IGLN/ICOM). Riduci Gov Bond lunga duration (IBGL/IDTL). Accorcia su IEGE.",cliente:"Il prezzo del petrolio alto fa salire l'inflazione. I tuoi bond lunghi soffrono, ma l'oro e i titoli indicizzati all'inflazione proteggono."},
+  {id:'guerra_commerciale',cat:'geo',nome:'Guerra commerciale USA-Cina',desc:'Dazi generalizzati >25%. Supply chain globale colpita. EM azionario sotto pressione.',orizzonte:'12-24m',intensita:'alta',impatto:{eq:-10,em:-18,gov:+5,corp:-8,il:+3,com:-5,cash:+5,gold:+8},corr:['hard_landing_usa','recessione_germania'],taa:"Riduci IEMA, aumenta EXCS (ex-China). Sovrappesa Gov Bond come rifugio.",cliente:"I dazi tra USA e Cina danneggiano il commercio mondiale. Le azioni dei paesi emergenti soffrono di più."},
+  {id:'crisi_taiwan',cat:'geo',nome:'Crisi Taiwan',desc:'Escalation militare o blocco commerciale. Shock geopolitico estremo globale.',orizzonte:'0-6m',intensita:'alta',impatto:{eq:-25,em:-30,gov:+10,corp:-15,il:+5,com:-10,cash:+15,gold:+20},corr:['flash_crash'],taa:"Massima difensività. Cash (XEON/SMART) al massimo. Oro. Esci da equity EM completamente.",cliente:"Una crisi a Taiwan sarebbe un evento estremo. Il portafoglio difensivo con oro e liquidità resisterebbe meglio."},
+  {id:'hormuz',cat:'geo',nome:'Chiusura Stretto di Hormuz',desc:'20% del petrolio mondiale bloccato. Shock energetico immediato e severo.',orizzonte:'0-3m',intensita:'alta',impatto:{eq:-15,em:-12,gov:+5,corp:-10,il:+12,com:+40,cash:+8,gold:+15},corr:['petrolio_alto','inflazione_strutturale'],taa:"Massimizza commodity (IGLN, ICOM). Riduci equity ciclico. Duration breve su bond.",cliente:"La chiusura dello Stretto di Hormuz farebbe esplodere il prezzo del petrolio."},
+  {id:'recessione_germania',cat:'geo',nome:'Recessione Germania',desc:'PIL Germania -0.5%+ per 2 trimestri. Trascina Eurozona. PMI manifatturiero <45.',orizzonte:'6-18m',intensita:'media',impatto:{eq:-12,em:-8,gov:+8,corp:-10,il:+4,com:-8,cash:+5,gold:+5},corr:['crisi_btp','bce_alza'],taa:"Sottopesa azionario Europa (BNKS, IESE). Aumenta Gov Bond breve. Riduci HY (IHYG).",cliente:"Se la Germania entra in recessione, l'intera Europa rallenta."},
+  {id:'crisi_btp',cat:'macro',nome:'Crisi BTP Italia',desc:'Spread BTP-Bund oltre 300bps. Tensione fiscale italiana. Contagio periferia.',orizzonte:'3-12m',intensita:'alta',impatto:{eq:-8,em:-5,gov:-15,corp:-12,il:-5,com:+3,cash:+10,gold:+8},corr:['recessione_germania'],taa:"Riduci IBGM/IBGL. Esci da BTP diretti. Cash tattico XEON.",cliente:"Un allargamento dello spread BTP significa che i mercati si fidano meno dell'Italia."},
+  {id:'bce_alza',cat:'macro',nome:'BCE alza i tassi di nuovo',desc:'Fine ciclo taglio. BCE rialza per inflazione persistente. Bond lunghi colpiti.',orizzonte:'3-9m',intensita:'media',impatto:{eq:-6,em:-4,gov:-14,corp:-8,il:+6,com:+3,cash:+5,gold:+4},corr:['petrolio_alto','inflazione_strutturale'],taa:"Accorcia duration. Da IBGL/IDTL a IEGE. Aumenta SMART/XEON. Riduci IHYG.",cliente:"Se la BCE alza i tassi, i tuoi bond lunghi perdono valore."},
+  {id:'deflazione_eu',cat:'macro',nome:'Deflazione Eurozona',desc:'BCE torna a QE. Tassi negativi. Bond lunghi salgono. Equity misto.',orizzonte:'12-24m',intensita:'media',impatto:{eq:+5,em:+3,gov:+15,corp:+10,il:-8,com:-10,cash:-2,gold:+5},corr:['recessione_germania'],taa:"Aumenta duration (IBGL, IDTL). Riduci IL e commodity.",cliente:"La deflazione fa scendere i prezzi ma è negativa per l'economia. I tuoi bond lunghi si apprezzano."},
+  {id:'hard_landing_usa',cat:'macro',nome:'Hard landing USA',desc:'Recessione USA entro 12 mesi. Utili aziendali crollano. Fed taglia aggressivo.',orizzonte:'6-18m',intensita:'alta',impatto:{eq:-20,em:-15,gov:+15,corp:-15,il:+3,com:-12,cash:+10,gold:+10},corr:['bear_market','guerra_commerciale'],taa:"Massimizza Gov Bond (IBGM, IBGL). Riduci equity globale. Aumenta oro.",cliente:"Una recessione americana colpisce tutti i mercati."},
+  {id:'soft_landing',cat:'macro',nome:'Soft landing USA confermato',desc:'Atterraggio perfetto. Inflazione al target. Fed taglia graduale. Mercati stabili.',orizzonte:'6-12m',intensita:'bassa',impatto:{eq:+10,em:+8,gov:+5,corp:+8,il:0,com:+3,cash:-2,gold:0},corr:['boom_ai'],taa:"Mantieni SAA. Leggermente sovrappesato equity. Normalità operativa.",cliente:"Il migliore scenario possibile. L'economia cresce, i mercati sono stabili."},
+  {id:'stagflazione_usa',cat:'macro',nome:'Stagflazione USA',desc:'Inflazione alta + crescita zero. Peggiore degli ambienti per i mercati finanziari.',orizzonte:'12-18m',intensita:'alta',impatto:{eq:-15,em:-12,gov:-10,corp:-12,il:+15,com:+20,cash:0,gold:+18},corr:['petrolio_alto','inflazione_strutturale'],taa:"Massimizza IL e commodity. Riduci tutto il resto.",cliente:"Stagflazione significa prezzi alti e economia ferma. Solo oro, materie prime e titoli indicizzati proteggono."},
+  {id:'boom_ai',cat:'tech',nome:'Boom AI continua',desc:"Produttività esplode. Capex tech in accelerazione. S&P500 guidato da tech.",orizzonte:'12-36m',intensita:'alta',impatto:{eq:+20,em:+8,gov:-3,corp:+5,il:-2,com:0,cash:-5,gold:-5},corr:['soft_landing','robotica_automazione'],taa:"Aumenta QDVE (S&P IT Sector). Sovrappesa IWMO (momentum).",cliente:"Il boom dell'intelligenza artificiale spinge le aziende tecnologiche."},
+  {id:'flash_crash',cat:'fin',nome:'Flash crash',desc:'Caduta -20%+ in 2 settimane poi rimbalzo rapido. Volatilità estrema temporanea.',orizzonte:'0-3m',intensita:'alta',impatto:{eq:-20,em:-22,gov:+8,corp:-15,il:+2,com:-10,cash:+10,gold:+12},corr:['crisi_taiwan'],taa:"Non vendere durante il crash. Mantieni PAC Dinamico con moltiplicatore 3x.",cliente:"Un flash crash è uno spavento temporaneo. Non vendere nel panico."},
+  {id:'bear_market',cat:'fin',nome:'Bear market prolungato',desc:'-40% in 18 mesi. Recessione globale. Liquidità premia. Recovery lenta.',orizzonte:'12-24m',intensita:'alta',impatto:{eq:-40,em:-45,gov:+20,corp:-25,il:+5,com:-20,cash:+15,gold:+15},corr:['hard_landing_usa','recessione_germania'],taa:"Drawdown L3 → posizione difensiva massima. Cash al massimo.",cliente:"Un bear market lungo è doloroso ma temporaneo. La storia insegna che chi mantiene recupera sempre."},
+  {id:'bull_estremo',cat:'fin',nome:'Bull market estremo',desc:"S&P500 +50% in 2 anni. FOMO generalizzato. Rischio bolla su alcune asset class.",orizzonte:'12-24m',intensita:'media',impatto:{eq:+50,em:+35,gov:-8,corp:+15,il:-5,com:+10,cash:-10,gold:-8},corr:['boom_ai','soft_landing'],taa:"Attenzione alla valutazione. Mantieni SAA. Non inseguire la performance.",cliente:"Un mercato toro molto forte porta guadagni importanti, ma attenzione alle valutazioni eccessive."},
+  {id:'inversione_curva',cat:'fin',nome:'Inversione curva tassi',desc:'2y-10y spread negativo persistente. Segnale storico più affidabile di recessione.',orizzonte:'6-18m',intensita:'media',impatto:{eq:-5,em:-8,gov:+5,corp:-8,il:+3,com:-5,cash:+8,gold:+5},corr:['hard_landing_usa','bear_market'],taa:"Segnale di allerta. Inizia a costruire posizione difensiva graduale.",cliente:"Quando i tassi a breve superano quelli a lungo termine, storicamente anticipa una recessione entro 12-18 mesi."},
+  {id:'bitcoin_mainstream',cat:'fin',nome:'Bitcoin mainstream',desc:'Istituzionali entrano massicci. ETF spot approvati. Bitcoin come riserva di valore.',orizzonte:'12-36m',intensita:'media',impatto:{eq:+5,em:+3,gov:-2,corp:0,il:-2,com:+5,cash:-5,gold:-3},corr:['boom_ai'],taa:"Solo per profili Ultra (BTCE, HODL). Portafogli classici: nessuna azione.",cliente:"Il Bitcoin che diventa mainstream interessa principalmente chi ha già esposizione crypto."},
+  {id:'regolamentazione_crypto',cat:'fin',nome:'Regolamentazione crypto UE',desc:'MiCA impatto mercati. Alcune crypto escluse. Stablecoin regolamentate.',orizzonte:'12-24m',intensita:'bassa',impatto:{eq:+2,em:0,gov:0,corp:+2,il:0,com:0,cash:0,gold:0},corr:['fintech_decentralizzato'],taa:"Nessuna azione per portafogli classici.",cliente:"La regolamentazione delle criptovalute le rende più sicure ma potrebbe ridurne la volatilità al rialzo."},
+  {id:'carbon_tax',cat:'geo',nome:'Carbon tax europea',desc:'Tassa carbonio generalizzata. Energia rinnovabile esplode. Fossili penalizzati.',orizzonte:'24-60m',intensita:'media',impatto:{eq:+3,em:-2,gov:0,corp:+2,il:+2,com:-8,cash:0,gold:0},corr:['rinascita_industriale_eu','infrastrutture_boom'],taa:"Aumenta esposizione a settori rinnovabili tramite HLTH/AERO. Riduci commodity fossili.",cliente:"La tassa sul carbonio premia le aziende verdi e penalizza quelle fossili."},
+  {id:'crisi_idrica',cat:'geo',nome:'Crisi idrica globale',desc:'Siccità strutturale. Commodity agricole alle stelle. Food security a rischio.',orizzonte:'24-60m',intensita:'media',impatto:{eq:-3,em:-8,gov:+2,corp:-4,il:+5,com:+20,cash:+2,gold:+5},corr:['carbon_tax','inflazione_strutturale'],taa:"Aumenta commodity broad (ICOM).",cliente:"La crisi idrica fa salire i prezzi alimentari e delle materie prime agricole."},
+  {id:'rinascita_industriale_eu',cat:'pos',nome:'Rinascita industriale Europa',desc:'Reshoring + sussidi verdi + PNRR. Manifattura europea torna competitiva.',orizzonte:'24-60m',intensita:'media',impatto:{eq:+12,em:-2,gov:0,corp:+8,il:+3,com:+5,cash:-3,gold:0},corr:['infrastrutture_boom','carbon_tax'],taa:"Aumenta azionario Europa (BNKS, settoriali). Sovrappesa small cap (IESE).",cliente:"La reindustrializzazione europea porta lavoro e crescita."},
+  {id:'boom_demografico_africa',cat:'demo',nome:'Boom demografico Africa',desc:'Africa motore crescita globale. 1.4 miliardi di consumatori. EM nuovo driver.',orizzonte:'60-120m',intensita:'media',impatto:{eq:+5,em:+15,gov:0,corp:+3,il:0,com:+10,cash:-2,gold:0},corr:['superciclo_commodity'],taa:"Aumenta IEMA con focus su EM Africa.",cliente:"La crescita dell'Africa nei prossimi decenni creerà enormi opportunità."},
+  {id:'rivoluzione_farmaceutica',cat:'tech',nome:'Rivoluzione farmaceutica',desc:'GLP-1, longevità, biotech esplode. Healthcare diventa settore dominante.',orizzonte:'24-60m',intensita:'alta',impatto:{eq:+8,em:+3,gov:0,corp:+5,il:0,com:0,cash:-2,gold:0},corr:['invecchiamento_europa','boom_ai'],taa:"Aumenta HLTH (Healthcare). Considera BTEC (Biotech) per profili aggressivi.",cliente:"I nuovi farmaci contro obesità e invecchiamento potrebbero essere la più grande rivoluzione sanitaria degli ultimi decenni."},
+  {id:'fusione_nucleare',cat:'tech',nome:'Fusione nucleare commerciale',desc:'Energia quasi gratuita entro 10 anni. Rivoluzione energetica totale.',orizzonte:'60-120m',intensita:'alta',impatto:{eq:+10,em:+8,gov:0,corp:+5,il:-5,com:-20,cash:-3,gold:-5},corr:['carbon_tax','robotica_automazione'],taa:"Molto lungo termine. Nessuna azione TAA immediata.",cliente:"La fusione nucleare risolverebbe il problema energetico globale."},
+  {id:'pace_ucraina',cat:'geo',nome:'Pace in Ucraina',desc:'Accordo di cessate il fuoco. Gas russo torna. Ricostruzione. Spread crollano.',orizzonte:'0-12m',intensita:'alta',impatto:{eq:+12,em:+5,gov:+3,corp:+10,il:-5,com:-15,cash:-5,gold:-10},corr:['deflazione_eu','recessione_germania'],taa:"Aumenta azionario Europa (BNKS). Riduci commodity energia.",cliente:"La pace in Ucraina farebbe scendere i prezzi dell'energia e rilanciare l'economia europea."},
+  {id:'superciclo_commodity',cat:'pos',nome:'Superciclo commodity',desc:'Domanda EM + underinvestment offerta. Metalli, energia, agricoltura salgono.',orizzonte:'24-60m',intensita:'media',impatto:{eq:+3,em:+12,gov:-2,corp:+3,il:+8,com:+30,cash:-3,gold:+15},corr:['boom_demografico_africa','dedollarizzazione'],taa:"Aumenta ICOM (commodity broad) e IGLN (oro). Sovrappesa EM produttori.",cliente:"Un superciclo delle materie prime beneficia i paesi produttori."},
+  {id:'dollaro_debole',cat:'mon',nome:'Dollaro debole strutturale',desc:'EUR/USD > 1.20. EM beneficiano. Oro sale. Debito USA in dollari si alleggerisce.',orizzonte:'12-36m',intensita:'media',impatto:{eq:+3,em:+15,gov:+2,corp:+3,il:+3,com:+12,cash:0,gold:+12},corr:['dedollarizzazione','multipolarismo'],taa:"Aumenta IEMA. Riduci hedging valutario. IGLN beneficia strutturalmente.",cliente:"Un dollaro più debole è positivo per i mercati emergenti e per l'oro."},
+  {id:'credito_privato_boom',cat:'fin',nome:'Credito privato boom',desc:'Private credit come alternativa. Rendimenti 8-12%. Mercato in espansione rapida.',orizzonte:'12-36m',intensita:'media',impatto:{eq:+2,em:+2,gov:-3,corp:+5,il:0,com:0,cash:-2,gold:0},corr:['pe_democratizzato'],taa:"Nessuna azione diretta su ETF.",cliente:"Il credito privato offre rendimenti alti ma è poco liquido."},
+  {id:'small_cap_outperform',cat:'fin',nome:'Small cap outperformance',desc:'Value rotation dopo anni growth. Small cap value storicamente batte in questo ciclo.',orizzonte:'12-24m',intensita:'media',impatto:{eq:+15,em:+8,gov:-2,corp:+3,il:0,com:+3,cash:-3,gold:0},corr:['dollaro_debole','soft_landing'],taa:"Aumenta IUSN (World Small Cap) e ZPRV (USA Small Cap Value).",cliente:"Le piccole aziende tendono a sovraperformare in certi cicli di mercato."},
+  {id:'dividendi_moda',cat:'fin',nome:'Dividendi tornano di moda',desc:'Income investing strutturale. High dividend outperformance. Yield preference.',orizzonte:'12-24m',intensita:'bassa',impatto:{eq:+5,em:+3,gov:0,corp:+5,il:0,com:0,cash:-2,gold:0},corr:['invecchiamento_europa'],taa:"Aumenta VHYL e ISEU (Income).",cliente:"Quando i dividendi tornano di moda, i tuoi ETF ad alto rendimento cedolare beneficiano."},
+  {id:'invecchiamento_europa',cat:'demo',nome:'Invecchiamento Europa',desc:'Healthcare, pharma, risparmio gestito crescono strutturalmente per decenni.',orizzonte:'60-120m',intensita:'alta',impatto:{eq:+5,em:-2,gov:+3,corp:+3,il:+2,com:0,cash:0,gold:0},corr:['rivoluzione_farmaceutica','pensioni_pressione'],taa:"Aumenta HLTH (Healthcare). Strutturalmente positivo per income e dividendi.",cliente:"L'invecchiamento della popolazione europea è una certezza. Farmaci, assistenza sanitaria e previdenza cresceranno."},
+  {id:'gen_z_investe',cat:'demo',nome:'Gen Z investe diversamente',desc:'Crypto, ESG, alternative mainstream. Flussi verso asset non tradizionali.',orizzonte:'24-60m',intensita:'bassa',impatto:{eq:+3,em:+2,gov:-2,corp:0,il:0,com:0,cash:-3,gold:0},corr:['bitcoin_mainstream','fintech_decentralizzato'],taa:"Nessuna azione immediata.",cliente:"Le nuove generazioni investono in modo diverso."},
+  {id:'pensioni_pressione',cat:'demo',nome:'Pensioni sotto pressione',desc:'Mercato previdenza integrativa esplode. Risparmio privato necessario strutturalmente.',orizzonte:'24-60m',intensita:'alta',impatto:{eq:+5,em:+2,gov:+5,corp:+3,il:+3,com:0,cash:-5,gold:0},corr:['invecchiamento_europa'],taa:"Strutturalmente positivo per tutto il settore gestione patrimoniale.",cliente:"Le pensioni pubbliche saranno insufficienti. La previdenza integrativa e i portafogli privati diventano essenziali."},
+  {id:'immigrazione_europa',cat:'demo',nome:'Immigrazione massiccia Europa',desc:'Consumi, real estate, banche beneficiano. Mercato lavoro si riequilibra.',orizzonte:'24-60m',intensita:'bassa',impatto:{eq:+5,em:0,gov:0,corp:+3,il:+2,com:+3,cash:-2,gold:0},corr:['invecchiamento_europa','rinascita_industriale_eu'],taa:"Positivo per azionario Europa (BNKS) e Real Estate (IPRP).",cliente:"L'immigrazione sostiene i consumi e il mercato immobiliare europeo."},
+  {id:'robotica_automazione',cat:'tech',nome:'Robotica e automazione',desc:'Produttività manifatturiera aumenta. Costi produzione calano. Margini migliorano.',orizzonte:'24-60m',intensita:'alta',impatto:{eq:+10,em:+5,gov:0,corp:+5,il:-2,com:-5,cash:-3,gold:0},corr:['boom_ai','rinascita_industriale_eu'],taa:"Aumenta IWMO (Momentum) e tech tramite QDVE/EQQQ.",cliente:"I robot e l'automazione aumentano la produttività delle aziende, migliorando i profitti."},
+  {id:'quantum_computing',cat:'tech',nome:'Quantum computing commerciale',desc:'Rivoluzione cybersecurity e scoperta farmaci. Alcune industrie disrupted.',orizzonte:'36-72m',intensita:'media',impatto:{eq:+5,em:+2,gov:0,corp:+3,il:0,com:0,cash:-2,gold:0},corr:['boom_ai','rivoluzione_farmaceutica'],taa:"Lungo termine. Esposizione indiretta tramite QDVE e HLTH.",cliente:"Il quantum computing potrebbe rivoluzionare farmaci e sicurezza informatica."},
+  {id:'spazio_commerciale',cat:'tech',nome:'Spazio commerciale',desc:'SpaceX, satelliti, turismo spaziale. Nuova frontiera investimenti settoriali.',orizzonte:'36-72m',intensita:'bassa',impatto:{eq:+5,em:+2,gov:0,corp:+3,il:0,com:+3,cash:-2,gold:0},corr:['boom_ai','robotica_automazione'],taa:"Esposizione indiretta tramite AERO (Aerospace & Defence).",cliente:"Lo spazio commerciale è una frontiera entusiasmante."},
+  {id:'fintech_decentralizzato',cat:'tech',nome:'Fintech decentralizzato',desc:'Banche tradizionali sotto pressione. DeFi, pagamenti digitali, neobank crescono.',orizzonte:'24-60m',intensita:'media',impatto:{eq:+2,em:+3,gov:-2,corp:+2,il:0,com:0,cash:-3,gold:0},corr:['bitcoin_mainstream','gen_z_investe'],taa:"Attenzione a BNKS (Banche EU) nel lungo termine.",cliente:"Le nuove tecnologie finanziarie mettono sotto pressione le banche tradizionali."},
+  {id:'governo_tecnico_italia',cat:'geo',nome:'Governo tecnico in Italia',desc:'Riforme strutturali, spread BTP giù, fiducia mercati aumenta.',orizzonte:'6-24m',intensita:'media',impatto:{eq:+8,em:0,gov:+5,corp:+5,il:+3,com:0,cash:-3,gold:-3},corr:['crisi_btp'],taa:"Positivo per IBGM/IBGL (BTP). Aumenta azionario Italia tramite BNKS.",cliente:"Un governo riformatore in Italia farebbe scendere lo spread."},
+  {id:'federalismo_eu',cat:'geo',nome:'Federalismo fiscale EU',desc:'Eurobond permanenti. Integrazione fiscale. Safe asset europeo credibile.',orizzonte:'36-72m',intensita:'alta',impatto:{eq:+8,em:+2,gov:+10,corp:+6,il:+3,com:0,cash:-5,gold:-5},corr:['rinascita_industriale_eu'],taa:"Molto positivo per Gov Bond EU (IBGM, IBGL, VGEA). Azionario Europa beneficia.",cliente:"Un'Europa più integrata fiscalmente renderebbe i bond europei più sicuri."},
+  {id:'trump_completo',cat:'geo',nome:'Trump 2.0 completo',desc:'Dazi, riduzione tasse, dollaro forte/debole, debito USA esplode.',orizzonte:'6-24m',intensita:'alta',impatto:{eq:+8,em:-12,gov:-5,corp:+5,il:+3,com:+5,cash:0,gold:+8},corr:['guerra_commerciale','stagflazione_usa'],taa:"Riduci IEMA (EM penalizzati da dazi). Aumenta azionario USA domestico. Oro come hedge.",cliente:"Le politiche Trump favoriscono le aziende americane ma danneggiano i mercati emergenti."},
+  {id:'multipolarismo',cat:'geo',nome:'Multipolarismo consolidato',desc:'Fine egemonia dollaro, BRICS rafforzati, yuan e oro come riserve alternative.',orizzonte:'36-72m',intensita:'media',impatto:{eq:+2,em:+10,gov:0,corp:0,il:+5,com:+10,cash:-5,gold:+15},corr:['dedollarizzazione','dollaro_debole'],taa:"Aumenta IEMA con focus su Asia. Oro strutturalmente positivo.",cliente:"Un mondo multipolare favorisce i mercati emergenti e l'oro."},
+  {id:'lusso_italiano',cat:'pos',nome:'Rinascita lusso italiano',desc:'Domanda Asia in ripresa. Brand italiani beneficiano. Turismo di lusso esplode.',orizzonte:'12-24m',intensita:'media',impatto:{eq:+8,em:+3,gov:0,corp:+3,il:0,com:0,cash:-2,gold:0},corr:['turismo_record','boom_demografico_africa'],taa:"Esposizione indiretta tramite azionario Europa.",cliente:"Il lusso italiano è richiestissimo dall'Asia in ripresa."},
+  {id:'turismo_record',cat:'pos',nome:'Turismo record Europa',desc:'Boom post-pandemia strutturale. Prezzi alberghi/trasporti persistentemente alti.',orizzonte:'12-36m',intensita:'bassa',impatto:{eq:+5,em:+2,gov:0,corp:+3,il:+2,com:+3,cash:-2,gold:0},corr:['lusso_italiano','inflazione_strutturale'],taa:"Esposizione indiretta tramite azionario Europa (BNKS, settoriali).",cliente:"Il turismo record porta più entrate alle aziende europee."},
+  {id:'crisi_banche_usa',cat:'fin',nome:'Crisi banche regionali USA',desc:'Contagio Silicon Valley Bank style. Credito si restringe. Fed interviene.',orizzonte:'0-6m',intensita:'alta',impatto:{eq:-12,em:-8,gov:+10,corp:-15,il:+3,com:-5,cash:+8,gold:+10},corr:['hard_landing_usa','flash_crash'],taa:"Riduci corporate bond (IHYG). Aumenta Gov Bond. Cash tattico. Oro.",cliente:"Una crisi bancaria USA è uno shock finanziario. I tuoi bond governativi e oro salgono come rifugi."},
+  {id:'pe_democratizzato',cat:'fin',nome:'Private equity democratizzato',desc:'Retail accede agli alternativi. Fondi chiusi, ELTIF, infrastrutture per tutti.',orizzonte:'24-48m',intensita:'bassa',impatto:{eq:+3,em:+2,gov:-2,corp:+3,il:0,com:0,cash:-3,gold:0},corr:['credito_privato_boom'],taa:"Nessuna azione diretta.",cliente:"Gli investimenti alternativi diventano accessibili."},
+  {id:'re_commerciale_crisi',cat:'fin',nome:'Real estate commerciale crolla',desc:'Remote work strutturale. Uffici vuoti. REIT commerciali colpiti duramente.',orizzonte:'24-48m',intensita:'media',impatto:{eq:-3,em:-2,gov:+2,corp:-5,il:0,com:0,cash:+3,gold:0},corr:['fintech_decentralizzato'],taa:"Attenzione a IWDP e IPRP (Real Estate).",cliente:"Gli uffici vuoti colpiscono il mercato immobiliare commerciale."},
+  {id:'infrastrutture_boom',cat:'pos',nome:'Infrastrutture boom',desc:'PNRR, difesa, transizione energetica. Spesa pubblica esplode. Costruzioni crescono.',orizzonte:'24-60m',intensita:'alta',impatto:{eq:+8,em:+5,gov:-2,corp:+5,il:+3,com:+8,cash:-3,gold:0},corr:['rinascita_industriale_eu','carbon_tax'],taa:"Aumenta AERO (Aerospace/Difesa). Esposizione commodity metalli industriali tramite ICOM.",cliente:"Gli investimenti in infrastrutture militari, energetiche e digitali creano crescita per molti settori."},
+  {id:'cbdc_europeo',cat:'mon',nome:'CBDC europeo',desc:'Euro digitale. Impatto su banche, bond, privacy. Tassi negativi possibili.',orizzonte:'24-60m',intensita:'media',impatto:{eq:+2,em:0,gov:+3,corp:+2,il:0,com:0,cash:-5,gold:+3},corr:['fintech_decentralizzato','deflazione_eu'],taa:"Nessuna azione immediata. Monitorare impatto su BNKS nel lungo termine.",cliente:"La valuta digitale europea cambierà il sistema bancario."},
+  {id:'dedollarizzazione',cat:'mon',nome:'Dedollarizzazione accelera',desc:'BRICS, yuan, oro come riserve. Dollaro perde quota riserve mondiali gradualmente.',orizzonte:'36-72m',intensita:'media',impatto:{eq:+2,em:+12,gov:0,corp:0,il:+5,com:+12,cash:-5,gold:+18},corr:['multipolarismo','dollaro_debole'],taa:"Aumenta IEMA e oro (IGLN). Diversifica valutario strutturalmente.",cliente:"Se il dollaro perde il suo ruolo dominante, i mercati emergenti e l'oro ne beneficiano."},
+  {id:'inflazione_strutturale',cat:'mon',nome:'Inflazione strutturalmente alta',desc:'Nuovo regime 3-4% permanente. Tassi reali bassi. Bond nominali penalizzati.',orizzonte:'24-60m',intensita:'alta',impatto:{eq:+3,em:+5,gov:-12,corp:-5,il:+18,com:+15,cash:-3,gold:+12},corr:['petrolio_alto','stagflazione_usa'],taa:"Massimizza IL (IBCI). Aumenta commodity e oro. Riduci duration nominale.",cliente:"Se l'inflazione rimane strutturalmente alta, i bond nominali perdono potere d'acquisto."},
+  {id:'repressione_finanziaria',cat:'mon',nome:'Repressione finanziaria',desc:'Tassi reali negativi di nuovo. Governi si finanziano a spese dei risparmiatori.',orizzonte:'12-36m',intensita:'media',impatto:{eq:+8,em:+6,gov:-5,corp:+3,il:+10,com:+8,cash:-8,gold:+10},corr:['deflazione_eu','cbdc_europeo'],taa:"Aumenta azionario reale e IL. Riduci cash nominale. Oro come protezione.",cliente:"La repressione finanziaria penalizza chi tiene troppi soldi fermi."},
 ];
 
-// ══════════════════════════════════════════════════
-// IMPATTO PER CLASSE — descrizioni
-// ══════════════════════════════════════════════════
-const CLASSI = [
-  {k:'eq',   l:'Azionario DM',    c:'#1a4a8a'},
-  {k:'em',   l:'Azionario EM',    c:'#2a6e8a'},
-  {k:'gov',  l:'Gov Bond EU',     c:'#2a6e3a'},
-  {k:'corp', l:'Corporate Bond',  c:'#5a3a8a'},
-  {k:'il',   l:'Inflation Linked',c:'#6a4a8a'},
-  {k:'com',  l:'Commodity/Oro',   c:'#8a8a1a'},
-  {k:'cash', l:'Cash/Monetario',  c:'#4a6a6a'},
-  {k:'gold', l:'Oro fisico',      c:'#c8a020'},
+const CLASSI=[
+  {k:'eq',l:'Azionario DM',c:'#1a4a8a'},{k:'em',l:'Azionario EM',c:'#2a6e8a'},
+  {k:'gov',l:'Gov Bond EU',c:'#2a6e3a'},{k:'corp',l:'Corporate Bond',c:'#5a3a8a'},
+  {k:'il',l:'Inflation Linked',c:'#6a4a8a'},{k:'com',l:'Commodity/Oro',c:'#8a8a1a'},
+  {k:'cash',l:'Cash/Monetario',c:'#4a6a6a'},{k:'gold',l:'Oro fisico',c:'#c8a020'},
 ];
-
-const PRESET_WEIGHTS = {
-  monetario:    {eq:0,  em:0,  gov:20,corp:5,  il:5, com:0, cash:70,gold:0},
-  conservativo: {eq:15, em:5,  gov:50,corp:15, il:10,com:0, cash:5, gold:0},
-  moderato:     {eq:30, em:10, gov:35,corp:15, il:8, com:2, cash:5, gold:0},
-  bilanciato:   {eq:45, em:15, gov:25,corp:10, il:5, com:2, cash:3, gold:0},
-  crescita:     {eq:55, em:20, gov:15,corp:5,  il:0, com:3, cash:2, gold:0},
-  aggressivo:   {eq:65, em:25, gov:5, corp:0,  il:0, com:3, cash:2, gold:0},
-  full_equity:  {eq:75, em:25, gov:0, corp:0,  il:0, com:0, cash:0, gold:0},
+const PRESET_WEIGHTS={
+  monetario:{eq:0,em:0,gov:20,corp:5,il:5,com:0,cash:70,gold:0},
+  conservativo:{eq:15,em:5,gov:50,corp:15,il:10,com:0,cash:5,gold:0},
+  moderato:{eq:30,em:10,gov:35,corp:15,il:8,com:2,cash:5,gold:0},
+  bilanciato:{eq:45,em:15,gov:25,corp:10,il:5,com:2,cash:3,gold:0},
+  crescita:{eq:55,em:20,gov:15,corp:5,il:0,com:3,cash:2,gold:0},
+  aggressivo:{eq:65,em:25,gov:5,corp:0,il:0,com:3,cash:2,gold:0},
+  full_equity:{eq:75,em:25,gov:0,corp:0,il:0,com:0,cash:0,gold:0},
 };
+let G={selected:new Set(),customProbs:{},marketData:null,filter:'all'};
 
-// ══════════════════════════════════════════════════
-// STATO
-// ══════════════════════════════════════════════════
-let G = {
-  selected: new Set(),
-  customProbs: {},
-  marketData: null,
-  filter: 'all',
-};
-
-// ══════════════════════════════════════════════════
-// UTILS
-// ══════════════════════════════════════════════════
 function fmt(n){return new Intl.NumberFormat('it-IT').format(Math.round(n));}
-function toast(msg,dur=2500){
-  const t=document.getElementById('toast');
-  t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),dur);
-}
-function getProb(id){
-  return G.customProbs[id] ?? G.marketData?.probabilities?.[id] ?? 30;
-}
+function toast(msg,dur=2500){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),dur);}
+function getProb(id){return G.customProbs[id]??G.marketData?.probabilities?.[id]??30;}
 
-// ══════════════════════════════════════════════════
-// NAVIGAZIONE
-// ══════════════════════════════════════════════════
 function show(id){
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.ntab').forEach(t=>t.classList.remove('active'));
@@ -867,9 +552,6 @@ function show(id){
   if(id==='consensus')renderConsensus();
 }
 
-// ══════════════════════════════════════════════════
-// LOAD DATA
-// ══════════════════════════════════════════════════
 async function loadMarketData(){
   try{
     const res=await fetch('data/market_data_rse.json?t='+Date.now());
@@ -878,75 +560,56 @@ async function loadMarketData(){
     updateCruscotto();
     document.getElementById('updateDot').className='update-dot dot-live';
     document.getElementById('updateText').textContent='Dati live aggiornati';
-    document.getElementById('updateTime').textContent=
-      G.marketData.meta?.updated_it||'—';
-  } catch(e){
+    document.getElementById('updateTime').textContent=G.marketData.meta?.updated_it||'—';
+  }catch(e){
     document.getElementById('updateDot').className='update-dot dot-offline';
     document.getElementById('updateText').textContent='Dati non disponibili — modalità offline';
     updateCruscottoOffline();
   }
 }
 
-// ══════════════════════════════════════════════════
-// CRUSCOTTO
-// ══════════════════════════════════════════════════
 function updateCruscotto(){
   const meta=G.marketData?.meta||{};
   const inds=G.marketData?.indicators||{};
   const probs=G.marketData?.probabilities||{};
-
-  // Regime
   const regime=meta.regime||'NEUTRO';
   document.getElementById('regimeLabel').textContent=regime;
   document.getElementById('regimeBadge').textContent=regime;
   document.getElementById('regimeBadge').className='regime-badge regime-'+regime.toLowerCase().replace(/ /g,'-');
-  document.getElementById('regimeScore').textContent=
-    `Score: ${meta.regime_score??0} · ${(meta.regime_signals||[]).length} segnali rilevati`;
-
+  document.getElementById('regimeScore').textContent=`Score: ${meta.regime_score??0} · ${(meta.regime_signals||[]).length} segnali rilevati`;
   const signals=document.getElementById('regimeSignals');
   signals.innerHTML=(meta.regime_signals||[]).slice(0,4).map(s=>
-    `<div style="font-size:10px;color:var(--white2);padding:3px 0;border-bottom:1px solid var(--gray3)">→ ${s}</div>`
+    `<div style="font-size:10px;color:var(--gray);padding:3px 0;border-bottom:1px solid var(--gray3)">→ ${s}</div>`
   ).join('');
-
-  // Top scenari
-  const sorted=SCENARI
-    .map(s=>({...s,prob:probs[s.id]||30}))
-    .sort((a,b)=>b.prob-a.prob)
-    .slice(0,6);
-  document.getElementById('topScenari').innerHTML=sorted.map(s=>`
-    <div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--gray3)">
+  const sorted=SCENARI.map(s=>({...s,prob:probs[s.id]||30})).sort((a,b)=>b.prob-a.prob).slice(0,6);
+  document.getElementById('topScenari').innerHTML=sorted.map(s=>
+    `<div style="display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid var(--gray3)">
       <div style="flex:1;font-size:10px;color:var(--white2)">${s.nome.slice(0,35)}</div>
       <div style="font-size:11px;font-weight:600;color:var(--gold2)">${s.prob}%</div>
     </div>`).join('');
-
-  // Indicatori
   renderIndicatori(inds);
-
-  // Alert
-  renderAlert(probs, inds);
-
-  // Selected summary
+  renderAlert(probs,inds);
+  renderForecast();
   updateSelectedSummary();
 }
 
 function updateCruscottoOffline(){
   document.getElementById('regimeLabel').textContent='OFFLINE';
   document.getElementById('regimeBadge').textContent='OFFLINE';
-  document.getElementById('indicatoriGrid').innerHTML=
-    '<div style="grid-column:1/-1;text-align:center;color:var(--gray);padding:20px">Dati non disponibili — GitHub Action non ancora configurato o nessuna connessione</div>';
+  document.getElementById('indicatoriGrid').innerHTML='<div style="grid-column:1/-1;text-align:center;color:var(--gray);padding:20px">Dati non disponibili</div>';
 }
 
 function renderIndicatori(inds){
   const grid=document.getElementById('indicatoriGrid');
   const items=[
-    {k:'VIX',  label:'VIX',       format:v=>v.toFixed(1), color:v=>v>30?'var(--red3)':v>20?'var(--amber2)':'var(--green3)'},
-    {k:'US10Y',label:'US 10Y',    format:v=>v.toFixed(2)+'%', color:v=>'var(--white)'},
-    {k:'US2Y', label:'US 2Y',     format:v=>v.toFixed(2)+'%', color:v=>'var(--white)'},
-    {k:'CRUDE',label:'Petrolio',  format:v=>'$'+v.toFixed(1), color:v=>v>90?'var(--red3)':'var(--white)'},
-    {k:'GOLD', label:'Oro',       format:v=>'$'+fmt(v), color:v=>'var(--gold2)'},
-    {k:'EURUSD',label:'EUR/USD',  format:v=>v.toFixed(4), color:v=>v>1.10?'var(--green3)':v<1.05?'var(--red3)':'var(--white)'},
-    {k:'SP500',label:'S&P 500',   format:v=>fmt(v), color:v=>'var(--white)'},
-    {k:'STOXX',label:'Stoxx 50',  format:v=>fmt(v), color:v=>'var(--white)'},
+    {k:'VIX',label:'VIX',format:v=>v.toFixed(1),color:v=>v>30?'var(--red2)':v>20?'var(--amber2)':'var(--green)'},
+    {k:'US10Y',label:'US 10Y',format:v=>v.toFixed(2)+'%',color:v=>'var(--white)'},
+    {k:'US2Y',label:'US 2Y',format:v=>v.toFixed(2)+'%',color:v=>'var(--white)'},
+    {k:'CRUDE',label:'Petrolio',format:v=>'$'+v.toFixed(1),color:v=>v>90?'var(--red2)':'var(--white)'},
+    {k:'GOLD',label:'Oro',format:v=>'$'+fmt(v),color:v=>'var(--gold2)'},
+    {k:'EURUSD',label:'EUR/USD',format:v=>v.toFixed(4),color:v=>v>1.10?'var(--green)':v<1.05?'var(--red2)':'var(--white)'},
+    {k:'SP500',label:'S&P 500',format:v=>fmt(v),color:v=>'var(--white)'},
+    {k:'STOXX',label:'Stoxx 50',format:v=>fmt(v),color:v=>'var(--white)'},
   ];
   grid.innerHTML=items.map(item=>{
     const d=inds[item.k];
@@ -955,26 +618,22 @@ function renderIndicatori(inds){
     return`<div class="ind-card">
       <div class="ind-name">${item.label}</div>
       <div class="ind-value" style="color:${item.color(d.price)}">${item.format(d.price)}</div>
-      <div class="ind-chg" style="color:${chg>=0?'var(--green3)':'var(--red3)'}">${chg>=0?'+':''}${chg?.toFixed(2)}% 1w</div>
+      <div class="ind-chg" style="color:${chg>=0?'var(--green)':'var(--red2)'}">${chg>=0?'+':''}${chg?.toFixed(2)}% 1w</div>
     </div>`;
   }).join('');
 }
 
-function renderAlert(probs, inds){
+function renderAlert(probs,inds){
   const alerts=[];
   const vix=inds?.VIX?.price;
-  if(vix>30)alerts.push({t:'🔴 VIX ELEVATO',txt:`VIX a ${vix?.toFixed(1)} — volatilità di stress. Verifica soglie drawdown nei portafogli cliente.`,c:'var(--red3)'});
-  if(vix>40)alerts.push({t:'⚠ VIX ESTREMO',txt:`VIX oltre 40 — paura estrema. Opportunità di acquisto per PAC Dinamico (moltiplicatore 3x).`,c:'var(--red3)'});
-
+  if(vix>30)alerts.push({t:'🔴 VIX ELEVATO',txt:`VIX a ${vix?.toFixed(1)} — volatilità di stress.`,c:'var(--red2)'});
+  if(vix>40)alerts.push({t:'⚠ VIX ESTREMO',txt:`VIX oltre 40 — paura estrema. Opportunità di acquisto per PAC Dinamico (moltiplicatore 3x).`,c:'var(--red2)'});
   const crude=inds?.CRUDE?.price;
-  if(crude>90)alerts.push({t:'🛢 PETROLIO ALTO',txt:`Petrolio a $${crude?.toFixed(1)} — pressione inflattiva. Aumenta probabilità scenario "Petrolio Alto".`,c:'var(--amber2)'});
-
+  if(crude>90)alerts.push({t:'🛢 PETROLIO ALTO',txt:`Petrolio a $${crude?.toFixed(1)} — pressione inflattiva.`,c:'var(--amber2)'});
   const spread=((inds?.US10Y?.price||4)-(inds?.US2Y?.price||4.5));
   if(spread<0)alerts.push({t:'📉 CURVA INVERTITA',txt:`Spread 2y-10y: ${spread.toFixed(2)}% — segnale storico di recessione entro 12-18 mesi.`,c:'var(--amber2)'});
-
   const top=SCENARI.filter(s=>(probs[s.id]||30)>65).slice(0,3);
   top.forEach(s=>alerts.push({t:`⚡ ${s.nome.toUpperCase()}`,txt:`Probabilità elevata: ${probs[s.id]}% — considera impatto sul portafoglio.`,c:'var(--gold2)'}));
-
   const sec=document.getElementById('alertSection');
   if(!alerts.length){sec.innerHTML='';return;}
   sec.innerHTML=`<div class="card" style="margin-bottom:14px">
@@ -984,6 +643,54 @@ function renderAlert(probs, inds){
       <div style="font-size:11px;color:var(--white2)">${a.txt}</div>
     </div>`).join('')}
   </div>`;
+}
+
+// ══════════════════════════════════════════════════
+// FORECAST MARKOV
+// ══════════════════════════════════════════════════
+function renderForecast(){
+  const forecast=G.marketData?.forecast||{};
+  const duration=G.marketData?.regime_duration||{};
+  const regime=G.marketData?.meta?.regime||'—';
+  if(!Object.keys(forecast).length||!forecast['4w']){
+    document.getElementById('forecastCard').style.display='none';return;
+  }
+  document.getElementById('forecastCard').style.display='block';
+
+  const RCOLORS={BULL:'#166534',ESPANSIONE:'#15803d',NEUTRO:'#a16207',RALLENTAMENTO:'#b45309',BEAR:'#b91c1c'};
+  const sw=duration.settimane_correnti||1;
+  const media=duration.media_storica||22;
+  const pct=duration.percentuale_durata||0;
+  const rim=duration.aspettativa_rimanente||0;
+  const cal=duration.calibrato_su_dati?'✓ calibrato su dati storici':'⚠ stima iniziale (dati in accumulo)';
+  const col=RCOLORS[regime]||'#a16207';
+  document.getElementById('durInfo').innerHTML=
+    `<span style="font-weight:700;color:${col}">${regime}</span> · ${sw} settimane in corso · media storica: ${media}w · aspettativa rimanente: ~${rim}w · <span style="color:var(--gray2)">${cal}</span>`;
+  document.getElementById('durBar').style.width=Math.min(100,pct)+'%';
+  document.getElementById('durBar').style.background=pct>80?'var(--red2)':pct>60?'var(--amber2)':'var(--gold)';
+  document.getElementById('durLabel').textContent='Completamento ciclo: '+pct+'%';
+
+  const REGIMES=['BULL','ESPANSIONE','NEUTRO','RALLENTAMENTO','BEAR'];
+  const horizons=[{k:'4w',l:'4 SETTIMANE',best:false},{k:'3m',l:'3 MESI',best:true},{k:'6m',l:'6 MESI',best:false},{k:'12m',l:'12 MESI',best:false}];
+  document.getElementById('forecastGrid').innerHTML=horizons.map(h=>{
+    const f=forecast[h.k]||{};
+    const dom=REGIMES.reduce((a,b)=>(f[a]||0)>(f[b]||0)?a:b,REGIMES[0]);
+    const domPct=f[dom]||0;
+    return`<div class="fc-card ${h.best?'fc-best':''}">
+      <div class="fc-horizon">${h.l}${h.best?' ★':''}</div>
+      <div class="fc-dominant ${dom}" style="color:${RCOLORS[dom]||'#a16207'}">${dom} <span style="font-size:13px;font-weight:400">${domPct}%</span></div>
+      <div>
+        ${REGIMES.filter(r=>(f[r]||0)>0).sort((a,b)=>(f[b]||0)-(f[a]||0)).map(r=>{
+          const pct2=f[r]||0;const col2=RCOLORS[r]||'#a16207';
+          return`<div class="fc-bar-row">
+            <div class="fc-bar-label">${r}</div>
+            <div class="fc-bar-track"><div class="fc-bar-fill" style="width:${pct2}%;background:${col2}"></div></div>
+            <div class="fc-bar-pct" style="color:${col2}">${pct2}%</div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function updateSelectedSummary(){
@@ -1001,22 +708,11 @@ function updateSelectedSummary(){
   }).join('');
 }
 
-// ══════════════════════════════════════════════════
-// SCENARI
-// ══════════════════════════════════════════════════
-const CAT_BADGE = {
-  geo:'b-geo',macro:'b-macro',tech:'b-tech',demo:'b-demo',fin:'b-fin',mon:'b-mon',pos:'b-pos'
-};
-const CAT_LABEL = {
-  geo:'🌍 Geopolitico',macro:'📈 Macro',tech:'⚙ Tech',
-  demo:'👥 Demo',fin:'💰 Finanziario',mon:'🏦 Monetario',pos:'✨ Positivo'
-};
-const INT_BADGE = {alta:'b-alta',media:'b-media',bassa:'b-bassa'};
+const CAT_BADGE={geo:'b-geo',macro:'b-macro',tech:'b-tech',demo:'b-demo',fin:'b-fin',mon:'b-mon',pos:'b-pos'};
+const CAT_LABEL={geo:'🌍 Geopolitico',macro:'📈 Macro',tech:'⚙ Tech',demo:'👥 Demo',fin:'💰 Finanziario',mon:'🏦 Monetario',pos:'✨ Positivo'};
+const INT_BADGE={alta:'b-alta',media:'b-media',bassa:'b-bassa'};
 
-function filterScenari(cat){
-  G.filter=cat;
-  renderScenari();
-}
+function filterScenari(cat){G.filter=cat;renderScenari();}
 
 function renderScenari(){
   const grid=document.getElementById('scenariGrid');
@@ -1024,7 +720,7 @@ function renderScenari(){
   grid.innerHTML=filtered.map(sc=>{
     const prob=getProb(sc.id);
     const sel=G.selected.has(sc.id);
-    const fillColor=prob>65?'var(--green2)':prob>40?'var(--gold2)':'var(--gray)';
+    const fillColor=prob>65?'var(--green)':prob>40?'var(--gold2)':'var(--gray)';
     return`<div class="sc-card ${sel?'selected':''}" onclick="toggleScenario('${sc.id}')">
       <div class="sc-meta">
         <span class="badge sc-tag ${CAT_BADGE[sc.cat]}">${CAT_LABEL[sc.cat]}</span>
@@ -1042,28 +738,16 @@ function renderScenari(){
 }
 
 function toggleScenario(id){
-  if(G.selected.has(id)){
-    G.selected.delete(id);
-    toast('Scenario rimosso');
-  } else {
-    if(G.selected.size>=8){toast('Max 8 scenari selezionabili');return;}
-    G.selected.add(id);
-    toast('Scenario aggiunto');
-  }
-  renderScenari();
-  updateSelectedSummary();
+  if(G.selected.has(id)){G.selected.delete(id);toast('Scenario rimosso');}
+  else{if(G.selected.size>=8){toast('Max 8 scenari selezionabili');return;}G.selected.add(id);toast('Scenario aggiunto');}
+  renderScenari();updateSelectedSummary();
 }
 
-// ══════════════════════════════════════════════════
-// COSTRUTTORE
-// ══════════════════════════════════════════════════
 function renderCostruttore(){
   const empty=document.getElementById('builderEmpty');
   const content=document.getElementById('builderContent');
   if(G.selected.size===0){empty.style.display='block';content.style.display='none';return;}
   empty.style.display='none';content.style.display='block';
-
-  // Lista scenari con slider
   const list=document.getElementById('builderList');
   let totalProb=0;
   list.innerHTML=[...G.selected].map(id=>{
@@ -1073,39 +757,26 @@ function renderCostruttore(){
     return`<div class="builder-scenario">
       <div class="builder-name">${sc.nome}</div>
       <div class="builder-prob">
-        <input type="range" min="0" max="100" value="${prob}"
-          oninput="updateProb('${id}',this.value)"
-          style="width:120px">
+        <input type="range" min="0" max="100" value="${prob}" oninput="updateProb('${id}',this.value)" style="width:120px">
         <div class="builder-prob-val" id="bpv_${id}">${prob}%</div>
       </div>
       <button onclick="toggleScenario('${id}')" style="background:none;border:none;color:var(--gray);cursor:pointer;font-size:14px">✕</button>
     </div>`;
   }).join('');
-
   const tp=document.getElementById('totalProb');
   tp.textContent=totalProb+'%';
-  tp.style.color=totalProb>100?'var(--red3)':totalProb>80?'var(--amber2)':'var(--green3)';
-
-  // Correlazioni
-  renderCorrelazioni();
-
-  // Impatto aggregato
-  renderImpactoBars();
-
-  // TAA actions
-  renderTAAActions();
+  tp.style.color=totalProb>100?'var(--red2)':totalProb>80?'var(--amber2)':'var(--green)';
+  renderCorrelazioni();renderImpactoBars();renderTAAActions();
 }
 
-function updateProb(id, val){
+function updateProb(id,val){
   G.customProbs[id]=parseInt(val);
   document.getElementById('bpv_'+id).textContent=val+'%';
-  let tot=0;
-  [...G.selected].forEach(sid=>tot+=getProb(sid));
+  let tot=0;[...G.selected].forEach(sid=>tot+=getProb(sid));
   const tp=document.getElementById('totalProb');
   tp.textContent=tot+'%';
-  tp.style.color=tot>100?'var(--red3)':tot>80?'var(--amber2)':'var(--green3)';
-  renderImpactoBars();
-  renderTAAActions();
+  tp.style.color=tot>100?'var(--red2)':tot>80?'var(--amber2)':'var(--green)';
+  renderImpactoBars();renderTAAActions();
 }
 
 function renderCorrelazioni(){
@@ -1119,38 +790,25 @@ function renderCorrelazioni(){
       }
     });
   });
-  document.getElementById('correlazioni').innerHTML=
-    corr.length?corr.map(c=>`<div style="padding:4px 0;border-bottom:1px solid var(--gray3)">⚡ ${c}</div>`).join(''):
-    '<div style="color:var(--gray)">Nessuna correlazione rilevata tra gli scenari selezionati</div>';
+  document.getElementById('correlazioni').innerHTML=corr.length?corr.map(c=>`<div style="padding:4px 0;border-bottom:1px solid var(--gray3)">⚡ ${c}</div>`).join(''):'<div style="color:var(--gray)">Nessuna correlazione rilevata</div>';
 }
 
 function renderImpactoBars(){
-  const weighted={};
-  CLASSI.forEach(cl=>{weighted[cl.k]=0;});
-
+  const weighted={};CLASSI.forEach(cl=>{weighted[cl.k]=0;});
   let totalWeight=0;
   [...G.selected].forEach(id=>{
     const sc=SCENARI.find(s=>s.id===id);
-    const prob=getProb(id)/100;
-    totalWeight+=prob;
-    CLASSI.forEach(cl=>{
-      weighted[cl.k]+=(sc.impatto[cl.k]||0)*prob;
-    });
+    const prob=getProb(id)/100;totalWeight+=prob;
+    CLASSI.forEach(cl=>{weighted[cl.k]+=(sc.impatto[cl.k]||0)*prob;});
   });
-
   if(totalWeight>0)CLASSI.forEach(cl=>{weighted[cl.k]/=totalWeight;});
-
   const maxAbs=Math.max(...Object.values(weighted).map(Math.abs),1);
   document.getElementById('impactBars').innerHTML=CLASSI.map(cl=>{
-    const val=weighted[cl.k];
-    const pct=Math.abs(val)/maxAbs*45;
+    const val=weighted[cl.k];const pct=Math.abs(val)/maxAbs*45;
     return`<div class="impact-row">
       <div class="impact-class"><span style="display:inline-block;width:6px;height:6px;border-radius:2px;background:${cl.c};margin-right:5px;vertical-align:middle"></span>${cl.l}</div>
-      <div class="impact-bar-wrap">
-        <div class="impact-zero"></div>
-        <div class="impact-bar ${val>=0?'impact-bar-pos':'impact-bar-neg'}" style="width:${pct}%"></div>
-      </div>
-      <div class="impact-val" style="color:${val>=0?'var(--green3)':'var(--red3)'}">${val>=0?'+':''}${val.toFixed(1)}%</div>
+      <div class="impact-bar-wrap"><div class="impact-zero"></div><div class="impact-bar ${val>=0?'impact-bar-pos':'impact-bar-neg'}" style="width:${pct}%"></div></div>
+      <div class="impact-val" style="color:${val>=0?'var(--green)':'var(--red2)'}">${val>=0?'+':''}${val.toFixed(1)}%</div>
     </div>`;
   }).join('');
 }
@@ -1163,151 +821,101 @@ function renderTAAActions(){
     if(prob>=40&&sc.taa)actions.push({nome:sc.nome,prob,taa:sc.taa});
   });
   actions.sort((a,b)=>b.prob-a.prob);
-  document.getElementById('taaActions').innerHTML=
-    actions.length?actions.map(a=>`
-      <div style="padding:6px 0;border-bottom:1px solid var(--gray3)">
-        <div style="font-size:10px;color:var(--gold2);margin-bottom:2px">${a.nome} (${a.prob}%)</div>
-        <div style="font-size:11px;color:var(--white2)">${a.taa}</div>
-      </div>`).join(''):
-    '<div style="color:var(--gray)">Nessuno scenario con probabilità ≥ 40% — nessuna azione TAA urgente</div>';
+  document.getElementById('taaActions').innerHTML=actions.length?actions.map(a=>`
+    <div style="padding:6px 0;border-bottom:1px solid var(--gray3)">
+      <div style="font-size:10px;color:var(--gold2);margin-bottom:2px">${a.nome} (${a.prob}%)</div>
+      <div style="font-size:11px;color:var(--white2)">${a.taa}</div>
+    </div>`).join(''):'<div style="color:var(--gray)">Nessuno scenario con probabilità ≥ 40%</div>';
 }
 
-// ══════════════════════════════════════════════════
-// PORTAFOGLIO
-// ══════════════════════════════════════════════════
 function applyPreset(){
   const preset=document.getElementById('pPreset').value;
   if(!preset)return;
-  const w=PRESET_WEIGHTS[preset];
-  if(!w)return;
-  document.getElementById('wEq').value=w.eq;
-  document.getElementById('wEM').value=w.em;
-  document.getElementById('wGov').value=w.gov;
-  document.getElementById('wCorp').value=w.corp;
-  document.getElementById('wIL').value=w.il;
-  document.getElementById('wCash').value=w.cash;
+  const w=PRESET_WEIGHTS[preset];if(!w)return;
+  document.getElementById('wEq').value=w.eq;document.getElementById('wEM').value=w.em;
+  document.getElementById('wGov').value=w.gov;document.getElementById('wCorp').value=w.corp;
+  document.getElementById('wIL').value=w.il;document.getElementById('wCash').value=w.cash;
   calcPortoImpact();
 }
 
-function renderPortafoglio(){
-  calcPortoImpact();
-}
+function renderPortafoglio(){calcPortoImpact();}
 
 function calcPortoImpact(){
   const cap=parseFloat(document.getElementById('pCapitale')?.value||0);
-  if(!cap||G.selected.size===0){
-    document.getElementById('portoResults').style.display='none';return;
-  }
-
+  if(!cap||G.selected.size===0){document.getElementById('portoResults').style.display='none';return;}
   const weights={
     eq:parseFloat(document.getElementById('wEq')?.value||0)/100,
     em:parseFloat(document.getElementById('wEM')?.value||0)/100,
     gov:parseFloat(document.getElementById('wGov')?.value||0)/100,
     corp:parseFloat(document.getElementById('wCorp')?.value||0)/100,
     il:parseFloat(document.getElementById('wIL')?.value||0)/100,
-    com:0,
-    cash:parseFloat(document.getElementById('wCash')?.value||0)/100,
-    gold:0,
+    com:0,cash:parseFloat(document.getElementById('wCash')?.value||0)/100,gold:0,
   };
-
   document.getElementById('portoResults').style.display='block';
-
-  // KPI
   const totW=Object.values(weights).reduce((s,v)=>s+v,0);
   document.getElementById('portoKPI').innerHTML=`
     <div class="stat"><div class="stat-label">Capitale</div><div class="stat-value" style="font-size:18px">€ ${fmt(cap)}</div></div>
     <div class="stat"><div class="stat-label">Scenari attivi</div><div class="stat-value">${G.selected.size}</div></div>
-    <div class="stat"><div class="stat-label">Pesi totali</div><div class="stat-value" style="color:${Math.abs(totW-1)<.02?'var(--green3)':'var(--red3)'}">${Math.round(totW*100)}%</div></div>
+    <div class="stat"><div class="stat-label">Pesi totali</div><div class="stat-value" style="color:${Math.abs(totW-1)<.02?'var(--green)':'var(--red2)'}">${Math.round(totW*100)}%</div></div>
     <div class="stat"><div class="stat-label">Cliente</div><div class="stat-value" style="font-size:14px">${document.getElementById('pNome')?.value||'—'}</div></div>`;
-
-  // Impatto scenari
   const tbody=document.getElementById('portoImpactBody');
   let totImpactoP=0;
   tbody.innerHTML=[...G.selected].map(id=>{
     const sc=SCENARI.find(s=>s.id===id);
     const prob=getProb(id)/100;
-    // Impatto medio ponderato sul portafoglio
     let portoImpact=0;
-    CLASSI.forEach(cl=>{
-      portoImpact+=(sc.impatto[cl.k]||0)*(weights[cl.k]||0);
-    });
-    const impE=cap*portoImpact/100;
-    const ponderato=portoImpact*prob;
-    totImpactoP+=ponderato;
-
-    // Classe più esposta
+    CLASSI.forEach(cl=>{portoImpact+=(sc.impatto[cl.k]||0)*(weights[cl.k]||0);});
+    const impE=cap*portoImpact/100;const ponderato=portoImpact*prob;totImpactoP+=ponderato;
     let maxCl='—',maxV=0;
-    CLASSI.forEach(cl=>{
-      const v=Math.abs((sc.impatto[cl.k]||0)*(weights[cl.k]||0));
-      if(v>maxV){maxV=v;maxCl=cl.l;}
-    });
-
+    CLASSI.forEach(cl=>{const v=Math.abs((sc.impatto[cl.k]||0)*(weights[cl.k]||0));if(v>maxV){maxV=v;maxCl=cl.l;}});
     return`<tr>
       <td style="font-size:10px;color:var(--white)">${sc.nome}</td>
       <td class="num">${Math.round(prob*100)}%</td>
-      <td class="num" style="color:${portoImpact>=0?'var(--green3)':'var(--red3)'}">${portoImpact>=0?'+':''}${portoImpact.toFixed(1)}%</td>
-      <td class="num" style="color:${impE>=0?'var(--green3)':'var(--red3)'}">€ ${impE>=0?'+':''}${fmt(impE)}</td>
-      <td class="num" style="color:${ponderato>=0?'var(--green3)':'var(--red3)'}">${ponderato>=0?'+':''}${ponderato.toFixed(2)}%</td>
+      <td class="num" style="color:${portoImpact>=0?'var(--green)':'var(--red2)'}">${portoImpact>=0?'+':''}${portoImpact.toFixed(1)}%</td>
+      <td class="num" style="color:${impE>=0?'var(--green)':'var(--red2)'}">€ ${impE>=0?'+':''}${fmt(impE)}</td>
+      <td class="num" style="color:${ponderato>=0?'var(--green)':'var(--red2)'}">${ponderato>=0?'+':''}${ponderato.toFixed(2)}%</td>
       <td style="font-size:10px;color:var(--gray)">${maxCl}</td>
     </tr>`;
   }).join('');
-
-  // Resilienza
   const impE=cap*totImpactoP/100;
   const res=document.getElementById('resilienzaResult');
-  const color=totImpactoP>0?'var(--green3)':totImpactoP>-5?'var(--amber2)':'var(--red3)';
-  res.innerHTML=`
-    <div style="font-size:20px;font-weight:600;color:${color};margin-bottom:8px">
-      Impatto atteso ponderato: ${totImpactoP>=0?'+':''}${totImpactoP.toFixed(2)}% (€ ${fmt(impE)})
-    </div>
-    <div style="color:var(--white2)">
-      ${totImpactoP>2?'✓ Il portafoglio beneficia mediamente dagli scenari selezionati':
-        totImpactoP>-2?'→ Il portafoglio è sostanzialmente neutro agli scenari selezionati':
-        '⚠ Il portafoglio è vulnerabile agli scenari selezionati — considera aggiustamenti TAA'}
-    </div>`;
+  const color=totImpactoP>0?'var(--green)':totImpactoP>-5?'var(--amber2)':'var(--red2)';
+  res.innerHTML=`<div style="font-size:20px;font-weight:600;color:${color};margin-bottom:8px">
+    Impatto atteso ponderato: ${totImpactoP>=0?'+':''}${totImpactoP.toFixed(2)}% (€ ${fmt(impE)})
+  </div><div style="color:var(--white2)">
+    ${totImpactoP>2?'✓ Il portafoglio beneficia mediamente dagli scenari selezionati':
+      totImpactoP>-2?'→ Il portafoglio è sostanzialmente neutro agli scenari selezionati':
+      '⚠ Il portafoglio è vulnerabile agli scenari selezionati — considera aggiustamenti TAA'}
+  </div>`;
 }
 
-// ══════════════════════════════════════════════════
-// CONSENSUS
-// ══════════════════════════════════════════════════
 async function renderConsensus(){
-  // Fonti
   const fonti=[
-    {n:'FMI WEO',         org:'FMI',       freq:'Semestrale',  pri:'Alta'},
-    {n:'BCE Economic Bulletin',org:'BCE',   freq:'Bimestrale',  pri:'Alta'},
-    {n:'OCSE Economic Outlook',org:'OCSE',  freq:'Semestrale',  pri:'Alta'},
-    {n:'Fed SEP',         org:'Fed',        freq:'Trimestrale', pri:'Alta'},
-    {n:'BlackRock Outlook',org:'BlackRock', freq:'Mensile',     pri:'Media'},
-    {n:'JPMorgan GTM',    org:'JPMorgan',   freq:'Trimestrale', pri:'Alta'},
-    {n:'Vanguard Outlook',org:'Vanguard',   freq:'Annuale',     pri:'Media'},
+    {n:'FMI WEO',org:'FMI',freq:'Semestrale',pri:'Alta'},
+    {n:'BCE Economic Bulletin',org:'BCE',freq:'Bimestrale',pri:'Alta'},
+    {n:'OCSE Economic Outlook',org:'OCSE',freq:'Semestrale',pri:'Alta'},
+    {n:'Fed SEP',org:'Fed',freq:'Trimestrale',pri:'Alta'},
+    {n:'BlackRock Outlook',org:'BlackRock',freq:'Mensile',pri:'Media'},
+    {n:'JPMorgan GTM',org:'JPMorgan',freq:'Trimestrale',pri:'Alta'},
+    {n:'Vanguard Outlook',org:'Vanguard',freq:'Annuale',pri:'Media'},
   ];
-
   let log={};
-  try{
-    const res=await fetch('data/download_log.json?t='+Date.now());
-    if(res.ok)log=await res.json();
-  }catch(e){}
-
+  try{const res=await fetch('data/download_log.json?t='+Date.now());if(res.ok)log=await res.json();}catch(e){}
   document.getElementById('fontiBody').innerHTML=fonti.map(f=>{
     const entry=Object.values(log).find(l=>l.source?.name===f.n)||{};
     const hasData=!!entry.last_success;
     return`<tr>
-      <td style="color:var(--white)">${f.n}</td>
-      <td style="color:var(--gray)">${f.org}</td>
-      <td>${f.freq}</td>
+      <td style="color:var(--white)">${f.n}</td><td style="color:var(--gray)">${f.org}</td><td>${f.freq}</td>
       <td><span class="badge ${f.pri==='Alta'?'b-alta':'b-media'}">${f.pri}</span></td>
       <td style="color:var(--gray);font-size:10px">${entry.last_success?entry.last_success.slice(0,10):'—'}</td>
       <td><span class="badge ${hasData?'b-fin':'b-bassa'}">${hasData?'✓ Disponibile':'Attesa'}</span></td>
     </tr>`;
   }).join('');
-
-  // Consensus probs
   try{
     const res=await fetch('data/consensus.json?t='+Date.now());
     if(res.ok){
       const consensus=await res.json();
-      document.getElementById('consensusDate').textContent=
-        `Ultimo aggiornamento: ${consensus.date_it||'—'} · Fonti: ${(consensus.sources||[]).join(', ')}`;
+      document.getElementById('consensusDate').textContent=`Ultimo aggiornamento: ${consensus.date_it||'—'} · Fonti: ${(consensus.sources||[]).join(', ')}`;
       const probs=consensus.probabilities||{};
       const sorted=Object.entries(probs).sort((a,b)=>b[1]-a[1]).slice(0,15);
       document.getElementById('consensusProbs').innerHTML=sorted.map(([id,prob])=>{
@@ -1322,44 +930,30 @@ async function renderConsensus(){
       }).join('');
     }
   }catch(e){
-    document.getElementById('consensusProbs').innerHTML=
-      '<div style="color:var(--gray);padding:16px;text-align:center">Consensus non ancora disponibile — configura GitHub Action per abilitare la lettura automatica dei PDF</div>';
+    document.getElementById('consensusProbs').innerHTML='<div style="color:var(--gray);padding:16px;text-align:center">Consensus non ancora disponibile</div>';
   }
 }
 
-// PDF Upload con Claude API (client-side via Anthropic API)
 function handlePDFUpload(event){
-  const file=event.target.files[0];
-  if(!file)return;
+  const file=event.target.files[0];if(!file)return;
   const status=document.getElementById('pdfStatus');
   status.style.display='block';
   status.innerHTML=`<div style="color:var(--gold2)">📄 File caricato: ${file.name} (${Math.round(file.size/1024)}KB)</div>
-    <div style="color:var(--gray);margin-top:6px">La lettura automatica via Claude API è disponibile tramite il workflow GitHub.<br>
-    Per analisi immediata: carica il PDF su GitHub e avvia manualmente il workflow "Read PDFs with Claude AI".</div>`;
+    <div style="color:var(--gray);margin-top:6px">Per analisi immediata: carica il PDF su GitHub e avvia manualmente il workflow "Read PDFs with Claude AI".</div>`;
 }
 
-// ══════════════════════════════════════════════════
-// REPORT PDF
-// ══════════════════════════════════════════════════
 function renderReportPreview(){
   const preview=document.getElementById('reportPreview');
   const content=document.getElementById('reportPreviewContent');
   preview.style.display='block';
-
-  if(G.selected.size===0){
-    content.innerHTML='<div style="color:var(--gray)">Seleziona prima gli scenari nel tab ②</div>';
-    return;
-  }
-
+  if(G.selected.size===0){content.innerHTML='<div style="color:var(--gray)">Seleziona prima gli scenari nel tab ②</div>';return;}
   const nome=document.getElementById('rNome')?.value||'Cliente';
   const stile=document.getElementById('rStile')?.value||'semplice';
-
   content.innerHTML=`
-    <div style="font-family:serif;font-size:14px;font-weight:600;margin-bottom:16px;color:#fff">Analisi Scenari Macro — ${nome}</div>
+    <div style="font-family:serif;font-size:14px;font-weight:600;margin-bottom:16px;color:var(--white)">Analisi Scenari Macro — ${nome}</div>
     <div style="font-size:10px;color:var(--gray);margin-bottom:16px">Data: ${new Date().toLocaleDateString('it-IT')} · Regime: ${G.marketData?.meta?.regime||'—'}</div>
     ${[...G.selected].map(id=>{
-      const sc=SCENARI.find(s=>s.id===id);
-      const prob=getProb(id);
+      const sc=SCENARI.find(s=>s.id===id);const prob=getProb(id);
       return`<div class="report-scenario-block">
         <div class="report-scenario-name">${sc.nome} <span style="font-size:11px;color:var(--gray)">(${prob}%)</span></div>
         <div class="report-scenario-desc">${stile==='tecnico'?sc.desc:sc.cliente}</div>
@@ -1374,83 +968,51 @@ function downloadReportPDF(){
   const nome=document.getElementById('rNome')?.value||'Cliente';
   const stile=document.getElementById('rStile')?.value||'semplice';
   const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
-  const W=210,M=18;
-  let y=20;
-
+  const W=210,M=18;let y=20;
   const DARK=[8,8,24],GOLD=[200,160,32],WHITE=[224,224,240],GRAY=[96,96,128];
-
   doc.setFillColor(...DARK);doc.rect(0,0,210,26,'F');
   doc.setFontSize(18);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
   doc.text('RAPTOR SCENARIO ENGINE',M,13);
   doc.setFontSize(9);doc.setTextColor(...GOLD);
-  doc.text(`Analisi Scenari Macro · ${new Date().toLocaleDateString('it-IT')}`,M,21);
-  y=34;
-
+  doc.text(`Analisi Scenari Macro · ${new Date().toLocaleDateString('it-IT')}`,M,21);y=34;
   doc.setFillColor(20,20,48);doc.rect(M-2,y-5,W-2*M+4,14,'F');
   doc.setFontSize(13);doc.setFont('helvetica','bold');doc.setTextColor(255,255,255);
   doc.text(`Cliente: ${nome}`,M,y+2);
   doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(...GRAY);
-  doc.text(`Regime: ${G.marketData?.meta?.regime||'—'} · Scenari: ${G.selected.size} · Stile: ${stile}`,M,y+8);
-  y+=20;
-
+  doc.text(`Regime: ${G.marketData?.meta?.regime||'—'} · Scenari: ${G.selected.size}`,M,y+8);y+=20;
   [...G.selected].forEach(id=>{
-    const sc=SCENARI.find(s=>s.id===id);
-    const prob=getProb(id);
+    const sc=SCENARI.find(s=>s.id===id);const prob=getProb(id);
     if(y>250)doc.addPage(),y=20;
-
     doc.setFillColor(20,20,42);doc.rect(M-2,y-4,W-2*M+4,8,'F');
     doc.setFontSize(11);doc.setFont('helvetica','bold');doc.setTextColor(...GOLD);
     doc.text(`${sc.nome}`,M,y+1);
     doc.setFontSize(9);doc.setFont('helvetica','normal');doc.setTextColor(150,150,180);
-    doc.text(`Probabilità: ${prob}% · ${sc.orizzonte} · Intensità: ${sc.intensita}`,W-M,y+1,{align:'right'});
-    y+=12;
-
+    doc.text(`Probabilità: ${prob}% · ${sc.orizzonte}`,W-M,y+1,{align:'right'});y+=12;
     doc.setTextColor(...WHITE);
     const text=stile==='tecnico'?sc.desc:sc.cliente;
     const lines=doc.splitTextToSize(text,W-2*M);
     lines.forEach(l=>{if(y>275)doc.addPage(),y=20;doc.text(l,M,y);y+=5;});
-
     if(stile!=='semplice'){
-      y+=2;
-      doc.setTextColor(...GOLD);
-      doc.text('Azione TAA:',M,y);y+=5;
+      y+=2;doc.setTextColor(...GOLD);doc.text('Azione TAA:',M,y);y+=5;
       doc.setTextColor(...WHITE);
       const taaLines=doc.splitTextToSize(sc.taa,W-2*M-4);
       taaLines.forEach(l=>{if(y>275)doc.addPage(),y=20;doc.text(l,M+3,y);y+=5;});
-    }
-    y+=6;
+    }y+=6;
   });
-
-  // Disclaimer
-  if(y>240)doc.addPage(),y=20;
-  y+=10;
+  if(y>240)doc.addPage(),y=20;y+=10;
   doc.setFillColor(30,8,8);doc.rect(M-2,y-4,W-2*M+4,20,'F');
   doc.setFontSize(8);doc.setFont('helvetica','bold');doc.setTextColor(200,80,80);
-  doc.text('DISCLAIMER',M,y+2);
-  doc.setFont('helvetica','normal');doc.setTextColor(160,120,120);
-  const disc=doc.splitTextToSize('Le probabilità degli scenari sono stime basate su dati di mercato e consensus istituzionale. Non costituiscono previsioni certe né raccomandazioni di investimento. Past performance does not guarantee future results.',W-2*M-4);
+  doc.text('DISCLAIMER',M,y+2);doc.setFont('helvetica','normal');doc.setTextColor(160,120,120);
+  const disc=doc.splitTextToSize('Le probabilità degli scenari sono stime basate su dati di mercato e consensus istituzionale. Non costituiscono previsioni certe né raccomandazioni di investimento.',W-2*M-4);
   disc.forEach((l,i)=>{doc.text(l,M,y+8+i*4);});
-
   const n=doc.internal.getNumberOfPages();
-  for(let i=1;i<=n;i++){
-    doc.setPage(i);
-    doc.setFillColor(...DARK);doc.rect(0,287,210,10,'F');
-    doc.setFontSize(7);doc.setTextColor(...GRAY);
-    doc.text('RAPTOR SCENARIO ENGINE · Uso riservato CFA · Non costituisce consulenza',M,293);
-    doc.text(`${i}/${n}`,W-M,293,{align:'right'});
-  }
-
+  for(let i=1;i<=n;i++){doc.setPage(i);doc.setFillColor(...DARK);doc.rect(0,287,210,10,'F');doc.setFontSize(7);doc.setTextColor(...GRAY);doc.text('RAPTOR SCENARIO ENGINE · Uso riservato CFA',M,293);doc.text(`${i}/${n}`,W-M,293,{align:'right'});}
   doc.save(`RSE_Scenari_${nome.replace(/ /g,'_')}_${new Date().toISOString().slice(0,10)}.pdf`);
   toast('✓ Report PDF scaricato');
 }
 
-// ══════════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════════
-document.getElementById('hdrDate').textContent=
-  new Date().toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
+document.getElementById('hdrDate').textContent=new Date().toLocaleDateString('it-IT',{weekday:'short',day:'2-digit',month:'short',year:'numeric'});
 document.getElementById('rData').value=new Date().toISOString().slice(0,10);
-
 loadMarketData();
 </script>
 </body>
