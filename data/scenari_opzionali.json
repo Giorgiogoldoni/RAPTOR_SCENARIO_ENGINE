@@ -1,0 +1,55 @@
+{
+  "_istruzioni": "Imposta attivo:true e peso:0.0-1.0 per attivare uno scenario. Il peso determina quanto modifica le probabilità Markov (0.1=lieve, 0.5=moderato, 0.9=dominante). Gli scenari automatici si attivano da soli se superano le soglie — puoi forzarli o disattivarli qui.",
+  "_ultimo_aggiornamento": "2026-04-16",
+
+  "recessione_tecnica": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: yield curve < -0.5%. Aumenta probabilità BEAR e RALLENTAMENTO."
+  },
+  "crisi_credito": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: VIX > 35. Forte impatto negativo su BULL."
+  },
+  "shock_geopolitico": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: WTI +20% mensile. Attiva manualmente per eventi geopolitici non prezzati."
+  },
+  "hard_landing": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: VIX > 40. Scenario estremo — usa peso 0.8-1.0."
+  },
+  "soft_landing": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Solo manuale. Aumenta probabilità BULL e ESPANSIONE."
+  },
+  "stagflazione": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Solo manuale. Attiva se CPI risale e crescita rallenta."
+  },
+  "pivot_fed": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Solo manuale. Attiva quando la Fed taglia i tassi — bullish."
+  },
+  "crisi_bancaria": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: VIX > 45. Scenario SVB/Lehman."
+  },
+  "boom_ai": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Solo manuale. Attiva per cicli tech estremi — bullish equity."
+  },
+  "crisi_debito_sovrano": {
+    "attivo": false,
+    "peso": 0.0,
+    "note": "Auto-trigger: BTP-Bund diff < -3%. Scenario 2011."
+  }
+}
