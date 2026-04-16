@@ -136,9 +136,4254 @@
   },
   "regime_history": [
     {
-      "date": "2026-04-13",
+      "date": "2010-01-04",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2010-01-11",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2010-01-18",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2010-01-25",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2010-02-01",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2010-02-08",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2010-02-15",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2010-02-22",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2010-03-01",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2010-03-08",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2010-03-15",
       "regime": "BULL",
-      "score": 2.65
+      "score": 2.3
+    },
+    {
+      "date": "2010-03-22",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2010-03-29",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2010-04-05",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2010-04-12",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2010-04-19",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2010-04-26",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2010-05-03",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2010-05-10",
+      "regime": "RALLENTAMENTO",
+      "score": -1.1
+    },
+    {
+      "date": "2010-05-17",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2010-05-24",
+      "regime": "BEAR",
+      "score": -1.9
+    },
+    {
+      "date": "2010-05-31",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2010-06-07",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2010-06-14",
+      "regime": "RALLENTAMENTO",
+      "score": -0.9
+    },
+    {
+      "date": "2010-06-21",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2010-06-28",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2010-07-05",
+      "regime": "RALLENTAMENTO",
+      "score": -1.05
+    },
+    {
+      "date": "2010-07-12",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2010-07-19",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2010-07-26",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2010-08-02",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2010-08-09",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2010-08-16",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2010-08-23",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2010-08-30",
+      "regime": "NEUTRO",
+      "score": -0.35
+    },
+    {
+      "date": "2010-09-06",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2010-09-13",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2010-09-20",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2010-09-27",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2010-10-04",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2010-10-11",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2010-10-18",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2010-10-25",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2010-11-01",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2010-11-08",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2010-11-15",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2010-11-22",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2010-11-29",
+      "regime": "NEUTRO",
+      "score": -0.1
+    },
+    {
+      "date": "2010-12-06",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2010-12-13",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2010-12-20",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2010-12-27",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2011-01-03",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2011-01-10",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2011-01-17",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2011-01-24",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2011-01-31",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2011-02-07",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2011-02-14",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2011-02-21",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2011-02-28",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2011-03-07",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2011-03-14",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2011-03-21",
+      "regime": "RALLENTAMENTO",
+      "score": -0.95
+    },
+    {
+      "date": "2011-03-28",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2011-04-04",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2011-04-11",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2011-04-18",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2011-04-25",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2011-05-02",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2011-05-09",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2011-05-16",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2011-05-23",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2011-05-30",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2011-06-06",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2011-06-13",
+      "regime": "NEUTRO",
+      "score": 0.05
+    },
+    {
+      "date": "2011-06-20",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2011-06-27",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2011-07-04",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2011-07-11",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2011-07-18",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2011-07-25",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2011-08-01",
+      "regime": "NEUTRO",
+      "score": -0.35
+    },
+    {
+      "date": "2011-08-08",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2011-08-15",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2011-08-22",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2011-08-29",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2011-09-05",
+      "regime": "BEAR",
+      "score": -1.6
+    },
+    {
+      "date": "2011-09-12",
+      "regime": "RALLENTAMENTO",
+      "score": -1.1
+    },
+    {
+      "date": "2011-09-19",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2011-09-26",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2011-10-03",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2011-10-10",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2011-10-17",
+      "regime": "NEUTRO",
+      "score": -0.05
+    },
+    {
+      "date": "2011-10-24",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2011-10-31",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2011-11-07",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2011-11-14",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2011-11-21",
+      "regime": "NEUTRO",
+      "score": -0.75
+    },
+    {
+      "date": "2011-11-28",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2011-12-05",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2011-12-12",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2011-12-19",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2011-12-26",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2012-01-02",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2012-01-09",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2012-01-16",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2012-01-23",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2012-01-30",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2012-02-06",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2012-02-13",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2012-02-20",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2012-02-27",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2012-03-05",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-03-12",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-03-19",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2012-03-26",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2012-04-02",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2012-04-09",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2012-04-16",
+      "regime": "NEUTRO",
+      "score": -0.05
+    },
+    {
+      "date": "2012-04-23",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2012-04-30",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2012-05-07",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2012-05-14",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2012-05-21",
+      "regime": "RALLENTAMENTO",
+      "score": -1.1
+    },
+    {
+      "date": "2012-05-28",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2012-06-04",
+      "regime": "BEAR",
+      "score": -1.85
+    },
+    {
+      "date": "2012-06-11",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2012-06-18",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2012-06-25",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2012-07-02",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2012-07-09",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2012-07-16",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2012-07-23",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2012-07-30",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2012-08-06",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2012-08-13",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2012-08-20",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2012-08-27",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2012-09-03",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2012-09-10",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2012-09-17",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2012-09-24",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2012-10-01",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2012-10-08",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-10-15",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2012-10-22",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-10-29",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-11-05",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2012-11-12",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2012-11-19",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2012-11-26",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-12-03",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2012-12-10",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2012-12-17",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2012-12-24",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2012-12-31",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2013-01-07",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2013-01-14",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2013-01-21",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2013-01-28",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2013-02-04",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-02-11",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2013-02-18",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2013-02-25",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2013-03-04",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2013-03-11",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2013-03-18",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2013-03-25",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-04-01",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2013-04-08",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-04-15",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2013-04-22",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2013-04-29",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2013-05-06",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2013-05-13",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2013-05-20",
+      "regime": "BULL",
+      "score": 2.7
+    },
+    {
+      "date": "2013-05-27",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2013-06-03",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2013-06-10",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2013-06-17",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2013-06-24",
+      "regime": "RALLENTAMENTO",
+      "score": -1.45
+    },
+    {
+      "date": "2013-07-01",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2013-07-08",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2013-07-15",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-07-22",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2013-07-29",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2013-08-05",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2013-08-12",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2013-08-19",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2013-08-26",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-09-02",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2013-09-09",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2013-09-16",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2013-09-23",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2013-09-30",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2013-10-07",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2013-10-14",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2013-10-21",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2013-10-28",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2013-11-04",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2013-11-11",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2013-11-18",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-11-25",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2013-12-02",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2013-12-09",
+      "regime": "BULL",
+      "score": 2.1
+    },
+    {
+      "date": "2013-12-16",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2013-12-23",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2013-12-30",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2014-01-06",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2014-01-13",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2014-01-20",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2014-01-27",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2014-02-03",
+      "regime": "NEUTRO",
+      "score": -0.75
+    },
+    {
+      "date": "2014-02-10",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2014-02-17",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2014-02-24",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2014-03-03",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2014-03-10",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2014-03-17",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2014-03-24",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2014-03-31",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2014-04-07",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2014-04-14",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2014-04-21",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-04-28",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2014-05-05",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2014-05-12",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2014-05-19",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2014-05-26",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2014-06-02",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-06-09",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2014-06-16",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2014-06-23",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2014-06-30",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-07-07",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-07-14",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-07-21",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2014-07-28",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-08-04",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2014-08-11",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-08-18",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-08-25",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-09-01",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2014-09-08",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2014-09-15",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2014-09-22",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2014-09-29",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2014-10-06",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2014-10-13",
+      "regime": "RALLENTAMENTO",
+      "score": -1.0
+    },
+    {
+      "date": "2014-10-20",
+      "regime": "NEUTRO",
+      "score": -0.2
+    },
+    {
+      "date": "2014-10-27",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2014-11-03",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2014-11-10",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2014-11-17",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2014-11-24",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2014-12-01",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2014-12-08",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2014-12-15",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2014-12-22",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2014-12-29",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-01-05",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2015-01-12",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2015-01-19",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2015-01-26",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2015-02-02",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2015-02-09",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2015-02-16",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2015-02-23",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2015-03-02",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2015-03-09",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2015-03-16",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2015-03-23",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2015-03-30",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2015-04-06",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2015-04-13",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2015-04-20",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2015-04-27",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2015-05-04",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2015-05-11",
+      "regime": "ESPANSIONE",
+      "score": 1.1
+    },
+    {
+      "date": "2015-05-18",
+      "regime": "ESPANSIONE",
+      "score": 1.1
+    },
+    {
+      "date": "2015-05-25",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2015-06-01",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2015-06-08",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-06-15",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-06-22",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2015-06-29",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2015-07-06",
+      "regime": "NEUTRO",
+      "score": -0.05
+    },
+    {
+      "date": "2015-07-13",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2015-07-20",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2015-07-27",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2015-08-03",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2015-08-10",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2015-08-17",
+      "regime": "NEUTRO",
+      "score": 0.35
+    },
+    {
+      "date": "2015-08-24",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2015-08-31",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2015-09-07",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2015-09-14",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2015-09-21",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2015-09-28",
+      "regime": "NEUTRO",
+      "score": -0.75
+    },
+    {
+      "date": "2015-10-05",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2015-10-12",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2015-10-19",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2015-10-26",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2015-11-02",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2015-11-09",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2015-11-16",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-11-23",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-11-30",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-12-07",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2015-12-14",
+      "regime": "NEUTRO",
+      "score": -0.7
+    },
+    {
+      "date": "2015-12-21",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2015-12-28",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2016-01-04",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2016-01-11",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2016-01-18",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2016-01-25",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2016-02-01",
+      "regime": "NEUTRO",
+      "score": -0.45
+    },
+    {
+      "date": "2016-02-08",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2016-02-15",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2016-02-22",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-02-29",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2016-03-07",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2016-03-14",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2016-03-21",
+      "regime": "BULL",
+      "score": 2.7
+    },
+    {
+      "date": "2016-03-28",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2016-04-04",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2016-04-11",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2016-04-18",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-04-25",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-05-02",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-05-09",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-05-16",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-05-23",
+      "regime": "NEUTRO",
+      "score": -0.05
+    },
+    {
+      "date": "2016-05-30",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-06-06",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-06-13",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2016-06-20",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2016-06-27",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2016-07-04",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2016-07-11",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-07-18",
+      "regime": "BULL",
+      "score": 2.7
+    },
+    {
+      "date": "2016-07-25",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2016-08-01",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2016-08-08",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2016-08-15",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2016-08-22",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-08-29",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2016-09-05",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2016-09-12",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2016-09-19",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2016-09-26",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-10-03",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2016-10-10",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-10-17",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2016-10-24",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2016-10-31",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2016-11-07",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2016-11-14",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2016-11-21",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2016-11-28",
+      "regime": "BULL",
+      "score": 2.1
+    },
+    {
+      "date": "2016-12-05",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2016-12-12",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2016-12-19",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2016-12-26",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-01-02",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2017-01-09",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2017-01-16",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-01-23",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-01-30",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-02-06",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-02-13",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-02-20",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2017-02-27",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2017-03-06",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2017-03-13",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-03-20",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-03-27",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-04-03",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-04-10",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-04-17",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2017-04-24",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-05-01",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-05-08",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2017-05-15",
+      "regime": "BULL",
+      "score": 2.45
+    },
+    {
+      "date": "2017-05-22",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2017-05-29",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-06-05",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-06-12",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-06-19",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2017-06-26",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-07-03",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-07-10",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-07-17",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-07-24",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-07-31",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-08-07",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-08-14",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-08-21",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-08-28",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-09-04",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-09-11",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-09-18",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2017-09-25",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-10-02",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2017-10-09",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2017-10-16",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-10-23",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-10-30",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-11-06",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-11-13",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-11-20",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2017-11-27",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2017-12-04",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-12-11",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2017-12-18",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2017-12-25",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2018-01-01",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2018-01-08",
+      "regime": "BULL",
+      "score": 2.35
+    },
+    {
+      "date": "2018-01-15",
+      "regime": "BULL",
+      "score": 2.35
+    },
+    {
+      "date": "2018-01-22",
+      "regime": "BULL",
+      "score": 2.1
+    },
+    {
+      "date": "2018-01-29",
+      "regime": "BULL",
+      "score": 2.1
+    },
+    {
+      "date": "2018-02-05",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2018-02-12",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2018-02-19",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2018-02-26",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2018-03-05",
+      "regime": "NEUTRO",
+      "score": -0.05
+    },
+    {
+      "date": "2018-03-12",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2018-03-19",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2018-03-26",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2018-04-02",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2018-04-09",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2018-04-16",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2018-04-23",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2018-04-30",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2018-05-07",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2018-05-14",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2018-05-21",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2018-05-28",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-06-04",
+      "regime": "ESPANSIONE",
+      "score": 1.6
+    },
+    {
+      "date": "2018-06-11",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2018-06-18",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-06-25",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2018-07-02",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2018-07-09",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2018-07-16",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2018-07-23",
+      "regime": "ESPANSIONE",
+      "score": 0.95
+    },
+    {
+      "date": "2018-07-30",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2018-08-06",
+      "regime": "ESPANSIONE",
+      "score": 1.85
+    },
+    {
+      "date": "2018-08-13",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-08-20",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-08-27",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-09-03",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2018-09-10",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2018-09-17",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2018-09-24",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2018-10-01",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2018-10-08",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2018-10-15",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2018-10-22",
+      "regime": "NEUTRO",
+      "score": 0.05
+    },
+    {
+      "date": "2018-10-29",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2018-11-05",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2018-11-12",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2018-11-19",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2018-11-26",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2018-12-03",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2018-12-10",
+      "regime": "RALLENTAMENTO",
+      "score": -1.35
+    },
+    {
+      "date": "2018-12-17",
+      "regime": "NEUTRO",
+      "score": -0.4
+    },
+    {
+      "date": "2018-12-24",
+      "regime": "BEAR",
+      "score": -1.8
+    },
+    {
+      "date": "2018-12-31",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2019-01-07",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2019-01-14",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2019-01-21",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-01-28",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2019-02-04",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2019-02-11",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2019-02-18",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-02-25",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2019-03-04",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-03-11",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2019-03-18",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-03-25",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2019-04-01",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-04-08",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2019-04-15",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2019-04-22",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2019-04-29",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-05-06",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2019-05-13",
+      "regime": "RALLENTAMENTO",
+      "score": -0.9
+    },
+    {
+      "date": "2019-05-20",
+      "regime": "NEUTRO",
+      "score": -0.1
+    },
+    {
+      "date": "2019-05-27",
+      "regime": "NEUTRO",
+      "score": -0.1
+    },
+    {
+      "date": "2019-06-03",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2019-06-10",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2019-06-17",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2019-06-24",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2019-07-01",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2019-07-08",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2019-07-15",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-07-22",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-07-29",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2019-08-05",
+      "regime": "RALLENTAMENTO",
+      "score": -1.4
+    },
+    {
+      "date": "2019-08-12",
+      "regime": "RALLENTAMENTO",
+      "score": -1.4
+    },
+    {
+      "date": "2019-08-19",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2019-08-26",
+      "regime": "RALLENTAMENTO",
+      "score": -1.1
+    },
+    {
+      "date": "2019-09-02",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2019-09-09",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2019-09-16",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2019-09-23",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2019-09-30",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2019-10-07",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2019-10-14",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-10-21",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-10-28",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2019-11-04",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2019-11-11",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2019-11-18",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2019-11-25",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2019-12-02",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2019-12-09",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2019-12-16",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2019-12-23",
+      "regime": "ESPANSIONE",
+      "score": 1.95
+    },
+    {
+      "date": "2019-12-30",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2020-01-06",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2020-01-13",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2020-01-20",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2020-01-27",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2020-02-03",
+      "regime": "NEUTRO",
+      "score": -0.1
+    },
+    {
+      "date": "2020-02-10",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2020-02-17",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2020-02-24",
+      "regime": "RALLENTAMENTO",
+      "score": -1.05
+    },
+    {
+      "date": "2020-03-02",
+      "regime": "BEAR",
+      "score": -2.2
+    },
+    {
+      "date": "2020-03-09",
+      "regime": "BEAR",
+      "score": -2.4
+    },
+    {
+      "date": "2020-03-16",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2020-03-23",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2020-03-30",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2020-04-06",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2020-04-13",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2020-04-20",
+      "regime": "ESPANSIONE",
+      "score": 1.1
+    },
+    {
+      "date": "2020-04-27",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2020-05-04",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2020-05-11",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2020-05-18",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2020-05-25",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2020-06-01",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2020-06-08",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2020-06-15",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2020-06-22",
+      "regime": "ESPANSIONE",
+      "score": 1.1
+    },
+    {
+      "date": "2020-06-29",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2020-07-06",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2020-07-13",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2020-07-20",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2020-07-27",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2020-08-03",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2020-08-10",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2020-08-17",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2020-08-24",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2020-08-31",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2020-09-07",
+      "regime": "NEUTRO",
+      "score": -0.4
+    },
+    {
+      "date": "2020-09-14",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2020-09-21",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2020-09-28",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2020-10-05",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2020-10-12",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2020-10-19",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2020-10-26",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2020-11-02",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2020-11-09",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2020-11-16",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2020-11-23",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2020-11-30",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2020-12-07",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2020-12-14",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2020-12-21",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2020-12-28",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2021-01-04",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2021-01-11",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2021-01-18",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2021-01-25",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2021-02-01",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2021-02-08",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2021-02-15",
+      "regime": "BULL",
+      "score": 2.3
+    },
+    {
+      "date": "2021-02-22",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2021-03-01",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2021-03-08",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2021-03-15",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2021-03-22",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2021-03-29",
+      "regime": "NEUTRO",
+      "score": 0.75
+    },
+    {
+      "date": "2021-04-05",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2021-04-12",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2021-04-19",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2021-04-26",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2021-05-03",
+      "regime": "ESPANSIONE",
+      "score": 1.45
+    },
+    {
+      "date": "2021-05-10",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-05-17",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2021-05-24",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2021-05-31",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2021-06-07",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2021-06-14",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2021-06-21",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2021-06-28",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2021-07-05",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2021-07-12",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2021-07-19",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2021-07-26",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2021-08-02",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2021-08-09",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2021-08-16",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2021-08-23",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2021-08-30",
+      "regime": "ESPANSIONE",
+      "score": 1.2
+    },
+    {
+      "date": "2021-09-06",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-09-13",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-09-20",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2021-09-27",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-10-04",
+      "regime": "RALLENTAMENTO",
+      "score": -1.0
+    },
+    {
+      "date": "2021-10-11",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2021-10-18",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-10-25",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2021-11-01",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2021-11-08",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2021-11-15",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2021-11-22",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2021-11-29",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2021-12-06",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2021-12-13",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2021-12-20",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2021-12-27",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2022-01-03",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2022-01-10",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2022-01-17",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2022-01-24",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2022-01-31",
+      "regime": "NEUTRO",
+      "score": -0.65
+    },
+    {
+      "date": "2022-02-07",
+      "regime": "NEUTRO",
+      "score": -0.45
+    },
+    {
+      "date": "2022-02-14",
+      "regime": "RALLENTAMENTO",
+      "score": -0.85
+    },
+    {
+      "date": "2022-02-21",
+      "regime": "NEUTRO",
+      "score": -0.7
+    },
+    {
+      "date": "2022-02-28",
+      "regime": "RALLENTAMENTO",
+      "score": -1.0
+    },
+    {
+      "date": "2022-03-07",
+      "regime": "RALLENTAMENTO",
+      "score": -1.4
+    },
+    {
+      "date": "2022-03-14",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2022-03-21",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2022-03-28",
+      "regime": "ESPANSIONE",
+      "score": 1.7
+    },
+    {
+      "date": "2022-04-04",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2022-04-11",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2022-04-18",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2022-04-25",
+      "regime": "NEUTRO",
+      "score": -0.75
+    },
+    {
+      "date": "2022-05-02",
+      "regime": "BEAR",
+      "score": -1.75
+    },
+    {
+      "date": "2022-05-09",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2022-05-16",
+      "regime": "RALLENTAMENTO",
+      "score": -0.9
+    },
+    {
+      "date": "2022-05-23",
+      "regime": "NEUTRO",
+      "score": -0.65
+    },
+    {
+      "date": "2022-05-30",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2022-06-06",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2022-06-13",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2022-06-20",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2022-06-27",
+      "regime": "NEUTRO",
+      "score": -0.35
+    },
+    {
+      "date": "2022-07-04",
+      "regime": "BEAR",
+      "score": -1.6
+    },
+    {
+      "date": "2022-07-11",
+      "regime": "NEUTRO",
+      "score": -0.65
+    },
+    {
+      "date": "2022-07-18",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2022-07-25",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2022-08-01",
+      "regime": "NEUTRO",
+      "score": 0.35
+    },
+    {
+      "date": "2022-08-08",
+      "regime": "NEUTRO",
+      "score": 0.35
+    },
+    {
+      "date": "2022-08-15",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2022-08-22",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2022-08-29",
+      "regime": "NEUTRO",
+      "score": -0.4
+    },
+    {
+      "date": "2022-09-05",
+      "regime": "RALLENTAMENTO",
+      "score": -1.5
+    },
+    {
+      "date": "2022-09-12",
+      "regime": "NEUTRO",
+      "score": -0.4
+    },
+    {
+      "date": "2022-09-19",
+      "regime": "RALLENTAMENTO",
+      "score": -1.4
+    },
+    {
+      "date": "2022-09-26",
+      "regime": "BEAR",
+      "score": -2.25
+    },
+    {
+      "date": "2022-10-03",
+      "regime": "BEAR",
+      "score": -1.65
+    },
+    {
+      "date": "2022-10-10",
+      "regime": "BEAR",
+      "score": -1.75
+    },
+    {
+      "date": "2022-10-17",
+      "regime": "BEAR",
+      "score": -2.05
+    },
+    {
+      "date": "2022-10-24",
+      "regime": "NEUTRO",
+      "score": -0.3
+    },
+    {
+      "date": "2022-10-31",
+      "regime": "NEUTRO",
+      "score": 0.35
+    },
+    {
+      "date": "2022-11-07",
+      "regime": "NEUTRO",
+      "score": 0.35
+    },
+    {
+      "date": "2022-11-14",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2022-11-21",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2022-11-28",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2022-12-05",
+      "regime": "NEUTRO",
+      "score": 0.45
+    },
+    {
+      "date": "2022-12-12",
+      "regime": "NEUTRO",
+      "score": -0.55
+    },
+    {
+      "date": "2022-12-19",
+      "regime": "NEUTRO",
+      "score": -0.55
+    },
+    {
+      "date": "2022-12-26",
+      "regime": "NEUTRO",
+      "score": -0.55
+    },
+    {
+      "date": "2023-01-02",
+      "regime": "BEAR",
+      "score": -1.55
+    },
+    {
+      "date": "2023-01-09",
+      "regime": "NEUTRO",
+      "score": -0.45
+    },
+    {
+      "date": "2023-01-16",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2023-01-23",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2023-01-30",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2023-02-06",
+      "regime": "ESPANSIONE",
+      "score": 1.5
+    },
+    {
+      "date": "2023-02-13",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2023-02-20",
+      "regime": "NEUTRO",
+      "score": 0.2
+    },
+    {
+      "date": "2023-02-27",
+      "regime": "RALLENTAMENTO",
+      "score": -1.3
+    },
+    {
+      "date": "2023-03-06",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2023-03-13",
+      "regime": "RALLENTAMENTO",
+      "score": -1.45
+    },
+    {
+      "date": "2023-03-20",
+      "regime": "RALLENTAMENTO",
+      "score": -1.05
+    },
+    {
+      "date": "2023-03-27",
+      "regime": "NEUTRO",
+      "score": -0.8
+    },
+    {
+      "date": "2023-04-03",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-04-10",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2023-04-17",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2023-04-24",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2023-05-01",
+      "regime": "NEUTRO",
+      "score": 0.6
+    },
+    {
+      "date": "2023-05-08",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-05-15",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-05-22",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-05-29",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-06-05",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2023-06-12",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2023-06-19",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2023-06-26",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2023-07-03",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2023-07-10",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2023-07-17",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2023-07-24",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2023-07-31",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2023-08-07",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2023-08-14",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2023-08-21",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2023-08-28",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2023-09-04",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2023-09-11",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2023-09-18",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2023-09-25",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-10-02",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-10-09",
+      "regime": "NEUTRO",
+      "score": -0.5
+    },
+    {
+      "date": "2023-10-16",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-10-23",
+      "regime": "NEUTRO",
+      "score": -0.8
+    },
+    {
+      "date": "2023-10-30",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2023-11-06",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2023-11-13",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2023-11-20",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2023-11-27",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2023-12-04",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2023-12-11",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2023-12-18",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2023-12-25",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2024-01-01",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2024-01-08",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2024-01-15",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2024-01-22",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2024-01-29",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2024-02-05",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2024-02-12",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2024-02-19",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2024-02-26",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2024-03-04",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2024-03-11",
+      "regime": "ESPANSIONE",
+      "score": 1.1
+    },
+    {
+      "date": "2024-03-18",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2024-03-25",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2024-04-01",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2024-04-08",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2024-04-15",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2024-04-22",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2024-04-29",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2024-05-06",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2024-05-13",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2024-05-20",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2024-05-27",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2024-06-03",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2024-06-10",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2024-06-17",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2024-06-24",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2024-07-01",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2024-07-08",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2024-07-15",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2024-07-22",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2024-07-29",
+      "regime": "NEUTRO",
+      "score": -0.25
+    },
+    {
+      "date": "2024-08-05",
+      "regime": "BEAR",
+      "score": -2.7
+    },
+    {
+      "date": "2024-08-12",
+      "regime": "BEAR",
+      "score": -1.9
+    },
+    {
+      "date": "2024-08-19",
+      "regime": "NEUTRO",
+      "score": 0.15
+    },
+    {
+      "date": "2024-08-26",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2024-09-02",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2024-09-09",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2024-09-16",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2024-09-23",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2024-09-30",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2024-10-07",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2024-10-14",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2024-10-21",
+      "regime": "NEUTRO",
+      "score": 0.5
+    },
+    {
+      "date": "2024-10-28",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2024-11-04",
+      "regime": "RALLENTAMENTO",
+      "score": -1.05
+    },
+    {
+      "date": "2024-11-11",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2024-11-18",
+      "regime": "NEUTRO",
+      "score": -0.1
+    },
+    {
+      "date": "2024-11-25",
+      "regime": "NEUTRO",
+      "score": 0.3
+    },
+    {
+      "date": "2024-12-02",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2024-12-09",
+      "regime": "NEUTRO",
+      "score": 0.75
+    },
+    {
+      "date": "2024-12-16",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2024-12-23",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2024-12-30",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-01-06",
+      "regime": "NEUTRO",
+      "score": 0.75
+    },
+    {
+      "date": "2025-01-13",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2025-01-20",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2025-01-27",
+      "regime": "NEUTRO",
+      "score": 0.75
+    },
+    {
+      "date": "2025-02-03",
+      "regime": "ESPANSIONE",
+      "score": 1.0
+    },
+    {
+      "date": "2025-02-10",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2025-02-17",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2025-02-24",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2025-03-03",
+      "regime": "NEUTRO",
+      "score": 0.05
+    },
+    {
+      "date": "2025-03-10",
+      "regime": "NEUTRO",
+      "score": -0.55
+    },
+    {
+      "date": "2025-03-17",
+      "regime": "NEUTRO",
+      "score": -0.8
+    },
+    {
+      "date": "2025-03-24",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-03-31",
+      "regime": "NEUTRO",
+      "score": -0.8
+    },
+    {
+      "date": "2025-04-07",
+      "regime": "BEAR",
+      "score": -2.65
+    },
+    {
+      "date": "2025-04-14",
+      "regime": "BEAR",
+      "score": -1.9
+    },
+    {
+      "date": "2025-04-21",
+      "regime": "BEAR",
+      "score": -2.3
+    },
+    {
+      "date": "2025-04-28",
+      "regime": "RALLENTAMENTO",
+      "score": -1.25
+    },
+    {
+      "date": "2025-05-05",
+      "regime": "NEUTRO",
+      "score": 0.25
+    },
+    {
+      "date": "2025-05-12",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2025-05-19",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2025-05-26",
+      "regime": "ESPANSIONE",
+      "score": 0.85
+    },
+    {
+      "date": "2025-06-02",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2025-06-09",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2025-06-16",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-06-23",
+      "regime": "NEUTRO",
+      "score": 0.7
+    },
+    {
+      "date": "2025-06-30",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2025-07-07",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2025-07-14",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2025-07-21",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2025-07-28",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2025-08-04",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2025-08-11",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-08-18",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2025-08-25",
+      "regime": "NEUTRO",
+      "score": 0.55
+    },
+    {
+      "date": "2025-09-01",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-09-08",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2025-09-15",
+      "regime": "ESPANSIONE",
+      "score": 0.9
+    },
+    {
+      "date": "2025-09-22",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2025-09-29",
+      "regime": "ESPANSIONE",
+      "score": 1.15
+    },
+    {
+      "date": "2025-10-06",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2025-10-13",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2025-10-20",
+      "regime": "ESPANSIONE",
+      "score": 1.25
+    },
+    {
+      "date": "2025-10-27",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2025-11-03",
+      "regime": "NEUTRO",
+      "score": 0.65
+    },
+    {
+      "date": "2025-11-10",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2025-11-17",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2025-11-24",
+      "regime": "NEUTRO",
+      "score": -0.4
+    },
+    {
+      "date": "2025-12-01",
+      "regime": "NEUTRO",
+      "score": 0.4
+    },
+    {
+      "date": "2025-12-08",
+      "regime": "ESPANSIONE",
+      "score": 1.05
+    },
+    {
+      "date": "2025-12-15",
+      "regime": "ESPANSIONE",
+      "score": 0.8
+    },
+    {
+      "date": "2025-12-22",
+      "regime": "BULL",
+      "score": 2.2
+    },
+    {
+      "date": "2025-12-29",
+      "regime": "ESPANSIONE",
+      "score": 1.8
+    },
+    {
+      "date": "2026-01-05",
+      "regime": "BULL",
+      "score": 2.05
+    },
+    {
+      "date": "2026-01-12",
+      "regime": "ESPANSIONE",
+      "score": 1.65
+    },
+    {
+      "date": "2026-01-19",
+      "regime": "ESPANSIONE",
+      "score": 1.55
+    },
+    {
+      "date": "2026-01-26",
+      "regime": "ESPANSIONE",
+      "score": 1.9
+    },
+    {
+      "date": "2026-02-02",
+      "regime": "ESPANSIONE",
+      "score": 1.4
+    },
+    {
+      "date": "2026-02-09",
+      "regime": "ESPANSIONE",
+      "score": 1.3
+    },
+    {
+      "date": "2026-02-16",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2026-02-23",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2026-03-02",
+      "regime": "NEUTRO",
+      "score": -0.15
+    },
+    {
+      "date": "2026-03-09",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2026-03-16",
+      "regime": "NEUTRO",
+      "score": -0.6
+    },
+    {
+      "date": "2026-03-23",
+      "regime": "RALLENTAMENTO",
+      "score": -1.1
+    },
+    {
+      "date": "2026-03-30",
+      "regime": "BEAR",
+      "score": -1.9
+    },
+    {
+      "date": "2026-04-06",
+      "regime": "NEUTRO",
+      "score": 0.0
+    },
+    {
+      "date": "2026-04-13",
+      "regime": "ESPANSIONE",
+      "score": 1.45
     }
   ],
   "indicators": {
@@ -463,5 +4708,27 @@
     "repressione_finanziaria": 21
   },
   "consensus_date": null,
-  "consensus_sources": []
+  "consensus_sources": [],
+  "backfill_done": "2026-04-16",
+  "backfill_info": {
+    "date": "2026-04-16",
+    "settimane": 850,
+    "da": "2010-01-04",
+    "a": "2026-04-13",
+    "distribuzione": {
+      "BULL": 72,
+      "ESPANSIONE": 429,
+      "NEUTRO": 266,
+      "RALLENTAMENTO": 47,
+      "BEAR": 36
+    },
+    "transizioni": 329,
+    "durate_medie": {
+      "BULL": 1.9,
+      "ESPANSIONE": 3.6,
+      "NEUTRO": 2.2,
+      "RALLENTAMENTO": 1.4,
+      "BEAR": 2.2
+    }
+  }
 }
