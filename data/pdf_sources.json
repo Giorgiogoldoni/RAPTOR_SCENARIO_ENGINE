@@ -1,5 +1,62 @@
 {
-  "last_run": null,
+  "last_run": "2026-05-01T09:26:28.138182Z",
   "new_downloads": [],
-  "sources": []
+  "sources": [
+    {
+      "id": "fmi_weo",
+      "name": "FMI World Economic Outlook",
+      "org": "FMI",
+      "priority": "alta",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "bce_bulletin",
+      "name": "BCE Economic Bulletin",
+      "org": "BCE",
+      "priority": "alta",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "ocse_outlook",
+      "name": "OCSE Economic Outlook",
+      "org": "OCSE",
+      "priority": "media",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "fed_sep",
+      "name": "Fed Summary of Economic Projections",
+      "org": "Fed",
+      "priority": "alta",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "blackrock_outlook",
+      "name": "BlackRock Global Investment Outlook",
+      "org": "BlackRock",
+      "priority": "media",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "jpm_guide",
+      "name": "JPMorgan Guide to the Markets",
+      "org": "JPMorgan",
+      "priority": "alta",
+      "last_download": null,
+      "path": null
+    },
+    {
+      "id": "vanguard_outlook",
+      "name": "Vanguard Economic and Market Outlook",
+      "org": "Vanguard",
+      "priority": "media",
+      "last_download": null,
+      "path": null
+    }
+  ]
 }

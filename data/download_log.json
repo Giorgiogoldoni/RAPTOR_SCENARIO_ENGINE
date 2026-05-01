@@ -1,0 +1,20 @@
+{
+  "bce_bulletin": {
+    "last_attempt": "2026-05-01T09:26:28.138038Z",
+    "last_success": null,
+    "path": null,
+    "new_download": false
+  },
+  "ocse_outlook": {
+    "last_attempt": "2026-05-01T09:26:28.138048Z",
+    "last_success": null,
+    "path": null,
+    "new_download": false
+  },
+  "blackrock_outlook": {
+    "last_attempt": "2026-05-01T09:26:28.138049Z",
+    "last_success": null,
+    "path": null,
+    "new_download": false
+  }
+}
