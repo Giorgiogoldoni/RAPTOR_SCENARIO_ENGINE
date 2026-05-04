@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updated": "2026-05-01T15:00:30.986252Z",
-    "updated_it": "01/05/2026 15:00",
+    "updated": "2026-05-04T09:14:03.418434Z",
+    "updated_it": "04/05/2026 09:14",
     "regime": "BULL",
     "regime_score": 3.0,
     "regime_score_usa": 3,
@@ -13,21 +13,21 @@
       "asia": 0.25
     },
     "regime_signals": [
-      "VIX 16.7 — volatilità normale",
+      "VIX 17.5 — volatilità normale",
       "Curva USA normale +0.80% (espansione)",
-      "S&P500 +10.3% mensile (momentum rialzista)",
-      "Azionario EU +5.0% (momentum positivo)",
-      "Spread BTP-Bund in compressione (1.5%)",
-      "Credito EU positivo (HY +2.1%)",
-      "EUR/USD 1.1770 — euro forte",
-      "Nikkei +16.1% (momentum Asia positivo)"
+      "S&P500 +10.0% mensile (momentum rialzista)",
+      "Azionario EU +4.2% (momentum positivo)",
+      "Spread BTP-Bund in compressione (1.4%)",
+      "Credito EU positivo (HY +2.0%)",
+      "EUR/USD 1.1723 — euro forte",
+      "Nikkei +10.7% (momentum Asia positivo)"
     ],
-    "btp_bund_diff": 1.53,
+    "btp_bund_diff": 1.4,
     "fetch_ok": 20,
     "fetch_total": 20
   },
   "regime_duration": {
-    "settimane_correnti": 3,
+    "settimane_correnti": 4,
     "media_storica": 1.0,
     "medie_per_regime": {
       "BULL": 1.0,
@@ -57,8 +57,8 @@
     },
     "3m": {
       "BULL": 0,
-      "ESPANSIONE": 46,
-      "NEUTRO": 48,
+      "ESPANSIONE": 47,
+      "NEUTRO": 47,
       "RALLENTAMENTO": 2,
       "BEAR": 4
     },
@@ -80,8 +80,8 @@
     "matrice_disponibile": true,
     "matrice": {
       "BULL": {
-        "BULL": 50,
-        "ESPANSIONE": 50,
+        "BULL": 60,
+        "ESPANSIONE": 40,
         "NEUTRO": 0,
         "RALLENTAMENTO": 0,
         "BEAR": 0
@@ -95,8 +95,8 @@
       },
       "NEUTRO": {
         "BULL": 1,
-        "ESPANSIONE": 28,
-        "NEUTRO": 65,
+        "ESPANSIONE": 29,
+        "NEUTRO": 64,
         "RALLENTAMENTO": 3,
         "BEAR": 3
       },
@@ -172,11 +172,6 @@
     }
   },
   "regime_history": [
-    {
-      "date": "2023-05-08",
-      "regime": "NEUTRO",
-      "score": 0.0
-    },
     {
       "date": "2023-05-15",
       "regime": "NEUTRO",
@@ -951,6 +946,11 @@
       "date": "2026-04-27",
       "regime": "BULL",
       "score": 3.0
+    },
+    {
+      "date": "2026-05-04",
+      "regime": "BULL",
+      "score": 3.0
     }
   ],
   "indicators": {
@@ -960,12 +960,12 @@
       "cat": "risk",
       "area": "usa",
       "ok": true,
-      "price": 16.7,
-      "chg_week": -10.74,
-      "chg_month": -31.95,
-      "sma20": 19.217,
-      "vol20": 91.34,
-      "ts": "2026-05-01T15:00:26.961401Z"
+      "price": 17.49,
+      "chg_week": -2.94,
+      "chg_month": -26.73,
+      "sma20": 18.8975,
+      "vol20": 92.46,
+      "ts": "2026-05-04T09:14:00.622794Z"
     },
     "US10Y": {
       "ticker": "^TNX",
@@ -973,12 +973,12 @@
       "cat": "rates",
       "area": "usa",
       "ok": true,
-      "price": 4.37,
-      "chg_week": 1.39,
-      "chg_month": 1.18,
-      "sma20": 4.3153,
-      "vol20": 11.68,
-      "ts": "2026-05-01T15:00:27.165710Z"
+      "price": 4.378,
+      "chg_week": 1.58,
+      "chg_month": 1.37,
+      "sma20": 4.3157,
+      "vol20": 11.59,
+      "ts": "2026-05-04T09:14:00.757811Z"
     },
     "US2Y": {
       "ticker": "^IRX",
@@ -986,12 +986,12 @@
       "cat": "rates",
       "area": "usa",
       "ok": true,
-      "price": 3.57,
-      "chg_week": -0.64,
-      "chg_month": -0.97,
-      "sma20": 3.598,
-      "vol20": 3.42,
-      "ts": "2026-05-01T15:00:27.325265Z"
+      "price": 3.575,
+      "chg_week": -0.5,
+      "chg_month": -0.83,
+      "sma20": 3.5982,
+      "vol20": 3.26,
+      "ts": "2026-05-04T09:14:00.889617Z"
     },
     "SP500": {
       "ticker": "^GSPC",
@@ -999,12 +999,12 @@
       "cat": "equity",
       "area": "usa",
       "ok": true,
-      "price": 7250.8301,
-      "chg_week": 1.2,
-      "chg_month": 10.27,
-      "sma20": 7009.499,
-      "vol20": 11.62,
-      "ts": "2026-05-01T15:00:27.517494Z"
+      "price": 7230.1201,
+      "chg_week": 0.91,
+      "chg_month": 9.96,
+      "sma20": 7008.4635,
+      "vol20": 11.63,
+      "ts": "2026-05-04T09:14:01.088029Z"
     },
     "CRUDE": {
       "ticker": "CL=F",
@@ -1012,12 +1012,12 @@
       "cat": "commodity",
       "area": "global",
       "ok": true,
-      "price": 101.7,
-      "chg_week": 7.73,
-      "chg_month": 1.58,
-      "sma20": 97.465,
-      "vol20": 90.14,
-      "ts": "2026-05-01T15:00:27.661739Z"
+      "price": 102.95,
+      "chg_week": 6.83,
+      "chg_month": -7.7,
+      "sma20": 97.004,
+      "vol20": 90.08,
+      "ts": "2026-05-04T09:14:01.221387Z"
     },
     "GOLD": {
       "ticker": "GC=F",
@@ -1025,12 +1025,12 @@
       "cat": "commodity",
       "area": "global",
       "ok": true,
-      "price": 4639.6001,
-      "chg_week": -1.75,
-      "chg_month": -3.0,
-      "sma20": 4717.96,
-      "vol20": 18.1,
-      "ts": "2026-05-01T15:00:27.816780Z"
+      "price": 4589.7998,
+      "chg_week": -1.83,
+      "chg_month": -1.33,
+      "sma20": 4714.125,
+      "vol20": 18.27,
+      "ts": "2026-05-04T09:14:01.354030Z"
     },
     "DOLLAR": {
       "ticker": "DX-Y.NYB",
@@ -1038,12 +1038,12 @@
       "cat": "fx",
       "area": "global",
       "ok": true,
-      "price": 97.861,
-      "chg_week": -0.66,
+      "price": 98.228,
+      "chg_week": -0.26,
       "chg_month": -1.8,
-      "sma20": 98.5706,
-      "vol20": 4.56,
-      "ts": "2026-05-01T15:00:28.058373Z"
+      "sma20": 98.5004,
+      "vol20": 4.62,
+      "ts": "2026-05-04T09:14:01.487083Z"
     },
     "EURUSD": {
       "ticker": "EURUSD=X",
@@ -1051,12 +1051,12 @@
       "cat": "fx",
       "area": "global",
       "ok": true,
-      "price": 1.177,
-      "chg_week": 0.74,
-      "chg_month": 1.55,
-      "sma20": 1.1709,
-      "vol20": 6.78,
-      "ts": "2026-05-01T15:00:28.275555Z"
+      "price": 1.1723,
+      "chg_week": 0.14,
+      "chg_month": 1.57,
+      "sma20": 1.1718,
+      "vol20": 6.36,
+      "ts": "2026-05-04T09:14:01.629563Z"
     },
     "BITCOIN": {
       "ticker": "BTC-EUR",
@@ -1064,12 +1064,12 @@
       "cat": "crypto",
       "area": "global",
       "ok": true,
-      "price": 66565.9766,
-      "chg_week": -0.94,
-      "chg_month": 7.0,
-      "sma20": 64849.1039,
-      "vol20": 29.79,
-      "ts": "2026-05-01T15:00:28.501793Z"
+      "price": 68010.9766,
+      "chg_week": 4.88,
+      "chg_month": 7.44,
+      "sma20": 65619.3014,
+      "vol20": 23.96,
+      "ts": "2026-05-04T09:14:01.761222Z"
     },
     "COPPER": {
       "ticker": "HG=F",
@@ -1077,12 +1077,12 @@
       "cat": "commodity",
       "area": "global",
       "ok": true,
-      "price": 5.993,
-      "chg_week": -0.51,
-      "chg_month": 6.56,
-      "sma20": 5.9391,
-      "vol20": 21.12,
-      "ts": "2026-05-01T15:00:28.653074Z"
+      "price": 5.948,
+      "chg_week": -1.16,
+      "chg_month": 6.92,
+      "sma20": 5.9542,
+      "vol20": 20.96,
+      "ts": "2026-05-04T09:14:01.894380Z"
     },
     "STOXX": {
       "ticker": "^STOXX50E",
@@ -1090,12 +1090,12 @@
       "cat": "equity",
       "area": "eu",
       "ok": true,
-      "price": 5881.5098,
-      "chg_week": -0.22,
-      "chg_month": 6.13,
-      "sma20": 5880.357,
-      "vol20": 23.74,
-      "ts": "2026-05-01T15:00:28.875217Z"
+      "price": 5836.04,
+      "chg_week": -0.81,
+      "chg_month": 4.78,
+      "sma20": 5885.5235,
+      "vol20": 21.93,
+      "ts": "2026-05-04T09:14:02.033537Z"
     },
     "DAX": {
       "ticker": "^GDAXI",
@@ -1103,12 +1103,12 @@
       "cat": "equity",
       "area": "eu",
       "ok": true,
-      "price": 24292.3809,
-      "chg_week": 0.57,
-      "chg_month": 7.67,
-      "sma20": 23965.3466,
-      "vol20": 23.6,
-      "ts": "2026-05-01T15:00:29.104249Z"
+      "price": 24300.1191,
+      "chg_week": 0.71,
+      "chg_month": 7.14,
+      "sma20": 24015.408,
+      "vol20": 21.97,
+      "ts": "2026-05-04T09:14:02.232899Z"
     },
     "CAC": {
       "ticker": "^FCHI",
@@ -1116,12 +1116,12 @@
       "cat": "equity",
       "area": "eu",
       "ok": true,
-      "price": 8114.8398,
-      "chg_week": -1.37,
-      "chg_month": 4.41,
-      "sma20": 8184.4615,
-      "vol20": 21.2,
-      "ts": "2026-05-01T15:00:29.314255Z"
+      "price": 8054.1499,
+      "chg_week": -1.27,
+      "chg_month": 3.03,
+      "sma20": 8188.1055,
+      "vol20": 20.24,
+      "ts": "2026-05-04T09:14:02.363962Z"
     },
     "FTSE": {
       "ticker": "^FTSE",
@@ -1129,12 +1129,12 @@
       "cat": "equity",
       "area": "eu",
       "ok": true,
-      "price": 10363.5703,
+      "price": 10363.9004,
       "chg_week": -0.15,
       "chg_month": 1.84,
-      "sma20": 10481.8233,
+      "sma20": 10481.8398,
       "vol20": 13.64,
-      "ts": "2026-05-01T15:00:29.498673Z"
+      "ts": "2026-05-04T09:14:02.500403Z"
     },
     "BTP10": {
       "ticker": "BTP10.MI",
@@ -1142,12 +1142,12 @@
       "cat": "rates",
       "area": "eu",
       "ok": true,
-      "price": 152.29,
-      "chg_week": -0.46,
-      "chg_month": 1.37,
-      "sma20": 152.516,
-      "vol20": 10.73,
-      "ts": "2026-05-01T15:00:29.674586Z"
+      "price": 151.95,
+      "chg_week": -0.56,
+      "chg_month": 0.49,
+      "sma20": 152.515,
+      "vol20": 10.62,
+      "ts": "2026-05-04T09:14:02.634434Z"
     },
     "BUND10": {
       "ticker": "EXX6.DE",
@@ -1155,12 +1155,12 @@
       "cat": "rates",
       "area": "eu",
       "ok": true,
-      "price": 113.775,
-      "chg_week": -0.11,
-      "chg_month": -0.16,
-      "sma20": 113.5727,
-      "vol20": 9.79,
-      "ts": "2026-05-01T15:00:30.024319Z"
+      "price": 113.56,
+      "chg_week": -0.3,
+      "chg_month": -0.91,
+      "sma20": 113.5195,
+      "vol20": 9.8,
+      "ts": "2026-05-04T09:14:02.808562Z"
     },
     "IHYG": {
       "ticker": "IHYG.MI",
@@ -1168,12 +1168,12 @@
       "cat": "credit",
       "area": "eu",
       "ok": true,
-      "price": 90.81,
-      "chg_week": -0.2,
-      "chg_month": 2.11,
-      "sma20": 90.6915,
-      "vol20": 6.62,
-      "ts": "2026-05-01T15:00:30.297959Z"
+      "price": 90.91,
+      "chg_week": -0.01,
+      "chg_month": 2.05,
+      "sma20": 90.7435,
+      "vol20": 5.96,
+      "ts": "2026-05-04T09:14:02.980759Z"
     },
     "IEAC": {
       "ticker": "IEAC.MI",
@@ -1181,12 +1181,12 @@
       "cat": "credit",
       "area": "eu",
       "ok": true,
-      "price": 119.1,
-      "chg_week": -0.04,
-      "chg_month": 1.25,
-      "sma20": 118.999,
-      "vol20": 5.32,
-      "ts": "2026-05-01T15:00:30.566891Z"
+      "price": 119.01,
+      "chg_week": -0.15,
+      "chg_month": 0.92,
+      "sma20": 119.028,
+      "vol20": 5.16,
+      "ts": "2026-05-04T09:14:03.145522Z"
     },
     "NIKKEI": {
       "ticker": "^N225",
@@ -1194,12 +1194,12 @@
       "cat": "equity",
       "area": "asia",
       "ok": true,
-      "price": 59284.9219,
-      "chg_week": -0.51,
-      "chg_month": 16.1,
-      "sma20": 57421.1279,
-      "vol20": 26.95,
-      "ts": "2026-05-01T15:00:30.793818Z"
+      "price": 59513.1211,
+      "chg_week": 0.63,
+      "chg_month": 10.74,
+      "sma20": 57773.6205,
+      "vol20": 24.84,
+      "ts": "2026-05-04T09:14:03.279646Z"
     },
     "HSI": {
       "ticker": "^HSI",
@@ -1207,27 +1207,27 @@
       "cat": "equity",
       "area": "asia",
       "ok": true,
-      "price": 25776.5293,
-      "chg_week": -0.54,
-      "chg_month": 3.3,
-      "sma20": 25858.5799,
-      "vol20": 18.77,
-      "ts": "2026-05-01T15:00:30.984756Z"
+      "price": 26095.8809,
+      "chg_week": 0.45,
+      "chg_month": 5.43,
+      "sma20": 25923.9669,
+      "vol20": 19.1,
+      "ts": "2026-05-04T09:14:03.416942Z"
     }
   },
   "probabilities": {
-    "petrolio_alto": 37,
+    "petrolio_alto": 23,
     "guerra_commerciale": 40,
     "crisi_taiwan": 15,
-    "hormuz": 11,
+    "hormuz": 5,
     "recessione_germania": 39,
-    "crisi_btp": 10,
-    "bce_alza": 21,
-    "deflazione_eu": 14,
+    "crisi_btp": 11,
+    "bce_alza": 14,
+    "deflazione_eu": 19,
     "stress_periferico": 20,
     "hard_landing_usa": 25,
-    "soft_landing": 62,
-    "stagflazione_usa": 21,
+    "soft_landing": 60,
+    "stagflazione_usa": 15,
     "boom_ai": 70,
     "flash_crash": 10,
     "bear_market": 15,
@@ -1236,9 +1236,9 @@
     "crisi_credito_eu": 15,
     "rallentamento_cina": 30,
     "crisi_giappone": 10,
-    "boom_asia_emergenti": 45,
-    "superciclo_commodity": 38,
-    "dollaro_debole": 30,
+    "boom_asia_emergenti": 55,
+    "superciclo_commodity": 32,
+    "dollaro_debole": 31,
     "bitcoin_mainstream": 45,
     "regolamentazione_crypto": 55,
     "carbon_tax": 50,
@@ -1271,7 +1271,7 @@
     "infrastrutture_boom": 70,
     "cbdc_europeo": 60,
     "dedollarizzazione": 55,
-    "inflazione_strutturale": 36,
+    "inflazione_strutturale": 31,
     "repressione_finanziaria": 21
   },
   "consensus_date": null,
