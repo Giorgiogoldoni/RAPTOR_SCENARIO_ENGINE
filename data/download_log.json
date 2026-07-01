@@ -1,6 +1,6 @@
 {
   "bce_bulletin": {
-    "last_attempt": "2026-05-01T09:26:28.138038Z",
+    "last_attempt": "2026-07-01T11:17:02.604373Z",
     "last_success": null,
     "path": null,
     "new_download": false
@@ -12,7 +12,13 @@
     "new_download": false
   },
   "blackrock_outlook": {
-    "last_attempt": "2026-05-01T09:26:28.138049Z",
+    "last_attempt": "2026-07-01T11:17:02.604385Z",
+    "last_success": null,
+    "path": null,
+    "new_download": false
+  },
+  "jpm_guide": {
+    "last_attempt": "2026-07-01T11:17:02.604387Z",
     "last_success": null,
     "path": null,
     "new_download": false
