@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updated": "2026-08-27T23:29:03.099876Z",
-    "updated_it": "27/08/2026 23:29",
+    "updated": "2026-08-28T19:20:06.752737Z",
+    "updated_it": "28/08/2026 19:20",
     "source": "Yahoo Finance"
   },
   "data": {
@@ -9,81 +9,81 @@
       "ticker": "^GSPC",
       "n": "S&P 500",
       "ok": true,
-      "price": 7730.9902,
-      "chg_week": 1.18,
-      "ts": "2026-08-27T23:29:02.030454Z"
+      "price": 7709.9399,
+      "chg_week": 0.46,
+      "ts": "2026-08-28T19:20:05.118857Z"
     },
     "STOXX": {
       "ticker": "^STOXX50E",
       "n": "Euro Stoxx 50",
       "ok": true,
-      "price": 6470.7402,
-      "chg_week": 0.41,
-      "ts": "2026-08-27T23:29:02.143953Z"
+      "price": 6485.6699,
+      "chg_week": 0.36,
+      "ts": "2026-08-28T19:20:05.294064Z"
     },
     "FTSEMIB": {
       "ticker": "FTSEMIB.MI",
       "n": "FTSE MIB",
       "ok": true,
-      "price": 52883.0,
-      "chg_week": 0.5,
-      "ts": "2026-08-27T23:29:02.257078Z"
+      "price": 52616.1211,
+      "chg_week": -0.1,
+      "ts": "2026-08-28T19:20:05.469708Z"
     },
     "DAX": {
       "ticker": "^GDAXI",
       "n": "DAX",
       "ok": true,
-      "price": 26285.9609,
-      "chg_week": 0.75,
-      "ts": "2026-08-27T23:29:02.396595Z"
+      "price": 26569.9902,
+      "chg_week": 1.66,
+      "ts": "2026-08-28T19:20:05.648933Z"
     },
     "VIX": {
       "ticker": "^VIX",
       "n": "VIX",
       "ok": true,
-      "price": 14.51,
-      "chg_week": -9.37,
-      "ts": "2026-08-27T23:29:02.519628Z"
+      "price": 14.53,
+      "chg_week": -3.97,
+      "ts": "2026-08-28T19:20:05.825802Z"
     },
     "US10Y": {
       "ticker": "^TNX",
       "n": "US 10Y Yield",
       "ok": true,
-      "price": 4.672,
-      "chg_week": -0.51,
-      "ts": "2026-08-27T23:29:02.623915Z"
+      "price": 4.72,
+      "chg_week": -0.38,
+      "ts": "2026-08-28T19:20:06.002251Z"
     },
     "EURUSD": {
       "ticker": "EURUSD=X",
       "n": "EUR/USD",
       "ok": true,
-      "price": 1.1658,
-      "chg_week": -0.26,
-      "ts": "2026-08-27T23:29:02.727900Z"
+      "price": 1.1586,
+      "chg_week": -0.87,
+      "ts": "2026-08-28T19:20:06.202562Z"
     },
     "GOLD": {
       "ticker": "GC=F",
       "n": "Gold",
       "ok": true,
-      "price": 4655.8999,
-      "chg_week": 3.09,
-      "ts": "2026-08-27T23:29:02.831846Z"
+      "price": 4511.6001,
+      "chg_week": -2.43,
+      "ts": "2026-08-28T19:20:06.376464Z"
     },
     "CRUDE": {
       "ticker": "CL=F",
       "n": "WTI Crude",
       "ok": true,
-      "price": 83.61,
-      "chg_week": -4.8,
-      "ts": "2026-08-27T23:29:02.978925Z"
+      "price": 83.28,
+      "chg_week": -4.34,
+      "ts": "2026-08-28T19:20:06.547098Z"
     },
     "BITCOIN": {
       "ticker": "BTC-EUR",
       "n": "Bitcoin EUR",
       "ok": true,
-      "price": 68941.8516,
-      "chg_week": 4.46,
-      "ts": "2026-08-27T23:29:03.099808Z"
+      "price": 67065.1797,
+      "chg_week": 0.76,
+      "ts": "2026-08-28T19:20:06.752671Z"
     }
   }
 }
