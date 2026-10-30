@@ -12,19 +12,25 @@
     "new_download": false
   },
   "blackrock_outlook": {
-    "last_attempt": "2026-09-01T12:53:36.773807Z",
+    "last_attempt": "2026-10-30T16:12:12.629350Z",
     "last_success": null,
     "path": null,
     "new_download": false
   },
   "jpm_guide": {
-    "last_attempt": "2026-07-01T11:17:02.604387Z",
+    "last_attempt": "2026-10-30T16:12:12.629351Z",
     "last_success": null,
     "path": null,
     "new_download": false
   },
   "fed_sep": {
     "last_attempt": "2026-09-01T12:53:36.773805Z",
+    "last_success": null,
+    "path": null,
+    "new_download": false
+  },
+  "fmi_weo": {
+    "last_attempt": "2026-10-30T16:12:12.629341Z",
     "last_success": null,
     "path": null,
     "new_download": false
