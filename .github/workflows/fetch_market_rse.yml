@@ -2,8 +2,8 @@ name: RSE — Fetch Market Data
 
 on:
   schedule:
-    - cron: '0 7 * * 1-5'    # 09:00 ora italiana giorni feriali
-    - cron: '0 14 * * 1-5'   # 16:00 ora italiana giorni feriali
+    - cron: '0 10 * * *'    # circa 11:00 Italia in inverno
+    - cron: '0 22 * * *'    # circa 23:00 Italia in inverno giorni feriali
   workflow_dispatch:
 
 jobs:
